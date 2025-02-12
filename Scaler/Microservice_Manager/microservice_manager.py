@@ -1,3 +1,4 @@
+import subroutine
 import argparse
 
 '''
@@ -27,19 +28,12 @@ import argparse
 '''
 
 
-def validate_argument(max_reps, min_reps, target_cpu_utilization):
-    if (max_reps <= 0 or min_reps <= 0):
-        raise ValueError("Invalid number of replicas.")
-    if (max_reps < min_reps):
-        raise ValueError("Invalid number of replicas.")
-    if (target_cpu_utilization <= 0 or target_cpu_utilization > 100):
-        raise ValueError("Invalid target CPU utilization.")
-
 # entry point
 if __name__ == "__main__":
     # only run this when the script is run directly
 
     # take user arguments from SLA
+    # parse user input into specified type to avoid TypeError
     parser = argparse.ArgumentParser()
     parser.add_argument("--microservice_name", type=str)
     parser.add_argument("--max_reps", type=int)
@@ -48,7 +42,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # validate arguments
-    validate_argument(args.max_reps, args.min_reps, args.target_cpu_utilization)
+    subroutine.validate_argument(args.max_reps,
+                                 args.min_reps,
+                                 args.target_cpu_utilization)
 
     # assign for constants
     MICROSERVICE_NAME = args.microservice_name
@@ -58,3 +54,7 @@ if __name__ == "__main__":
 
     # test argument
     print(MICROSERVICE_NAME, MAX_REPS, MIN_REPS, TARGET_CPU_UTILIZATION)
+    print(type(MICROSERVICE_NAME))
+    print(type(MAX_REPS))
+    print(type(MIN_REPS))
+    print(type(TARGET_CPU_UTILIZATION))
