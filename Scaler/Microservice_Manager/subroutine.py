@@ -50,32 +50,37 @@ def get_available_reps(microservice_name):
 
     # execute command with timeout
     try:
+        # call api-server, convert byte type to string type
         available_reps = subprocess.check_output(available_reps_script.split(),
                                                  stderr=subprocess.STDOUT,
                                                  timeout=1).decode("utf-8")
-        # handle None value
-        if (available_reps is None):
-            raise ValueError
         # strip leading/trailing values from kube-api-server
         available_reps = available_reps.strip().strip('\'').strip('\"')
-        print(type(available_reps))
-        print(available_reps)
+
         if (len(available_reps) == 0):
-            sum = 0
-            # raise error
+            raise ValueError("Empty response")
+
         # convert string to int if not empty
         available_reps = int(available_reps)
     except subprocess.TimeoutExpired as err:
         print("Timeout")
+        print(err)
         # retry again
+    # error from kube-api-server
     except subprocess.CalledProcessError as err:
         print("Error from kube-api-server.")
         # stdout include stderr by subprocess
         err_msg = err.stdout.decode("utf-8")  # convert byte to string
         print(err_msg)
-    except ValueError:
-        print("Received invalid response from server:")
-        print(available_reps)
+    # server response (string) not numerical -> can't be converted to int
+    except ValueError as err:
+        if (err.args[1] == "Empty response"):
+            print("Received an empty response from server.")
+        # not numerical response, raised by str -> int convert
+        else:
+            print("Received invalid response from server:")
+            print(available_reps)
+
     else:
         return available_reps
 
