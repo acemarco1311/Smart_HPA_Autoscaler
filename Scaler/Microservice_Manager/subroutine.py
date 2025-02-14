@@ -1,4 +1,7 @@
-import subprocess
+import subprocess  # execute kubectl command
+from tenacity import retry, stop_after_attempt, stop_after_delay
+from tenacity import wait_fixed
+from tenacity import after
 
 '''
     Validate user-defined arguments for microservice resource
@@ -23,6 +26,38 @@ def validate_argument(max_reps, min_reps, target_cpu_utilization):
         raise ValueError("Invalid target CPU utilization.")
 
 
+# show error on each failed retry
+def callback_each_retry(retry_state):
+    if retry_state.outcome.failed:
+        err = retry_state.outcome.exception()
+        # either not numerical or empty string
+        # exception raised when converting str -> int
+        if isinstance(err, ValueError):
+            print("Error response is not a numerical string")
+            print(retry_state.outcome.exception())
+        # error from server
+        elif isinstance(err, subprocess.CalledProcessError):
+            print("Received error from kube-api-server")
+            print(err.stdout.decode("utf-8"))
+        # timeout error
+        elif isinstance(err, subprocess.TimeoutExpired):
+            print("Exceed 1 second timeout")
+        # unexpected error
+        else:
+            print("Unexpected error occurred")
+            print(err)
+        print("Retrying...")
+
+
+# callback function if all retries failed
+# avoid raising exception and crash
+# return None instead
+def callback_all_retries(retry_state):
+    print("All retries failed")
+    # return None instead of crashing
+    return None
+
+
 '''
     Get the number of available replicas in the deployment of
     the specified microservice. Use available replicas as
@@ -43,48 +78,30 @@ def validate_argument(max_reps, min_reps, target_cpu_utilization):
 '''
 
 
+# retry on exeception raised
+@retry(
+    # 3 attempts, total execution time = 6s
+    stop=(stop_after_attempt(3) |
+          stop_after_delay(6)),
+    # wait 1 second between retries
+    wait=wait_fixed(1),
+    after=callback_each_retry,
+    retry_error_callback=callback_all_retries
+    )
 def get_available_reps(microservice_name):
     available_reps_script = f"kubectl get deployment \
                             {microservice_name} \
                             -o=jsonpath='{{.status.availableReplicas}}'"
 
-    # execute command with timeout
-    try:
-        # call api-server, convert byte type to string type
-        available_reps = subprocess.check_output(available_reps_script.split(),
-                                                 stderr=subprocess.STDOUT,
-                                                 timeout=1).decode("utf-8")
-        # strip leading/trailing values from kube-api-server
-        available_reps = available_reps.strip().strip('\'').strip('\"')
-
-        if (len(available_reps) == 0):
-            raise ValueError("Empty response")
-
-        # convert string to int if not empty
-        available_reps = int(available_reps)
-    except subprocess.TimeoutExpired as err:
-        print("Timeout")
-        print(err)
-        # retry again
-    # error from kube-api-server
-    except subprocess.CalledProcessError as err:
-        print("Error from kube-api-server.")
-        # stdout include stderr by subprocess
-        err_msg = err.stdout.decode("utf-8")  # convert byte to string
-        print(err_msg)
-    # server response (string) not numerical -> can't be converted to int
-    except ValueError as err:
-        if (err.args[1] == "Empty response"):
-            print("Received an empty response from server.")
-        # not numerical response, raised by str -> int convert
-        else:
-            print("Received invalid response from server:")
-            print(available_reps)
-
-    else:
-        return available_reps
+    available_reps = subprocess.check_output(available_reps_script.split(),
+                                             stderr=subprocess.STDOUT,
+                                             timeout=1).decode("utf-8")
+    available_reps = available_reps.strip()\
+                                   .strip('\'')\
+                                   .strip('\"')
+    return int(available_reps)
 
 
 # entry point for testing
 if __name__ == "__main__":
-    get_available_reps("adservice")
+    print(get_available_reps("adservice"))
