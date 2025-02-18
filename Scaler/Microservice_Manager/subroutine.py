@@ -1,5 +1,8 @@
+import math
+import statistics
 import subprocess  # execute kubectl command
 from tenacity import retry, stop_after_attempt, stop_after_delay
+from tenacity import retry_if_result
 from tenacity import wait_fixed
 from tenacity import after
 
@@ -26,17 +29,11 @@ def validate_argument(max_reps, min_reps, target_cpu_utilization):
         raise ValueError("Invalid target CPU utilization.")
 
 
-# show error on each failed retry
 def callback_each_retry(retry_state):
     if retry_state.outcome.failed:
         err = retry_state.outcome.exception()
-        # either not numerical or empty string
-        # exception raised when converting str -> int
-        if isinstance(err, ValueError):
-            print("Error response is not a numerical string")
-            print(retry_state.outcome.exception())
         # error from server
-        elif isinstance(err, subprocess.CalledProcessError):
+        if isinstance(err, subprocess.CalledProcessError):
             print("Received error from kube-api-server")
             print(err.stdout.decode("utf-8"))
         # timeout error
@@ -56,6 +53,33 @@ def callback_all_retries(retry_state):
     print("All retries failed")
     # return None instead of crashing
     return None
+
+
+
+# retry
+@retry(
+    # 3 attempts, total execution time = 6s
+    stop=(stop_after_attempt(3) |
+          stop_after_delay(6)),
+    # wait 1 second between retries
+    wait=wait_fixed(1),
+    # show error of retry
+    after=callback_each_retry,
+    # cannot complete notification
+    retry_error_callback=callback_all_retries
+)
+def execute_kubectl(script):
+    # capture stderr in stdout if error occurs
+    # convert result to string
+    script_result = subprocess.check_output(script.split(),
+                                            stderr=subprocess.STDOUT,
+                                            timeout=1).decode("utf-8")
+    # empty string from server might become string "''"
+    # when decode from byte to str type
+    script_result = script_result.strip().strip('"').strip("'")
+    if len(script_result) == 0:
+        raise ValueError("Received an empty result from kube-apiserver.")
+    return script_result
 
 
 '''
@@ -78,28 +102,55 @@ def callback_all_retries(retry_state):
 '''
 
 
-# retry on exeception raised
-@retry(
-    # 3 attempts, total execution time = 6s
-    stop=(stop_after_attempt(3) |
-          stop_after_delay(6)),
-    # wait 1 second between retries
-    wait=wait_fixed(1),
-    after=callback_each_retry,
-    retry_error_callback=callback_all_retries
-    )
 def get_available_reps(microservice_name):
+    print(f"Getting {microservice_name}'s number of available replicas.")
     available_reps_script = f"kubectl get deployment \
-                            {microservice_name} \
-                            -o=jsonpath='{{.status.availableReplicas}}'"
-
-    available_reps = subprocess.check_output(available_reps_script.split(),
-                                             stderr=subprocess.STDOUT,
-                                             timeout=1).decode("utf-8")
-    available_reps = available_reps.strip()\
-                                   .strip('\'')\
-                                   .strip('\"')
+                              {microservice_name} \
+                              -o=jsonpath='{{.status.availableReplicas}}'"
+    available_reps = execute_kubectl(available_reps_script)
+    if available_reps is None:
+        return None
     return int(available_reps)
+
+
+'''
+    Get CPU usage from all replicas of this microservice using
+    Metric servers.
+
+    Input:
+        microservice_name - str
+
+    Output:
+        cpu_usage - int: the average cpu usage by each replica (in milicores)
+'''
+
+
+def get_cpu_usage(microservice_name, current_reps):
+    print(f"Getting {microservice_name}'s CPU usage.")
+    script = f"kubectl top pods -l app={microservice_name}"
+    script_result = execute_kubectl(script)
+    if script_result is None:
+        return None
+    # lines show replicas resource info
+    # skip first line/header
+    lines = script_result.splitlines()[1:]
+    # --> ERROR when only 1 line
+
+    # cross check if info from ALL reps has been collected
+    if lines != current_reps:
+        raise ValueError("")
+
+    # cpu usage from each replica
+    cpu_usage = []
+    for rep_info in lines:
+        # get cpu usage (0: name, 1: cpu, 2: memory)
+        cpu = rep_info.split()[1]
+        # remove milicore unit
+        cpu = cpu[:-1]
+        cpu_usage.append(int(cpu))
+
+    avg_cpu_usage = math.ceil(statistics.mean(cpu_usage))
+    return avg_cpu_usage
 
 
 # entry point for testing
