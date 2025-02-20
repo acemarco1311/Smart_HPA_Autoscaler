@@ -1,6 +1,37 @@
 from collections import namedtuple
 
 
+'''
+    Classifying microservices into underprovisioned and
+    overprovisioned microservices to prepare for resource
+    exchange.
+
+    Input:
+        microservice_data - List<ResourceData>:
+            contain resource data of all microservices whose scaling
+            action is either "scale up" (underprovisioned) or
+            "scale down" (overprovisioned)
+
+    ResourceData:
+        microservice_name - str
+        current_reps - int
+        desired_reps - int
+        cpu_usage_per_rep - int
+        cpu_request_per_rep - int
+        cpu_utilization_per_rep - int
+        desired_for_scale_reps - int
+        scaling_action - str
+        max_reps - Int
+        min_reps - Int
+        target_cpu_utilization - Int
+
+    Output:
+        underprovisioned_ms - List<UnderprovisionedData>
+        overprovisioned_ms - List<OverprovisionedData>
+
+'''
+
+
 def classify_ms(microservice_data):
     # required data format for adaptive resource manager
     UnderprovisionedData = namedtuple("UnderprovisionedData", [
@@ -22,7 +53,7 @@ def classify_ms(microservice_data):
     ])
     underprovisioned_ms = []
     overprovisioned_ms = []
-    # all no scale ms has been removed from microservice_data
+    # all "no scale" ms has been removed from microservice_data
     for microservice in microservice_data:
         # underprovisioned, need to scale up over user-defined limit
         if microservice.desired_for_scale_reps > microservice.max_reps:
@@ -39,11 +70,19 @@ def classify_ms(microservice_data):
                     ))
         # overprovisioned
         else:
-            residual
-
-
-
-
+            residual_reps = microservice.max_reps - \
+                            microservice.desired_for_scale_reps
+            residual_cpu = residual_reps * microservice.cpu_request_per_rep
+            overprovisioned_ms.append(OverprovisionedData(
+                microservice.microservice_name,
+                int(residual_cpu),
+                microservice.scaling_action,
+                microservice.desired_for_scale_reps,
+                microservice.current_reps,
+                microservice.cpu_request_per_rep,
+                microservice.max_reps
+                ))
+    return underprovisioned_ms, overprovisioned_ms
 
 # entry point
 if __name__ == "__main__":
