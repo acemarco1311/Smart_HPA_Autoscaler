@@ -56,3 +56,21 @@ echo "---------------------------------"
 # -> Error NotFound: the kube-api needs time to start the deployment.
 
 # what if delete service?
+
+# in getting CPU usage, 
+# current_replicas = available_replicas
+# if we one of the replicas got deleted 
+# between 2 steps (get current replicas and
+# cpu usage for each replica)
+# then the resource exchange will be incorrect
+# TEST
+# get available replicas
+# delete one of the pod (timeout > 1)
+# get cpu usage 
+
+
+
+# timeout need to be > 1 because `kubectl delete`
+# command can take longer than 1, and even it completed 
+# successfully, it returns a timeout error and retry.
+# For example, when we delete 1 pod with timeout 
