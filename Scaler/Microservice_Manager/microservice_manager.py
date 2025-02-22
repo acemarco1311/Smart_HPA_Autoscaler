@@ -73,28 +73,9 @@ def Analyze(desired_reps,
     return cpu_utilization_per_rep, desired_for_scale_reps, scaling_action
 
 
-def test_func():
-    # declare ResourceData object
-    ResourceData = namedtuple("ResourceData", [
-        "microservice_name",
-        "current_reps",
-        "desired_reps",  # num reps before scaling decision
-        "cpu_usage_per_rep",
-        "cpu_request_per_rep",
-        "cpu_utilization_per_rep",
-        "desired_for_scale_reps"  # num reps needs to be scaled
-        ])
-    data = ResourceData("test", 0, 0, 0, 0, 0, 230)
-    # after return, data can be used directly as ResourceData
-    return data
-
-
 # entry point
 if __name__ == "__main__":
     # only run this when the script is run directly
-
-    data = test_func()
-    print(type(data.desired_reps))
 
     # take user arguments from SLA
     # parse user input into specified type to avoid TypeError
