@@ -40,9 +40,9 @@ from data_format import ARMDecision
 def classify_ms(microservice_data):
     # required data format for adaptive resource manager
 
-    # list of ms that need to scale over user-defined limit
+    # list of ms that need to "scale up" over limit
     underprovisioned_ms = []
-    # list of ms that doesn't use all user-defined limit
+    # list of ms need to "scale down"
     overprovisioned_ms = []
 
     for microservice in microservice_data:
@@ -61,11 +61,9 @@ def classify_ms(microservice_data):
                     microservice.max_reps
                     ))
 
-        # "no-scale", using full allocated resources
-        elif microservice.desired_for_scale_reps == microservice.max_reps:
-            continue
-
-        # overprovisioned, need to down scale < current max_reps
+        # overprovisioned, need to scale down (auto accept)
+        # and/or those who need to scale up within limit. (auto accept)
+        # and/or "no scale" (auto accept)
         else:
             residual_reps = microservice.max_reps - \
                             microservice.desired_for_scale_reps
@@ -190,17 +188,19 @@ def back_distribute_residual_cpu(overprovisioned_ms, total_residual_cpu):
         # number of reps after down scaling + back distribute
         possible_reps = microservice.desired_for_scale_reps + remaining_reps
 
+        # arm_max_reps = new arm_max_reps for the microservice,
+        # allowed by Adaptive Resource Manager
+
         # enough cpu to maintain current capacity
         if possible_reps >= microservice.max_reps:
             # current ms need to down scale,
             # don't need to distribute back more
             # than current capacity
             arm_max_reps = microservice.max_reps
-
         # cannot maintain current capacity,
         # give back whatever is left
         elif (remaining_reps >= 1 and
-              possible_reps < microservice.max_reps):
+              possible_reps < microservice.max_reps):  #TODO: original Smart HPA mistake?
             arm_max_reps = possible_reps
 
         # nothing to give back,
@@ -216,8 +216,10 @@ def back_distribute_residual_cpu(overprovisioned_ms, total_residual_cpu):
         total_residual_cpu -= distributed_cpu
         arm_overprovisioned_decision.append(ARMDecision(
             microservice.microservice_name,
-            "scale down",  # automatically allow down scale
-            microservice.desired_for_scale_reps,
+            # free to scale: "scale down", "no scale"
+            # or "scale up" within limit
+            microservice.scaling_action,  # auto accept
+            microservice.desired_for_scale_reps,  # auto accept
             arm_max_reps,  # how much has been given back to this ms
             microservice.cpu_request_each_reps
         ))

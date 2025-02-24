@@ -1,11 +1,14 @@
 import math
+import argparse
 from subroutine import validate_argument
 from subroutine import get_available_reps
 from subroutine import get_cpu_usage
 from subroutine import get_desired_reps
 from subroutine import get_cpu_request
-import argparse
-from collections import namedtuple
+from data_format import ResourceData
+
+
+
 
 
 '''
@@ -35,42 +38,105 @@ from collections import namedtuple
 
 '''
 
+class MicroserviceManager:
 
-def Monitor(microservice_name):
-    current_reps = get_available_reps(microservice_name)
-    cpu_usage_per_rep = get_cpu_usage(microservice_name, current_reps)
-    desired_reps = get_desired_reps(microservice_name)
-    cpu_request_per_rep = get_cpu_request(microservice_name)
-    return desired_reps, current_reps, cpu_usage_per_rep, cpu_request_per_rep
+    '''
+        Microservice Manager class definition
+    '''
+    # constructor
+    def __init__(self, microservice_name, min_reps, max_reps,
+                 target_cpu_utilization, current_arm_max_reps):
+
+        # validate type and value
+        validate_argument(max_reps,
+                          min_reps,
+                          target_cpu_utilization,
+                          current_arm_max_reps)
+
+        self.microservice_name = microservice_name
+        self.min_reps = min_reps  # user-defined
+        self.max_reps = max_reps  # user-defined
+        self.target_cpu_utilization = target_cpu_utilization  # user-defined
+        # ARM defined, replace user-defined max_reps
+        self._current_arm_max_reps = current_arm_max_reps
+
+    def get_current_arm_max_reps(self):
+        return self._current_arm_max_reps
+
+    def _set_current_arm_max_reps(self, new_arm_max_reps):
+        # check input
+        try:
+            if (new_arm_max_reps >= self.min_reps):
+                self._current_arm_max_reps = new_arm_max_reps
+        except Exception as err:
+            print("Error occurred in setting arm max_reps")
+            print(err)
+
+    def get_max_reps(self):
+        if self._current_arm_max_reps is not None:
+            return self.max_reps
+        else:
+            return self._current_arm_max_reps
 
 
-def Analyze(desired_reps,
-            current_reps,
-            cpu_usage_per_rep,
-            cpu_request_per_rep,
-            target_cpu_utilization,
-            min_reps,
-            max_reps):
-    cpu_utilization_per_rep = (cpu_usage_per_rep / cpu_request_per_rep) * 100
-    # the new desired_reps to scale
-    # in order to maintain the required cpu utilization
-    desired_for_scale_reps = math.ceil(
-            current_reps *
-            (cpu_utilization_per_rep / target_cpu_utilization)
-            )
-    scaling_action = ""
-    if (desired_reps != desired_for_scale_reps) and \
-       (desired_for_scale_reps > current_reps) and  \
-       (desired_for_scale_reps >= min_reps):
+    '''
+        Microservice Manager functionality
+    '''
+    def _Monitor(microservice_name):
+        current_reps = get_available_reps(microservice_name)
+        cpu_usage_per_rep = get_cpu_usage(microservice_name, current_reps)
+        desired_reps = get_desired_reps(microservice_name)
+        cpu_request_per_rep = get_cpu_request(microservice_name)
 
-        scaling_action = "scale up"
-    elif (desired_reps != desired_for_scale_reps) and \
-         (desired_for_scale_reps < current_reps) and \
-         (desired_reps >= min_reps):
-        scaling_action = "scale down"
-    else:
-        scaling_action = "no scale"
-    return cpu_utilization_per_rep, desired_for_scale_reps, scaling_action
+        return (current_reps,
+                desired_reps,
+                cpu_usage_per_rep,
+                cpu_request_per_rep)
+
+    def _Analyze(desired_reps,
+                  current_reps,
+                  cpu_usage_per_rep,
+                  cpu_request_per_rep,
+                  target_cpu_utilization,
+                  min_reps,
+                  max_reps):
+        cpu_utilization_per_rep = (cpu_usage_per_rep / cpu_request_per_rep) * 100
+        # the new desired_reps to scale
+        # in order to maintain the required cpu utilization
+        desired_for_scale_reps = math.ceil(
+                current_reps *
+                (cpu_utilization_per_rep / target_cpu_utilization)
+                )
+        scaling_action = ""
+        if (desired_reps != desired_for_scale_reps) and \
+           (desired_for_scale_reps > current_reps) and  \
+           (desired_for_scale_reps >= min_reps):
+
+            scaling_action = "scale up"
+        elif (desired_reps != desired_for_scale_reps) and \
+             (desired_for_scale_reps < current_reps) and \
+             (desired_reps >= min_reps):
+            scaling_action = "scale down"
+        else:
+            scaling_action = "no scale"
+        return cpu_utilization_per_rep, desired_for_scale_reps, scaling_action
+
+    def Extract(self):
+        monitor_data = self._Monitor()
+        analyze_data = self._Analyze()
+        return ResourceData(
+                self.microservice_name,
+                monitor_data[0],
+                monitor_data[1],
+                monitor_data[2],
+                monitor_data[3],
+                analyze_data[0],
+                analyze_data[1],
+                analyze_data[2],
+                self.get_max_reps(),
+                self.min_reps,
+                self.target_cpu_utilization
+                )
 
 
 # entry point

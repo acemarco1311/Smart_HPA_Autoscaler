@@ -14,6 +14,7 @@ from tenacity import retry_if_exception_type
         max_reps - Int: number of max replicas
         min_reps - Int: number of min replicas
         target_cpu_utilization - Float: average cpu utilization for scaling
+        current_arm_max_reps - Int: max_reps defined by ARM.
 
     Output:
         raise Error if max_reps/min_reps <= 0 or
@@ -21,13 +22,16 @@ from tenacity import retry_if_exception_type
 '''
 
 
-def validate_argument(max_reps, min_reps, target_cpu_utilization):
+def validate_argument(max_reps, min_reps, target_cpu_utilization, current_arm_max_reps):
     if (max_reps <= 0 or min_reps <= 0):
         raise ValueError("Invalid number of replicas.")
     if (max_reps < min_reps):
         raise ValueError("Invalid number of replicas.")
     if (target_cpu_utilization <= 0 or target_cpu_utilization > 100):
         raise ValueError("Invalid target CPU utilization.")
+    if (current_arm_max_reps is not None):
+        if current_arm_max_reps < min_reps:
+            raise ValueError("Invalid ARM max_reps.")
 
 
 # callback function on each retry for execute_kubectl()
@@ -96,6 +100,19 @@ def execute_kubectl(script):
     script_result = script_result.strip().strip('"').strip("'")
     if len(script_result) == 0:
         raise ValueError("Received an empty result from kube-apiserver.")
+    return script_result
+
+
+#TODO: is there any chance the number of reps = 0.
+# the microservice being shutdown by Smart HPA
+# > but we don't allow reps < min_reps
+# so no problem here.
+# further failure scenarios for handling
+def scale(microservice_name, reps, min_reps):
+    if reps < min_reps:
+        raise ValueError("reps to scale < minimum reps")
+    script = f"kubectl scale deployment {microservice_name} --replicas={reps}"
+    script_result = execute_kubectl(script)
     return script_result
 
 
@@ -246,15 +263,18 @@ def get_cpu_request(microservice_name):
 # entry point for testing
 if __name__ == "__main__":
     microservice_name = "adservice"
-    available_reps = get_available_reps(microservice_name)
-    print(available_reps)
-    get_rep_names = f"kubectl get pods -l app={microservice_name}"
-    rep_names = execute_kubectl(get_rep_names)
-    rep_name = rep_names.splitlines()[1].split()[0]
-    print(execute_kubectl(f"kubectl delete pod {rep_name}"))
-    cpu_usage = get_cpu_usage(microservice_name, available_reps)
-    print(cpu_usage)
-    cpu_request = get_cpu_request(microservice_name)
-    print(cpu_request)
-    desired_reps = get_desired_reps(microservice_name)
-    print(desired_reps)
+    #available_reps = get_available_reps(microservice_name)
+    #print(available_reps)
+    #get_rep_names = f"kubectl get pods -l app={microservice_name}"
+    #rep_names = execute_kubectl(get_rep_names)
+    #rep_name = rep_names.splitlines()[1].split()[0]
+    #print(execute_kubectl(f"kubectl delete pod {rep_name}"))
+    #cpu_usage = get_cpu_usage(microservice_name, available_reps)
+    #print(cpu_usage)
+    #cpu_request = get_cpu_request(microservice_name)
+    #print(cpu_request)
+    #desired_reps = get_desired_reps(microservice_name)
+    #print(desired_reps)
+    #print("-----------------------")
+    scale_pod = scale(microservice_name, 3, 1)
+    print(scale_pod)

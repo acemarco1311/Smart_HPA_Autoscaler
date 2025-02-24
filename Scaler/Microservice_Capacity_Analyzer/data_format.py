@@ -1,5 +1,6 @@
 from collections import namedtuple
 
+
 # resource extraction from MS Manager
 ResourceData = namedtuple("ResourceData", [
     "microservice_name",
@@ -15,25 +16,6 @@ ResourceData = namedtuple("ResourceData", [
     "target_cpu_utilization"
 ])
 
-UnderprovisionedData = namedtuple("UnderprovisionedData", [
-    "microservice_name",
-    "desired_for_scale_reps"
-    "required_reps",  # new data
-    "required_cpu",  # new data
-    "cpu_request_per_rep",
-    "current_reps",
-    "max_reps"  # current max reps restrictions (user/ARM)
-])
-
-OverprovisionedData = namedtuple("OverprovisionedData", [
-    "microservice_name",
-    "residual_cpu",  # new data
-    "scaling_action",
-    "desired_for_scale_reps",
-    "current_reps",
-    "cpu_request_per_rep",
-    "max_reps"  # current max reps restrictions (user/ARM)
-])
 
 # scaling instruction for each microservice
 ARMDecision = namedtuple("ARMDecision", [
