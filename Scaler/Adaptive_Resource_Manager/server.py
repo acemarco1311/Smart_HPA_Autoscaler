@@ -33,5 +33,23 @@ class ARMImpl(adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerServicer
 
         # classify microservice data
         underprovisioned_ms, overprovisioned_ms = classify_ms(microservices_data)
+        # distribute residual cpu
+        arm_underprovisioned_decision, total_residual_cpu = distribute_residual_cpu(underprovisioned_ms, overprovisioned_ms)
+        # pay back final residual cpu
+        arm_overprovisioned_decision = back_distribute_residual_cpu(overprovisioned_ms, total_residual_cpu)
 
+        final_decision = arm_underprovisioned_decision + arm_overprovisioned_decision
 
+        # build response message
+        res = adaptive_resource_manager_pb2.ARMDecisionList()
+        for decision in final_decision:
+            res.scaling_instructions.append(
+                adaptive_resource_manager_pb2.ARMDecision(
+                    microservice_name = decision.microservice_name,
+                    allowed_scaling_action = decision.allowed_scaling_action,
+                    feasible_reps = decision.feasible_reps,
+                    arm_max_reps = decision.arm_max_reps,
+                    cpu_request_per_rep = decision.cpu_request_per_rep
+                )
+            )
+        return res

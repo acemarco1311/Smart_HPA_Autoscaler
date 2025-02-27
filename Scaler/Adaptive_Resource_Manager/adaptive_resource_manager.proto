@@ -7,7 +7,7 @@ service AdaptiveResourceManager {
 }
 
 message ResourceData {
-  string microservice_data = 1;
+  string microservice_name = 1;
   int32 current_reps = 2;
   int32 desired_reps = 3;
   int32 cpu_usage_per_rep = 4;
