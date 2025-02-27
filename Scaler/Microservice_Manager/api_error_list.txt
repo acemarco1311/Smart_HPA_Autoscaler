@@ -1,9 +1,0 @@
-- get the availableReplicas to check if the microservice has been ready.
-- if the pod has been deleted and restarting
--> return empty string in bash script.
-
-when the deployment is deleted
--> return "Error from server (NotFound): deployments.apps "adservice" not found"
-
-delete deployment, check immediately after apply deployment again
-->

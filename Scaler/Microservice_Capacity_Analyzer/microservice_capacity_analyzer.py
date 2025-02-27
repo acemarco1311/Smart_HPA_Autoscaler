@@ -2,6 +2,16 @@ from data_format import ResourceData
 from data_format import ARMDecision
 
 
+'''
+    Trigger resource exchange if any microservice
+    need to scale beyond its current limit.
+
+    Input:
+        microservices_data - List<ResourceData>
+
+    Output:
+        need_exchange - Boolean
+'''
 def need_resource_exchange(microservices_data):
     need_exchange = False
     i = 0
@@ -14,6 +24,18 @@ def need_resource_exchange(microservices_data):
     return need_exchange
 
 
+'''
+    Produce scaling instructions for microservices
+    that are free to scale: scale up within limit,
+    scale down, no scale.
+
+    Input:
+        microservices_data - List<ResourceData>
+            free to scale microservices
+
+    Output:
+        scaling_instructions - List<ARMDecision>
+'''
 def free_to_scale(microservices_data):
     scaling_instructions = []
     for microservice in microservices_data:
@@ -27,12 +49,24 @@ def free_to_scale(microservices_data):
     return scaling_instructions
 
 
+'''
+    Inspect microservices data to produce scaling actions.
+    
+    Input:
+        microservices_data - List<ResourceData>
+            resource data from all microservices
+
+    Output:
+        scaling_instructions - List<ARMDecision>
+            scaling instruction for each microservice
+'''
 def inspect_microservices(microservices_data):
+    # Resource Constraint environment
     if need_resource_exchange(microservices_data):
         #TODO: send request to ARM server
-        print("")
+        pass
 
-    # no scaling over limit, all free to scale
+    # no scaling over limit, all free to scale (ResourceRich)
     else:
         # capacity give instruction for scaling
         return free_to_scale(microservices_data)
@@ -45,6 +79,4 @@ def update_knowledge_base():
 
 # entry point
 if __name__ == "__main__":
-    arm_saved_decision = []
-    arm_decision = []
-    print("")
+    pass

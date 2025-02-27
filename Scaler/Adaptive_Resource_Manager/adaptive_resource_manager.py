@@ -165,7 +165,7 @@ def distribute_residual_cpu(underprovisioned_ms,
                 arm_max_reps,
                 microservice.cpu_request_each_rep
             ))
-    return arm_underprovisioned_decision
+    return arm_underprovisioned_decision, total_residual_cpu
 
 
 def back_distribute_residual_cpu(overprovisioned_ms, total_residual_cpu):
@@ -224,8 +224,3 @@ def back_distribute_residual_cpu(overprovisioned_ms, total_residual_cpu):
             microservice.cpu_request_each_reps
         ))
     return arm_overprovisioned_decision
-
-
-# entry point
-if __name__ == "__main__":
-    print("")

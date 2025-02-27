@@ -1,11 +1,12 @@
 import math
-import argparse
 from subroutine import validate_argument
 from subroutine import get_available_reps
 from subroutine import get_cpu_usage
 from subroutine import get_desired_reps
 from subroutine import get_cpu_request
+from subroutine import scale
 from data_format import ResourceData
+from data_format import ARMDecision
 
 
 
@@ -42,27 +43,62 @@ class MicroserviceManager:
 
     '''
         Microservice Manager class definition
+        microservice_name - str
+        min_reps - Int
+        max_reps - Int
+        target_cpu_utilization - Int
+        current_arm_max_reps - Int/None
+    '''
+
+    '''
+        Microservice Manager constructor
+
+        Input: 
+            microservice_name - str
+            min_reps - Int
+            max_reps - Int
+            target_cpu_utilization - Int
+
     '''
     # constructor
     def __init__(self, microservice_name, min_reps, max_reps,
-                 target_cpu_utilization, current_arm_max_reps):
+                 target_cpu_utilization):
 
         # validate type and value
         validate_argument(max_reps,
                           min_reps,
                           target_cpu_utilization,
-                          current_arm_max_reps)
+                          )
 
         self.microservice_name = microservice_name
         self.min_reps = min_reps  # user-defined
         self.max_reps = max_reps  # user-defined
         self.target_cpu_utilization = target_cpu_utilization  # user-defined
         # ARM defined, replace user-defined max_reps
-        self._current_arm_max_reps = current_arm_max_reps
+        self._current_arm_max_reps = None
 
+
+
+    '''
+        Get current arm max reps.
+        Input: None
+
+        Output:
+            current_arm_max_reps - Int
+            None if haven't exchange resource
+    '''
     def get_current_arm_max_reps(self):
         return self._current_arm_max_reps
 
+
+    '''
+        Set current arm_max_reps
+
+        Input:
+            new_arm_max_reps - Int
+
+        Output: None
+    '''
     def _set_current_arm_max_reps(self, new_arm_max_reps):
         # check input
         try:
@@ -73,99 +109,134 @@ class MicroserviceManager:
             print(err)
 
     def get_max_reps(self):
-        if self._current_arm_max_reps is not None:
+        # no resource exchange for this ms before
+        if self._current_arm_max_reps is None:
             return self.max_reps
         else:
             return self._current_arm_max_reps
 
-
     '''
         Microservice Manager functionality
     '''
-    def _Monitor(microservice_name):
-        current_reps = get_available_reps(microservice_name)
-        cpu_usage_per_rep = get_cpu_usage(microservice_name, current_reps)
-        desired_reps = get_desired_reps(microservice_name)
-        cpu_request_per_rep = get_cpu_request(microservice_name)
+
+    '''
+        Extract the resource metrics of the
+        microservice.
+
+        Input:
+
+        Output:
+            current_reps - Int:
+                available reps, running and pass
+                probe at least some specified time.
+            desired_reps - Int
+                reps that deployment will maintain,
+                specified in deployment config
+            cpu_usage_per_rep - Int
+            cpu_request_per_rep - Int
+    '''
+    def _Monitor(self):
+        print("Start collecting metrics")
+        current_reps = get_available_reps(self.microservice_name)
+        cpu_usage_per_rep = get_cpu_usage(self.microservice_name, current_reps)
+        desired_reps = get_desired_reps(self.microservice_name)
+        cpu_request_per_rep = get_cpu_request(self.microservice_name)
+        print("Complete collecting metrics")
 
         return (current_reps,
                 desired_reps,
                 cpu_usage_per_rep,
                 cpu_request_per_rep)
 
-    def _Analyze(desired_reps,
-                  current_reps,
-                  cpu_usage_per_rep,
-                  cpu_request_per_rep,
-                  target_cpu_utilization,
-                  min_reps,
-                  max_reps):
+
+    '''
+        Analyze the resource metrics to make scaling
+        decisions.
+
+        Input:
+            current_reps - Int
+            desired_reps - Int
+            cpu_usage_per_rep - Int
+            cpu_request_per_rep - Int
+
+        Output:
+            cpu_utilization_per_rep - Int
+            desired_for_scale_reps - Int
+            scaling_action- str
+    '''
+    def _Analyze(self, current_reps,
+                 desired_reps,
+                 cpu_usage_per_rep,
+                 cpu_request_per_rep):
+
+        print("Start analyzing metrics")
         cpu_utilization_per_rep = (cpu_usage_per_rep / cpu_request_per_rep) * 100
         # the new desired_reps to scale
         # in order to maintain the required cpu utilization
         desired_for_scale_reps = math.ceil(
                 current_reps *
-                (cpu_utilization_per_rep / target_cpu_utilization)
+                (cpu_utilization_per_rep / self.target_cpu_utilization)
                 )
         scaling_action = ""
         if (desired_reps != desired_for_scale_reps) and \
            (desired_for_scale_reps > current_reps) and  \
-           (desired_for_scale_reps >= min_reps):
+           (desired_for_scale_reps >= self.min_reps):
 
             scaling_action = "scale up"
         elif (desired_reps != desired_for_scale_reps) and \
              (desired_for_scale_reps < current_reps) and \
-             (desired_reps >= min_reps):
+             (desired_reps >= self.min_reps):
             scaling_action = "scale down"
         else:
             scaling_action = "no scale"
-        return cpu_utilization_per_rep, desired_for_scale_reps, scaling_action
+        print("Complete analyzing metrics")
+        return (
+                int(cpu_utilization_per_rep),
+                int(desired_for_scale_reps),
+                scaling_action
+                )
+
+    '''
+        Extract the resource metrics and scaling
+        action from the microservice.
+
+        Input: None
+
+        Output:
+            resource_data - ResourceData
+    '''
 
     def Extract(self):
         monitor_data = self._Monitor()
-        analyze_data = self._Analyze()
+        analyze_data = self._Analyze(monitor_data[0],
+                                     monitor_data[1],
+                                     monitor_data[2],
+                                     monitor_data[3])
         return ResourceData(
-                self.microservice_name,
-                monitor_data[0],
-                monitor_data[1],
-                monitor_data[2],
-                monitor_data[3],
-                analyze_data[0],
-                analyze_data[1],
-                analyze_data[2],
-                self.get_max_reps(),
-                self.min_reps,
-                self.target_cpu_utilization
-                )
+                microservice_name=self.microservice_name,
+                current_reps=monitor_data[0],
+                desired_reps=monitor_data[1],
+                cpu_usage_per_rep=monitor_data[2],
+                cpu_request_per_rep=monitor_data[3],
+                cpu_utilization_per_rep=analyze_data[0],
+                desired_for_scale_reps=analyze_data[1],
+                scaling_action=analyze_data[2],
+                max_reps=self.get_max_reps(),
+                min_reps=self.min_reps,
+                target_cpu_utilization=self.target_cpu_utilization
+        )
 
+    def Execute(self, arm_decision):
+        if arm_decision.microservice_name != self.microservice_name:
+            raise TypeError("Wrong destination for scaling instruction.")
 
-# entry point
-if __name__ == "__main__":
-    # only run this when the script is run directly
+        # scale microservice
+        scaling_result = scale(self.microservice_name,
+                               arm_decision.feasible_reps,
+                               self.min_reps)
 
-    # take user arguments from SLA
-    # parse user input into specified type to avoid TypeError
-    #parser = argparse.ArgumentParser()
-    #parser.add_argument("--microservice_name", type=str)
-    #parser.add_argument("--max_reps", type=int)
-    #parser.add_argument("--min_reps", type=int)
-    #parser.add_argument("--target_cpu_utilization", type=float)
-    #args = parser.parse_args()
+        # change max_R to update_max_R by ARM if success
+        if scaling_result is not None:
+            self._set_current_arm_max_reps(arm_decision.arm_max_reps)
+        return scaling_result
 
-    ## validate arguments
-    #validate_argument(args.max_reps,
-    #                  args.min_reps,
-    #                  args.target_cpu_utilization)
-
-    ## assign for constants
-    #MICROSERVICE_NAME = args.microservice_name
-    #MAX_REPS = args.max_reps
-    #MIN_REPS = args.min_reps
-    #TARGET_CPU_UTILIZATION = args.target_cpu_utilization
-
-    ## test argument
-    #print(MICROSERVICE_NAME, MAX_REPS, MIN_REPS, TARGET_CPU_UTILIZATION)
-    #print(type(MICROSERVICE_NAME))
-    #print(type(MAX_REPS))
-    #print(type(MIN_REPS))
-    #print(type(TARGET_CPU_UTILIZATION))

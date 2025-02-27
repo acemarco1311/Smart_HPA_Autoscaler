@@ -22,16 +22,13 @@ from tenacity import retry_if_exception_type
 '''
 
 
-def validate_argument(max_reps, min_reps, target_cpu_utilization, current_arm_max_reps):
+def validate_argument(max_reps, min_reps, target_cpu_utilization):
     if (max_reps <= 0 or min_reps <= 0):
         raise ValueError("Invalid number of replicas.")
     if (max_reps < min_reps):
         raise ValueError("Invalid number of replicas.")
     if (target_cpu_utilization <= 0 or target_cpu_utilization > 100):
         raise ValueError("Invalid target CPU utilization.")
-    if (current_arm_max_reps is not None):
-        if current_arm_max_reps < min_reps:
-            raise ValueError("Invalid ARM max_reps.")
 
 
 # callback function on each retry for execute_kubectl()
@@ -71,7 +68,7 @@ def callback_all_retries(retry_state):
 
     Output:
         result - str: response from kube-api-server
-        None if: empty response or error from kube-api-server
+        None if: empty response or error from kube-api-server, or use all retries.
 '''
 
 
@@ -132,6 +129,8 @@ def scale(microservice_name, reps, min_reps):
         available_replicas - Int: number of available replicas
         which passed the readiness probe and has been "Ready" >=
         `minReadySeconds` in deployment spec.
+        
+        None if failed
 
 '''
 
@@ -156,8 +155,8 @@ def get_available_reps(microservice_name):
         microservice_name - str
 
     Output:
-        cpu_usage - int: the average cpu usage by each replica (in milicores)
-        None if kube-api-server error
+        cpu_usage - Int: the average cpu usage by each replica (in milicores)
+        None if failed
 '''
 
 
@@ -240,7 +239,8 @@ def get_desired_reps(microservice_name):
         microservice_name - str
 
     Ouput:
-        cpu_request - int (in milicores)
+        cpu_request - Int (in milicores)
+        None if failed.
 '''
 
 
