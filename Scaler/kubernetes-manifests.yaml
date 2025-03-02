@@ -1,0 +1,41 @@
+# microservice managers
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adservice-manager  # deployment name
+  labels:
+    app: smart-hpa  # get all deployments of smart-hpa.
+                    # by kubectl get deployments -l app=smart-hpa
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: adservice-manager  #TODO
+  template:
+    metadata:
+      labels:
+        app: adservice-manager  #TODO
+    spec:
+      containers:
+      - name: adservice-manager-container #TODO
+        image: acemarco/microservice-manager-base:latest
+        # Docker image ENTRYPOINT command use these args
+        args: [
+
+        ]
+        ports:  # container port exposed
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adservice-manager
+spec:
+  type: ClusterIP  # internal communication only
+  selector:
+    app: adservice-manager  #TODO
+  ports:
+  - name: traffic  # type of connection
+    port: 5000  # service's port
+    targetPort: 8080  # container's port to forward traffic to
+                      # must match container's exposed port

@@ -1,3 +1,8 @@
+import argparse
+
+import grpc
+from concurrent import futures
+
 from adaptive_resource_manager import classify_ms
 from adaptive_resource_manager import distribute_residual_cpu
 from adaptive_resource_manager import back_distribute_residual_cpu
@@ -53,3 +58,24 @@ class ARMImpl(adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerServicer
                 )
             )
         return res
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--hostname", type=str)
+    parser.add_argument("--port", type=str)
+    args = parser.parse_args()
+
+    server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
+    implementation = ARMImpl()
+    
+    adaptive_resource_manager_pb2_grpc.add_ARMImplServicer_to_server(
+            server,
+            implementation
+    )
+    
+    server.add_insecure_port("[::]:", args.port)
+    server.start()
+    print("Adaptive Resource Manager has started.")
+    server.wait_for_termination()
+
