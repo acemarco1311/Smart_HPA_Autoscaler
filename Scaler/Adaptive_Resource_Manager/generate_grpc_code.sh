@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-
-
-
-
 # server side Adaptive Resource Manager
 python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. adaptive_resource_manager.proto
 

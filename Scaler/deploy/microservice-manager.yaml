@@ -7,7 +7,7 @@ metadata:
     app: smart-hpa  # get all deployments of smart-hpa.
                     # by kubectl get deployments -l app=smart-hpa
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: adservice-manager  #TODO
@@ -21,7 +21,12 @@ spec:
         image: acemarco/microservice-manager-base:latest
         # Docker image ENTRYPOINT command use these args
         args: [
-
+          "--hostname=localhost",  # hostname
+          "--port=8080",  # port
+          "--microservice_name=adservice", # microservice name
+          "--min_reps=1",  # min reps
+          "--max_reps=5",  # max reps
+          "--target_cpu_utilization=80" # target cpu utilization
         ]
         ports:  # container port exposed
         - containerPort: 8080

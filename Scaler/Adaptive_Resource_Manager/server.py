@@ -69,13 +69,13 @@ if __name__ == "__main__":
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     implementation = ARMImpl()
     
-    adaptive_resource_manager_pb2_grpc.add_ARMImplServicer_to_server(
-            server,
-            implementation
+    adaptive_resource_manager_pb2_grpc.add_AdaptiveResourceManagerServicer_to_server(
+            implementation,
+            server
     )
     
-    server.add_insecure_port("[::]:", args.port)
+    server.add_insecure_port("[::]:" + args.port)
     server.start()
-    print("Adaptive Resource Manager has started.")
+    print("Adaptive Resource Manager has started on port " + args.port)
     server.wait_for_termination()
 

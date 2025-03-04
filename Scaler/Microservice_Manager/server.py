@@ -90,7 +90,7 @@ if __name__ == "__main__":
     # configure server
     server.add_insecure_port("[::]:" + args.port)
     server.start()
-    print("Microservice Manager for " + args.microservice_name + " started.")
+    print("Microservice Manager for " + args.microservice_name + " started on port " + args.port)
     server.wait_for_termination()
 
 
