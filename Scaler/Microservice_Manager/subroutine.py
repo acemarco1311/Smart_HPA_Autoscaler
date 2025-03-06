@@ -91,13 +91,13 @@ def execute_kubectl(script):
     # such as kubectl delete
     script_result = subprocess.check_output(script.split(),
                                             stderr=subprocess.STDOUT,
-                                            timeout=2).decode("utf-8")
+                                            timeout=2)
     # empty string from server might become string "''"
     # when decode from byte to str type
-    script_result = script_result.strip().strip('"').strip("'")
-    if len(script_result) == 0:
+    script_result_str = script_result.decode("utf-8").strip().strip('"').strip("'")
+    if len(script_result_str) == 0:
         raise ValueError("Received an empty result from kube-apiserver.")
-    return script_result
+    return script_result_str
 
 
 #TODO: is there any chance the number of reps = 0.

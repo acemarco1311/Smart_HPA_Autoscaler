@@ -44,3 +44,6 @@ spec:
     port: 5000  # service's port
     targetPort: 8080  # container's port to forward traffic to
                       # must match container's exposed port
+  - name: health
+    port: 5005
+    targetPort: 8008

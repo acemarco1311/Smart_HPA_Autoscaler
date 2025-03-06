@@ -1,6 +1,7 @@
 import grpc
 from data_format import ResourceData
 from data_format import ARMDecision
+import subroutine
 
 # communicate to server of Adaptive Resource Manager
 import adaptive_resource_manager_pb2
@@ -9,6 +10,97 @@ import adaptive_resource_manager_pb2_grpc
 # communicate to servers of Microservice Managers
 import microservice_manager_pb2
 import microservice_manager_pb2_grpc
+
+
+class CapacityAnalyzer:
+
+    '''
+    microservice_names - List<str>: 
+        Name of Service/Deployment of MS Manager
+    microservice_connections - List<Dict>:
+        contains name, channel, stub
+    arm_name  - str: Name of Service/Deployment of ARM
+    arm_connection - Dict:
+        conains name, channel, stub.
+        
+    '''
+    
+    
+    '''
+        Input:
+            microservice_names - List<str>
+            arm_name - str
+
+        Connects to all other components (ms managers vs arm)
+    '''
+    def __init__(self, microservice_names):
+        self.microservice_names = microservice_names
+        # default
+        self.arm_name = "adaptive-resource-manager"
+        
+        # concurrently connect to all microservice managers
+        # connect to adaptive resource manager
+        self._microservice_connections = []
+        for microservice in mircoservice_names:
+            connection = self.connect_to_server(microservice)
+            self._microservice_connections.append()
+            
+
+
+'''
+    Connect to gRPC server of a Microservice Manager or
+    Adaptive Resource Manager
+    
+    Input:
+        microservice_name - str:
+            the name of microservice.
+            or "ARM" if connecting to Adaptive
+            Resource Manager
+
+    Output:
+        Dict<str, Obj>: 
+            name - str:
+                microservice_name or "ARM"
+            channel - grpc.Channel:
+                TCP connection
+            - stub
+        
+        None if fails.
+'''
+
+def connect_to_server(microservice_name):
+    service_endpoint = subroutine.get_service_endpoint(microservice_name)
+    if service_endpoint is None:
+        print("Cannot resolve endpoint to connect to Service to ", microservice_name)
+        return None
+    try:
+        connection = None
+        channel = grpc.insecure_channel(
+            service_endpoint,
+            options = [
+                #TODO: fault tolerance
+                # retry-backoff
+                # health check
+                # timeout
+                # https://github.com/grpc/proposal/blob/master/A6-client-retries.md
+            ]
+        )
+        if microservice_name == "adaptive-resource-manager":
+            stub = adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerStub(channel)
+        else:
+            stub = microservice_manager_pb2_grpc.MicroserviceManagerStub(channel)
+        # return Dict
+        connection = {
+                "name": microservice_name,
+                "channel": channel, 
+                "stub": stub
+        }
+    except Exception as err:
+        print("Unexpected error occured while connecting to ", microservice_name)
+        print(err)
+    finally:
+        return connection
+
 
 
 '''
@@ -129,7 +221,6 @@ def send_request_to_arm(microservices_data):
         scaling_instructions - List<ARMDecision>
             scaling instruction for each microservice
 '''
-
 
 def inspect_microservices(microservices_data):
     # Resource Constraint environment
