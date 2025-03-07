@@ -59,8 +59,7 @@ class MicroserviceManagerImpl(
         res = microservice_manager_pb2.MaxRepResponse(max_reps=current_max_reps)
         return res
 
-
-# entry point
+vvcv# entry point
 if __name__ == "__main__":
     # get client inputs
     parser = argparse.ArgumentParser()

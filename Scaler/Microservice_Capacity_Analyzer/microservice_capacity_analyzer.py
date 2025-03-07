@@ -21,7 +21,7 @@ class CapacityAnalyzer:
         contains name, channel, stub
     arm_name  - str: Name of Service/Deployment of ARM
     arm_connection - Dict:
-        conains name, channel, stub.
+        containes name, channel, stub.
         
     '''
     
@@ -33,143 +33,283 @@ class CapacityAnalyzer:
 
         Connects to all other components (ms managers vs arm)
     '''
-    def __init__(self, microservice_names):
+    def __init__(self, microservice_names, arm_name):
         self.microservice_names = microservice_names
         # default
-        self.arm_name = "adaptive-resource-manager"
+        self.arm_name = arm_name
         
+        #TODO: handle errors
+        # connect to ARM
+        self._arm_connection = self._connect_to_server(self.arm_name)
+        
+        #TODO: handle timeout/errors
+        # use threads for optimization
         # concurrently connect to all microservice managers
         # connect to adaptive resource manager
         self._microservice_connections = []
         for microservice in mircoservice_names:
-            connection = self.connect_to_server(microservice)
-            self._microservice_connections.append()
-            
+            connection = self._connect_to_server(microservice)
+            self._microservice_connections.append(connection)
+        return
 
 
-'''
-    Connect to gRPC server of a Microservice Manager or
-    Adaptive Resource Manager
-    
-    Input:
-        microservice_name - str:
-            the name of microservice.
-            or "ARM" if connecting to Adaptive
-            Resource Manager
-
-    Output:
-        Dict<str, Obj>: 
-            name - str:
-                microservice_name or "ARM"
-            channel - grpc.Channel:
-                TCP connection
-            - stub
+    '''
+        Connect to gRPC server of a Microservice Manager or
+        Adaptive Resource Manager
         
-        None if fails.
-'''
+        Input:
+            microservice_name - str:
+                the name of microservice.
+                or "ARM" if connecting to Adaptive
+                Resource Manager
 
-def connect_to_server(microservice_name):
-    service_endpoint = subroutine.get_service_endpoint(microservice_name)
-    if service_endpoint is None:
-        print("Cannot resolve endpoint to connect to Service to ", microservice_name)
-        return None
-    try:
+        Output:
+            Dict<str, Obj>: 
+                name - str:
+                    microservice_name or "ARM"
+                channel - grpc.Channel:
+                    TCP connection
+                - stub
+            
+            None if fails.
+    '''
+
+    def _connect_to_server(self, microservice_name):
+        service_endpoint = subroutine.get_service_endpoint(microservice_name)
+        if service_endpoint is None:
+            print("Cannot resolve endpoint to connect to Service to ", microservice_name)
+            return None
+        try:
+            connection = None
+            channel = grpc.insecure_channel(
+                service_endpoint,
+                options = [
+                    #TODO: fault tolerance
+                    # retry-backoff
+                    # health check
+                    # timeout
+                    # https://github.com/grpc/proposal/blob/master/A6-client-retries.md
+                ]
+            )
+            if microservice_name == "adaptive-resource-manager":
+                stub = adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerStub(channel)
+            else:
+                stub = microservice_manager_pb2_grpc.MicroserviceManagerStub(channel)
+            # return Dict
+            connection = {
+                    "name": microservice_name,
+                    "channel": channel, 
+                    "stub": stub
+            }
+        except Exception as err:
+            print("Unexpected error occured while connecting to ", microservice_name)
+            print(err)
+        finally:
+            return connection
+
+
+
+    '''
+        Trigger resource exchange if any microservice
+        need to scale beyond its current limit.
+
+        Input:
+            microservices_data - List<ResourceData>
+
+        Output:
+            need_exchange - Boolean
+    '''
+
+
+    def _need_resource_exchange(self, microservices_data):
+        need_exchange = False
+        i = 0
+        while not need_exchange and i < len(microservices_data):
+            # need to scale beyond max_reps
+            if (microservices_data[i].desired_for_scale_reps >
+                    microservices_data[i].max_reps):
+                need_exchange = True
+            i += 1
+        return need_exchange
+
+
+    '''
+        Produce scaling instructions for microservices
+        that are free to scale: scale up within limit,
+        scale down, no scale.
+
+        Input:
+            microservices_data - List<ResourceData>
+                free to scale microservices
+
+        Output:
+            scaling_instructions - List<ARMDecision>
+    '''
+
+
+    def _free_to_scale(self, microservices_data):
+        # TODO: no need to send decision if
+        # scaling = "no scale"
+        scaling_instructions = []
+        for microservice in microservices_data:
+            scaling_instructions.append(ARMDecision(
+                microservice.microservice_name,
+                microservice.scaling_action,
+                microservice.desired_for_scale_reps,
+                microservice.max_reps,
+                microservice.cpu_request_per_rep
+                ))
+        return scaling_instructions
+
+
+    '''
+        Get the connection (name, channel, stub) in the
+        connection pool
+
+        Input:
+            microservice_name - str:
+        
+        Output:
+            connection - Dict<str, Obj>
+            
+            None if not exists.
+    '''
+
+    def _get_connection(self, microservice_name):
         connection = None
-        channel = grpc.insecure_channel(
-            service_endpoint,
-            options = [
-                #TODO: fault tolerance
-                # retry-backoff
-                # health check
-                # timeout
-                # https://github.com/grpc/proposal/blob/master/A6-client-retries.md
-            ]
-        )
-        if microservice_name == "adaptive-resource-manager":
-            stub = adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerStub(channel)
-        else:
-            stub = microservice_manager_pb2_grpc.MicroserviceManagerStub(channel)
-        # return Dict
-        connection = {
-                "name": microservice_name,
-                "channel": channel, 
-                "stub": stub
-        }
-    except Exception as err:
-        print("Unexpected error occured while connecting to ", microservice_name)
-        print(err)
-    finally:
+        i = 0
+        while connection is None and i < len(self._microservice_connections):
+            if microservice_name == self._microservice_connection[i]["name"]:
+                connection = self._microservice_connection[i]
+            i += 1
         return connection
 
 
-
-'''
-    Trigger resource exchange if any microservice
-    need to scale beyond its current limit.
-
-    Input:
-        microservices_data - List<ResourceData>
-
-    Output:
-        need_exchange - Boolean
-'''
-
-
-def need_resource_exchange(microservices_data):
-    need_exchange = False
-    i = 0
-    while not need_exchange and i < len(microservices_data):
-        # need to scale beyond max_reps
-        if (microservices_data[i].desired_for_scale_reps >
-                microservices_data[i].max_reps):
-            need_exchange = True
-        i += 1
-    return need_exchange
+    '''
+        Get ResourceData from all connected Microservice Manager
+        
+        Input:
+            None
+        
+        Output:
+            List<ResourceData>
+    '''
+    #TODO: fault tolerance, some manager disconnected
+    def obtain_all_resource_data(self):
+        resource_data = []
+        for connection in self._microservice_connection:
+            resource_data.append(self._obtain_resource_data(connection))
+        return resource_data
 
 
-'''
-    Produce scaling instructions for microservices
-    that are free to scale: scale up within limit,
-    scale down, no scale.
+    '''
+        Send request to extract the metrics (resource data)
+        from a Microservice Manager and perform scaling
+        
+        Input:
+            microservice_name - str
 
-    Input:
-        microservices_data - List<ResourceData>
-            free to scale microservices
+        Output:
+            resource_data - ResourceData
 
-    Output:
-        scaling_instructions - List<ARMDecision>
-'''
+    '''
+
+    def _obtain_resource_data(self, connection):
+        #TODO: fault tolerance: not exist (None)
+        stub = connection["stub"]
+        
+        # create request
+        request = microservice_manager_pb2.ResourceDataRequest()
+        
+        #TODO: network fault tolerance
+        # get response
+        response = stub.ExtractResourceData(request)
+
+        # convert gRPC ResourceData into named tuple ResourceData
+        return ResourceData(
+            response.microservice_name,
+            response.current_reps,
+            response.desired_reps,
+            response.cpu_usagage_per_rep,
+            response.cpu_request_per_rep,
+            response.cpu_utilization_per_rep,
+            response.desired_for_scale_reps,
+            response.scaling_action,
+            response.max_reps,
+            response.min_reps,
+            response.target_cpu_utilization
+        )
+
+    '''
+        Send scaling instruction to Microservice Manager
+        
+        Input:
+            ARMDecision
+
+        Output:
+            scaling_status - str
+    '''
+    def _send_scaling_instruction(arm_decision):
+        #TODO: fault tolerance, not exist None
+        microservice_name = arm_decision.microservice_name
+        connection = self._get_connection(microservice_name)
+        stub = connection["stub"]
+
+        # create request
+        request = microservice_manager_pb2.ARMDecision(
+            microservice_name=arm_decision.microservice_name,
+            allowed_scaling_action=arm_decision.allowed_scaling_action,
+            feasible_reps=arm_decision.feasible_reps,
+            max_reps=arm_decision.max_reps,
+            cpu_request_per_rep=arm_decision.cpu_request_per_rep
+        )
+
+        
+        #TODO: connection fault tolerance
+        # send request
+        response = stub.ExecuteScaling(request)
+        return response.status
+
+    '''
+        Distribute all scaling instructions to all 
+        Microservice Managers
+        
+        Input:
+            scaling_instructions - List<ARMDecision>
 
 
-def free_to_scale(microservices_data):
-    scaling_instructions = []
-    for microservice in microservices_data:
-        scaling_instructions.append(ARMDecision(
-            microservice.microservice_name,
-            microservice.scaling_action,
-            microservice.desired_for_scale_reps,
-            microservice.max_reps,
-            microservice.cpu_request_per_rep
-            ))
-    return scaling_instructions
+        Output:
+            status_list - List<Dict>:
+                Dict contains: microservice names (str), 
+                scaling status (str)
+    '''
+    def distribute_all_instructions(arm_decisions):
+        status_list = []
+        for decision in arm_decisions:
+            status_list.append({
+                "microservice_name": decision.microservice_name,
+                "status": self._send_scaling_instruction(decision)
+            })
+        return status_list
 
-'''
-    Send request to Adaptive Resource Manager to
-    obtain scaling instructions in resource constrained
-    environment.
-    
-    Input:
-        microservices_data - List<ResourceData>
+    '''
+        Send request to Adaptive Resource Manager to
+        obtain scaling instructions in resource constrained
+        environment.
+        
+        Input:
+            microservices_data - List<ResourceData>
 
-    Output:
-        scaling_instructions - List<ARMDecision>
-'''
+        Output:
+            scaling_instructions - List<ARMDecision>
+    '''
 
 
-def send_request_to_arm(microservices_data):
-    with grpc.insecure_channel("localhost:5002") as channel:
+    def _send_request_to_arm(self, microservices_data):
         # obtain stub
-        stub = adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerStub(channel)
+        #TODO: fault tolerance, None - doesn't exist
+        connection = self._arm_connection
+        stub = connection["stub"]
         # create request ResourceDataList
         req = adaptive_resource_manager_pb2.ResourceDataList()
         for data in microservices_data:
@@ -210,35 +350,70 @@ def send_request_to_arm(microservices_data):
 
 
 
-'''
-    Inspect microservices data to produce scaling actions.
+    '''
+        Inspect microservices data to produce scaling actions.
 
-    Input:
-        microservices_data - List<ResourceData>
-            resource data from all microservices
+        Input:
+            microservices_data - List<ResourceData>
+                resource data from all microservices
 
-    Output:
-        scaling_instructions - List<ARMDecision>
-            scaling instruction for each microservice
-'''
+        Output:
+            scaling_instructions - List<ARMDecision>
+                scaling instruction for each microservice
+    '''
 
-def inspect_microservices(microservices_data):
-    # Resource Constraint environment
-    if need_resource_exchange(microservices_data):
-        scaling_instructions = send_request_to_arm(microservices_data)
+    def inspect_microservices(self, microservices_data):
+        # Resource Constraint environment
+        if need_resource_exchange(microservices_data):
+            scaling_instructions = self._send_request_to_arm(microservices_data)
 
-    # no scaling over limit, all free to scale (ResourceRich)
-    else:
-        scaling_instructions = free_to_scale(microservices_data)
+        # no scaling over limit, all free to scale (ResourceRich)
+        else:
+            scaling_instructions = self._free_to_scale(microservices_data)
+        return scaling_instructions
 
-    return scaling_instructions
 
+    #TODO: update Knowledge Base
+    def update_knowledge_base(self):
+        pass
 
-#TODO: update Knowledge Base
-def update_knowledge_base():
-    pass
+    #TODO: close a connection
+    def close_microservice_connection(microservice_manager):
+        pass
 
+    #TODO: close arm connection
+    def close_arm_connection():
+        pass
+
+    
+    #TODO: close all microservice manager connection
+    def close_all_microservice_connection():
+        pass
+
+    def total_allocated_resource():
+        pass
+
+    
 
 # entry point
 if __name__ == "__main__":
-    pass
+    microservice_names = [
+        "adservice-manager",
+        "cartservice-manager",
+        "checkoutservice-manager",
+        "frontend-manager",
+        "paymentservice-manager",
+        "productcatalogservice-manager",
+        "recommendationservice-manager",
+        "shippingservice-manager",
+        "redis-cart-manager"
+    ]
+    arm_name = "adaptive-resource-manager"
+    # create capacity analyzer
+    # connect to all
+    client = CapacityAnalyzer(microservice_names, arm_name)
+    while True:
+        resource_data = client.obtain_all_resource_data()
+        scaling_instructions = client.inspect_microservices(resource_data)
+        scaling_status = client.distribute_all_instructions(scaling_instructions)
+        print(scaling_status)
