@@ -16,6 +16,8 @@ spec:
       labels:
         app: cartservice-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: cartservice-manager-container #TODO
         image: acemarco/microservice-manager-base:latest

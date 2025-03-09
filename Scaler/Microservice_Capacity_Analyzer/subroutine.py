@@ -50,12 +50,13 @@ def callback_all_retries(retry_state):
     Input:
         script - str:
             command to run
-    
+
     Output:
         script_result_str - str
         None if failed
 '''
 
+#TODO: backoff exponential instead of fixed wait
 # retry
 @retry(
     # 3 attempts, total execution time = 6s
@@ -63,9 +64,9 @@ def callback_all_retries(retry_state):
           stop_after_delay(6)),
     # wait 1 second between retries
     wait=wait_fixed(1),
-    # show error of retry
+    # if failed, show the type of error
     after=callback_each_retry,
-    # cannot complete notification
+    # if failed all retries, notify that it cannot be completed
     retry_error_callback=callback_all_retries
 )
 def execute_kubectl(script):
@@ -79,7 +80,7 @@ def execute_kubectl(script):
     # empty string might become string "''"
     # avoid this
     script_result_str = script_result.decode("utf-8").strip().strip('"').strip("'")
-    
+
     if len(script_result_str) == 0:
         raise ValueError("Received an empty result from kube-apiserver")
     return script_result_str
@@ -87,31 +88,34 @@ def execute_kubectl(script):
 
 '''
     Get the clusterIP:port of the service
-    with port name = "traffic" (differs from 
+    with port name = "traffic" (differs from
     "health" port for liveness)
-    
+
     Input:
         - microservice_name - str
-    
-    Output: 
+
+    Output:
         - service_endpoint - str
         in form clusterIP:port
 
         - None if failed
 '''
 
+
 def get_service_endpoint(microservice_name):
     ip_script = (
             f"kubectl get service {microservice_name} "
             "-o=jsonpath='{.spec.clusterIP}'"
     )
+    # retry-backoff with kubeapi-server
     ip_script_result = execute_kubectl(ip_script)
-    
+
     ports_script = (
             f"kubectl get service {microservice_name} "
             "-o=jsonpath='{.spec.ports}'"
     )
-    
+
+    # retry-backoff with kubeapi-server
     ports_script_result = execute_kubectl(ports_script)
 
     # error occured in calling K8s API
@@ -135,7 +139,7 @@ def get_service_endpoint(microservice_name):
         print("Unexpected error occurred in connecting to Service ", microservice_name)
         print(err)
     return service_endpoint
-    
+
 
 '''
     Get all the pods/servers endpoints that

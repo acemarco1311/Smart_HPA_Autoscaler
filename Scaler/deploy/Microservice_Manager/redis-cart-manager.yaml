@@ -16,6 +16,8 @@ spec:
       labels:
         app: redis-cart-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: redis-cart-manager-container #TODO
         image: acemarco/microservice-manager-base:latest

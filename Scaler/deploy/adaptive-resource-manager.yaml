@@ -16,6 +16,8 @@ spec:
       labels:
         app: adaptive-resource-manager  #TODO
     spec:
+      serviceAccount: god  # run kubectl command
+      serviceAccountName: god  
       containers:
       - name: adaptive-resource-manager-container #TODO
         image: acemarco/adaptive-resource-manager:latest

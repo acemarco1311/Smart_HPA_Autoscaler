@@ -16,6 +16,8 @@ spec:
       labels:
         app: recommendationservice-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: recommendationservice-manager-container #TODO
         image: acemarco/microservice-manager-base:latest

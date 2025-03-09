@@ -59,9 +59,10 @@ class MicroserviceManagerImpl(
         res = microservice_manager_pb2.MaxRepResponse(max_reps=current_max_reps)
         return res
 
-vvcv# entry point
+# entry point
 if __name__ == "__main__":
-    # get client inputs
+
+    # geta client inputs
     parser = argparse.ArgumentParser()
     parser.add_argument("--hostname", type=str)
     parser.add_argument("--port", type=str)

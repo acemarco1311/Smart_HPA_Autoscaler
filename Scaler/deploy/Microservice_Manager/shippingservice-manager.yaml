@@ -16,6 +16,8 @@ spec:
       labels:
         app: shippingservice-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: shippingservice-manager-container #TODO
         image: acemarco/microservice-manager-base:latest

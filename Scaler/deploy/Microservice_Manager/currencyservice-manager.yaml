@@ -16,6 +16,8 @@ spec:
       labels:
         app: currencyservice-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: currencyservice-manager-container #TODO
         image: acemarco/microservice-manager-base:latest

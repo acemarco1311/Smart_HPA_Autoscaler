@@ -16,6 +16,8 @@ spec:
       labels:
         app: frontend-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: frontend-manager-container #TODO
         image: acemarco/microservice-manager-base:latest

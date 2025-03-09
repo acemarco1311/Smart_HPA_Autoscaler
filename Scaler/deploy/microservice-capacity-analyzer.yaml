@@ -16,6 +16,8 @@ spec:
       labels:
         app: microservice-capacity-analyzer  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: microservice-capacity-analyzer-container #TODO
         image: acemarco/microservice-capacity-analyzer:latest

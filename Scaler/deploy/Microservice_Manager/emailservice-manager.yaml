@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: paymentservice-manager  # deployment name
+  name: emailservice-manager  # deployment name
   labels:
     app: smart-hpa  # get all deployments of smart-hpa.
                     # by kubectl get deployments -l app=smart-hpa
@@ -10,22 +10,22 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: paymentservice-manager  #TODO
+      app: emailservice-manager  #TODO
   template:
     metadata:
       labels:
-        app: paymentservice-manager  #TODO
+        app: emailservice-manager  #TODO
     spec:
       serviceAccount: god
       serviceAccountName: god
       containers:
-      - name: paymentservice-manager-container #TODO
+      - name: emailservice-manager-container #TODO
         image: acemarco/microservice-manager-base:latest
         # Docker image ENTRYPOINT command use these args
         args: [
           "--hostname=localhost",  # hostname
           "--port=8080",  # port
-          "--microservice_name=paymentservice", # microservice name
+          "--microservice_name=emailservice", # microservice name
           "--min_reps=1",  # min reps
           "--max_reps=5",  # max reps
           "--target_cpu_utilization=80" # target cpu utilization
@@ -39,11 +39,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: paymentservice-manager
+  name: emailservice-manager
 spec:
   type: ClusterIP  # internal communication only
   selector:
-    app: paymentservice-manager  #TODO
+    app: emailservice-manager  #TODO
   ports:
   - name: traffic  # type of connection
     port: 5000  # service's port

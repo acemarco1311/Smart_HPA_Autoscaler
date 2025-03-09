@@ -16,6 +16,8 @@ spec:
       labels:
         app: adservice-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: adservice-manager-container #TODO
         image: acemarco/microservice-manager-base:latest

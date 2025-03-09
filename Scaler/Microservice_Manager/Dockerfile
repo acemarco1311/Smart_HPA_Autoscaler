@@ -27,6 +27,11 @@ COPY microservice_manager.py ./src/microservice_manager.py
 COPY server.py ./src/server.py
 
 
+# set up to run `kubectl` command
+RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+RUN mv kubectl /usr/local/bin/kubectl
+RUN chmod +x /usr/local/bin/kubectl
+
 # run with args from K8s deployment `args`
 # for different instances of MS Manager
 ENTRYPOINT ["python3", "./src/server.py"]

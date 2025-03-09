@@ -16,6 +16,8 @@ spec:
       labels:
         app: productcatalogservice-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: productcatalogservice-manager-container #TODO
         image: acemarco/microservice-manager-base:latest

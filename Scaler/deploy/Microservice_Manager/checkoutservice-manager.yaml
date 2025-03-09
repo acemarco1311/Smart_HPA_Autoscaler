@@ -16,6 +16,8 @@ spec:
       labels:
         app: checkoutservice-manager  #TODO
     spec:
+      serviceAccount: god
+      serviceAccountName: god
       containers:
       - name: checkoutservice-manager-container #TODO
         image: acemarco/microservice-manager-base:latest
