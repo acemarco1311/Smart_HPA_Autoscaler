@@ -153,5 +153,5 @@ def get_service_endpoint(microservice_name):
 '''
 def get_all_server_endpoints(microservice_name):
     script = f"kubectl get endpoints {microservice_name}"
-    server_endpoints = subroutine.execute_kubectl(script)
+    server_endpoints = execute_kubectl(script)
     return server_endpoints

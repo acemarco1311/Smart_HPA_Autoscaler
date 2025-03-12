@@ -5,6 +5,12 @@ from data_format import ARMDecision
 import argparse
 from microservice_manager import MicroserviceManager
 
+# for grpc health check
+# generated from a provided health check .proto
+from grpc_health.v1 import health
+from grpc_health.v1 import health_pb2
+from grpc_health.v1 import health_pb2_grpc
+
 
 import microservice_manager_pb2  # for message definitions
 # for stub (client) or implementation class (server)
@@ -22,7 +28,15 @@ class MicroserviceManagerImpl(
 
     # implementation
     def ExtractResourceData(self, request, context):
+        # data can be None if error when calling kube-api-server
         data = self._microservice_manager.Extract()
+        
+        # if receive a None in extracting metrics
+        # send error 
+        if data is None:
+            context.abort(grpc.StatusCode.INTERNAL,
+                          "Error in extracting resource data")
+
         # response
         res = microservice_manager_pb2.ResourceData(
             microservice_name=data.microservice_name,
@@ -48,6 +62,11 @@ class MicroserviceManagerImpl(
                 cpu_request_per_rep = request.cpu_request_per_rep
         )
         result = self._microservice_manager.Execute(arm_decision)
+        # return Error if faults occured in interacting with kube-api
+        if result is None:
+            # this return an error and terminate the channel
+            context.abort(grpc.StatusCode.INTERNAL,
+                          "Error in execute scaling for microservice.")
         res = microservice_manager_pb2.ScalingStatus(
                 status = result
         )
@@ -58,6 +77,25 @@ class MicroserviceManagerImpl(
         current_max_reps = self._microservice_manager.get_max_reps()
         res = microservice_manager_pb2.MaxRepResponse(max_reps=current_max_reps)
         return res
+
+
+'''
+    Configure health service in server for liveness probe
+    via Check(), Watch() 
+
+    Input: 
+        server - gRPC server
+
+'''
+def _configure_health_server(server: grpc.Server):
+    # create a health servicer
+    health_servicer = health.HealthServicer(
+        experimental_non_blocking=True,
+        experimental_thread_pool=futures.ThreadPoolExecutor(max_workers=10),
+    )
+    # add health servicer to Server
+    health_pb2_grpc.add_HealthServicer_to_server(health_servicer, server)
+
 
 # entry point
 if __name__ == "__main__":
@@ -89,6 +127,7 @@ if __name__ == "__main__":
     )
     # configure server
     server.add_insecure_port("[::]:" + args.port)
+    _configure_health_server(server)
     server.start()
     print("Microservice Manager for " + args.microservice_name + " started on port " + args.port)
     server.wait_for_termination()

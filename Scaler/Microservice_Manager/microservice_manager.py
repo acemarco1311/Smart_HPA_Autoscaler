@@ -136,19 +136,34 @@ class MicroserviceManager:
                 specified in deployment config
             cpu_usage_per_rep - Int
             cpu_request_per_rep - Int
+
+            OR:
+
+            None if there is error in calling kube API
     '''
     def _Monitor(self):
         print("Start collecting metrics")
         current_reps = get_available_reps(self.microservice_name)
+        if current_reps is None:
+            return None
+
         cpu_usage_per_rep = get_cpu_usage(self.microservice_name, current_reps)
         desired_reps = get_desired_reps(self.microservice_name)
         cpu_request_per_rep = get_cpu_request(self.microservice_name)
         print("Complete collecting metrics")
-
-        return (current_reps,
-                desired_reps,
-                cpu_usage_per_rep,
-                cpu_request_per_rep)
+        
+        result = (current_reps,
+                  desired_reps,
+                  cpu_usage_per_rep,
+                  cpu_request_per_rep)
+        valid_result = True
+        for i in result:
+            if i is None:
+                valid_result = False
+                break
+        if valid_result:
+            return result
+        return None
 
 
     '''
@@ -206,10 +221,17 @@ class MicroserviceManager:
 
         Output:
             resource_data - ResourceData
+            
+            or
+
+            None if there is any error
     '''
 
     def Extract(self):
         monitor_data = self._Monitor()
+        if monitor_data is None:
+            return None
+
         analyze_data = self._Analyze(monitor_data[0],
                                      monitor_data[1],
                                      monitor_data[2],

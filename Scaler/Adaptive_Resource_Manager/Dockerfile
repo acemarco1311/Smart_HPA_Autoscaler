@@ -9,6 +9,7 @@ WORKDIR /adaptive_resource_manager
 # and add to .txt file
 RUN pip install --no-cache-dir grpcio
 RUN pip install --no-cache-dir grpcio_tools
+RUN pip install --no-cache-dir grpcio-health-checking
 
 # get source code
 #TODO: reorganize .proto files

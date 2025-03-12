@@ -1,9 +1,11 @@
 FROM python:3.12.2
 
+ENV PYTHONUNBUFFERED=1
 WORKDIR /microservice_capacity_analyzer
 
 RUN pip install --no-cache-dir grpcio
 RUN pip install --no-cache-dir grpcio-tools
+RUN pip install --no-cache-dir grpcio-health-checking
 RUN pip install --no-cache-dir tenacity
 
 # grpc runtime files

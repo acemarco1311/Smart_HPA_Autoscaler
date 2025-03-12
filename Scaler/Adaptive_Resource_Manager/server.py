@@ -1,7 +1,11 @@
 import argparse
 
 import grpc
+from grpc_health.v1 import health
+from grpc_health.v1 import health_pb2
+from grpc_health.v1 import health_pb2_grpc
 from concurrent import futures
+
 
 from adaptive_resource_manager import classify_ms
 from adaptive_resource_manager import distribute_residual_cpu
@@ -60,6 +64,24 @@ class ARMImpl(adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerServicer
         return res
 
 
+'''
+    Configure health service in server for liveness probe
+    via Check(), Watch() 
+
+    Input: 
+        server - gRPC server
+
+'''
+def _configure_health_server(server: grpc.Server):
+    # create a health servicer
+    health_servicer = health.HealthServicer(
+        experimental_non_blocking=True,
+        experimental_thread_pool=futures.ThreadPoolExecutor(max_workers=10),
+    )
+    # add health servicer to Server
+    health_pb2_grpc.add_HealthServicer_to_server(health_servicer, server)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--hostname", type=str)
@@ -75,6 +97,7 @@ if __name__ == "__main__":
     )
     
     server.add_insecure_port("[::]:" + args.port)
+    _configure_health_server(server)
     server.start()
     print("Adaptive Resource Manager has started on port " + args.port)
     server.wait_for_termination()

@@ -11,6 +11,7 @@ WORKDIR /microservice_manager
 # no cache use -> run latest version
 RUN pip install --no-cache-dir grpcio
 RUN pip install --no-cache-dir grpcio-tools
+RUN pip install --no-cache-dir grpcio-health-checking
 RUN pip install --no-cache-dir tenacity
 
 

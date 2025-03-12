@@ -3,7 +3,7 @@ import statistics
 import subprocess  # execute kubectl command
 from tenacity import retry, stop_after_attempt, stop_after_delay
 from tenacity import retry_if_result
-from tenacity import wait_fixed
+from tenacity import wait_fixed, wait_exponential
 from tenacity import after
 from tenacity import retry_if_exception_type
 
@@ -76,9 +76,9 @@ def callback_all_retries(retry_state):
 @retry(
     # 3 attempts, total execution time = 6s
     stop=(stop_after_attempt(3) |
-          stop_after_delay(6)),
+          stop_after_delay(20)),
     # wait 1 second between retries
-    wait=wait_fixed(1),
+    wait=wait_exponential(multiplier=1, min=2, max=4),
     # show error of retry
     after=callback_each_retry,
     # cannot complete notification
@@ -91,7 +91,7 @@ def execute_kubectl(script):
     # such as kubectl delete
     script_result = subprocess.check_output(script.split(),
                                             stderr=subprocess.STDOUT,
-                                            timeout=2)
+                                            timeout=5)
     # empty string from server might become string "''"
     # when decode from byte to str type
     script_result_str = script_result.decode("utf-8").strip().strip('"').strip("'")
@@ -100,14 +100,16 @@ def execute_kubectl(script):
     return script_result_str
 
 
-#TODO: is there any chance the number of reps = 0.
-# the microservice being shutdown by Smart HPA
-# > but we don't allow reps < min_reps
-# so no problem here.
-# further failure scenarios for handling
+'''
+Scale microservice
+Input:
+    microservice_name - str
+Output:
+    script_result - str: '<> scaled...'
+    None if error when calling kube-api
+'''
+
 def scale(microservice_name, reps, min_reps):
-    if reps < min_reps:
-        raise ValueError("reps to scale < minimum reps")
     script = f"kubectl scale deployment {microservice_name} --replicas={reps}"
     script_result = execute_kubectl(script)
     return script_result
