@@ -26,7 +26,7 @@ class ARMImpl(adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerServicer
         for data in request.microservices_data:
             microservices_data.append(
                 ResourceData(
-                    data.microservice_data,
+                    data.microservice_name,
                     data.current_reps,
                     data.desired_reps,
                     data.cpu_usage_per_rep,
@@ -64,6 +64,7 @@ class ARMImpl(adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerServicer
         return res
 
 
+
 '''
     Configure health service in server for liveness probe
     via Check(), Watch() 
@@ -90,12 +91,12 @@ if __name__ == "__main__":
 
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     implementation = ARMImpl()
-    
+
     adaptive_resource_manager_pb2_grpc.add_AdaptiveResourceManagerServicer_to_server(
             implementation,
             server
     )
-    
+
     server.add_insecure_port("[::]:" + args.port)
     _configure_health_server(server)
     server.start()

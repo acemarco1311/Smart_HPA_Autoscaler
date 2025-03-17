@@ -30,9 +30,9 @@ class MicroserviceManagerImpl(
     def ExtractResourceData(self, request, context):
         # data can be None if error when calling kube-api-server
         data = self._microservice_manager.Extract()
-        
+
         # if receive a None in extracting metrics
-        # send error 
+        # send error
         if data is None:
             context.abort(grpc.StatusCode.INTERNAL,
                           "Error in extracting resource data")

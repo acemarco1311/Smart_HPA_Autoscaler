@@ -179,7 +179,7 @@ class CapacityAnalyzer:
             service_endpoint,
             options=[]
         )
-        stub = microservice_manager_pb2_grpc.MicroserviceManagerStub(channel)
+        stub = adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerStub(channel)
         # return Dict
         connection = {
                 "name": self.arm_name,  # still use ms name
@@ -283,6 +283,7 @@ class CapacityAnalyzer:
 
     # Retry when unavailable (restarting hopefully)
     # or timeout (network error hopefully)
+    @staticmethod
     def should_retry(err):
         if isinstance(err, grpc.RpcError):
             unavailable = (err.code() == grpc.StatusCode.UNAVAILABLE)
@@ -292,6 +293,7 @@ class CapacityAnalyzer:
 
 
     # return None as callback
+    @staticmethod
     def error_callback(retry_state):
         print("All retries failed.")
         return None
@@ -520,8 +522,9 @@ class CapacityAnalyzer:
             # receive ARMDecisionList
             res = stub.ResourceExchange(req, timeout=10)
         except Exception as e:
-            if not should_retry(e):
+            if not CapacityAnalyzer.should_retry(e):
                 print("Failed to send request to ARM")
+                print(e)
                 return None
             # raise for retry
             else:
@@ -670,9 +673,17 @@ if __name__ == "__main__":
     while True:
         resource_data = client.obtain_all_resource_data()
         print("Extracted metrics from " + str(len(resource_data)) + "/11 microservices")
+
         scaling_instructions = client.inspect_microservices(resource_data)
         if scaling_instructions is None:
             continue
         else:
+            total_arm_resources = 0
+            for microservice in scaling_instructions:
+                total_arm_resources += (microservice.arm_max_reps *
+                                       microservice.cpu_request_per_rep)
+            print("Total Resources: ", total_arm_resources)
             scaling_status = client.distribute_all_instructions(scaling_instructions)
             print("Scaled " + str(len(scaling_status)) + "/11 microservices")
+        print("----------------------")
+        time.sleep(3)
