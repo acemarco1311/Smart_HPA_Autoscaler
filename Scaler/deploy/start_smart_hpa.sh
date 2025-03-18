@@ -6,6 +6,6 @@ kubectl apply -f .
 cd ..
 kubectl apply -f adaptive-resource-manager.yaml
 
-sleep 45
-
-kubectl apply -f microservice-capacity-analyzer.yaml
+#sleep 45
+#
+#kubectl apply -f microservice-capacity-analyzer.yaml

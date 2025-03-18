@@ -95,7 +95,7 @@ class CapacityAnalyzer:
             return False
         else:
             # close channel
-            self._microservice_connections[target_index][""].close()
+            self._microservice_connections[target_index]["channel"].close()
             #TODO: mutex
             self._microservice_connections.pop(target_index)
             return True
@@ -243,6 +243,12 @@ class CapacityAnalyzer:
             return health
 
 
+    def reset_connection(self, microservice_list):
+        for microservice_name in microservice_list:
+            print("Reset connection with: ", microservice_name)
+            self.remove_microservice_connection(microservice_name)
+            Process(target=self._connect_to_server, args=(microservice_name,)).start()
+
     '''
         Get ResourceData from all connected Microservice Manager
 
@@ -250,7 +256,8 @@ class CapacityAnalyzer:
             None
 
         Output:
-            List<ResourceData>
+            List<ResourceData> resource_data
+            List<str> failed_call
     '''
 
     def obtain_all_resource_data(self):
@@ -266,11 +273,14 @@ class CapacityAnalyzer:
 
         #TODO: Use thread to callback, the healthy pod
         # go ahead with the resource exchange round
+        # reset the connection with the service
+        # see if it switches to healthy pods
         if len(failed_call) != 0:
-            pass
-
+            # remove the channel from connection pool
+            for ms in failed_call:
+                self.remove_microservice_connection(ms)
         # continue with healthy pod only
-        return resource_data
+        return (resource_data, failed_call)
 
 
     '''
@@ -365,9 +375,11 @@ class CapacityAnalyzer:
                 # re-raise error for retry
                 else:
                     print("Cannot extract resource from ", connection["name"])
+                    print(e)
                     return None
             else:
                 print("Cannot extract resource from ", connection["name"])
+                print(e)
                 return None
 
     '''
@@ -463,8 +475,10 @@ class CapacityAnalyzer:
         # TODO: callback for fault tolerance
         # health pod continue
         if len(failed_call) != 0:
-            pass
-        return status_list
+            # remove connection for reconnect later
+            for ms in failed_call:
+                self.remove_microservice_connection(ms)
+        return (status_list, failed_call)
 
     '''
         Send request to Adaptive Resource Manager to
@@ -649,6 +663,21 @@ class CapacityAnalyzer:
         pass
 
 
+def test_one(sleep_time, microservice_name, delete_interval):
+    time.sleep(sleep_time)
+    script = f"kubectl get pods -l app={microservice_name}"
+    pod_id_list = []
+    result = subroutine.execute_kubectl(script)
+    for line in result.splitlines()[1:]:
+        # pod id in first column
+        pod_id = line.split()[0]
+        pod_id_list.append(str(pod_id))
+    # delete replicas in the deployment
+    for pod_id in pod_id_list:
+        script = f"kubectl delete pod {pod_id}"
+        print(subroutine.execute_kubectl(script))
+        time.sleep(delete_interval)
+
 
 # entry point
 if __name__ == "__main__":
@@ -670,20 +699,66 @@ if __name__ == "__main__":
     # create capacity analyzer
     # connect to all
     client = CapacityAnalyzer(microservice_names, arm_name)
-    while True:
-        resource_data = client.obtain_all_resource_data()
-        print("Extracted metrics from " + str(len(resource_data)) + "/11 microservices")
+    #while True:
+    #    resource_data = client.obtain_all_resource_data()
+    #    print("Extracted metrics from " + str(len(resource_data)) + "/11 microservices")
 
+    #    scaling_instructions = client.inspect_microservices(resource_data)
+    #    if scaling_instructions is None:
+    #        continue
+    #    else:
+    #        total_arm_resources = 0
+    #        for microservice in scaling_instructions:
+    #            total_arm_resources += (microservice.arm_max_reps *
+    #                                   microservice.cpu_request_per_rep)
+    #        print("Total Resources: ", total_arm_resources)
+    #        scaling_status = client.distribute_all_instructions(scaling_instructions)
+    #        print("Scaled " + str(len(scaling_status)) + "/11 microservices")
+    #    print("----------------------")
+    #    time.sleep(3)
+
+    ### Test 1: Delete microservice pods
+    test_one_total_time = 100
+    test_one_start_time = time.time()
+
+    print("TEST 1 STARTED.")
+    # delete pods in parallel with Smart HPA
+    # delete pod of adservice, checkoutservice
+    #p1 = Process(target=test_one, args=(15, "adservice", 4,))
+    #p2 = Process(target=test_one, args=(20, "checkoutservice", 4,))
+    #p1.start()
+    #p2.start()
+
+    # run Smart HPA for the test
+    while (time.time() - test_one_start_time) < test_one_total_time:
+        print("--------------------")
+        resource_data, extract_failed_calls = client.obtain_all_resource_data()
+        print("Extracted metrics from " + str(len(resource_data)) + "/11 microservices")
         scaling_instructions = client.inspect_microservices(resource_data)
         if scaling_instructions is None:
+            print("Couldn't get scaling instruction, skip resource exchange round")
             continue
         else:
             total_arm_resources = 0
             for microservice in scaling_instructions:
                 total_arm_resources += (microservice.arm_max_reps *
-                                       microservice.cpu_request_per_rep)
+                                        microservice.cpu_request_per_rep)
             print("Total Resources: ", total_arm_resources)
-            scaling_status = client.distribute_all_instructions(scaling_instructions)
+            scaling_status, distribute_failed_calls = client.distribute_all_instructions(scaling_instructions)
             print("Scaled " + str(len(scaling_status)) + "/11 microservices")
-        print("----------------------")
-        time.sleep(3)
+        print("Reset failed calls: ")
+        print(extract_failed_calls)
+        print(distribute_failed_calls)
+        for microservice in microservice_names:
+            if client._get_connection(microservice) is None:
+                print("Reset connection with ", microservice)
+                client._connect_to_server(microservice)
+        print("--------------------")
+
+
+    
+    ### Test 2: Delete the whole microservice deployments
+
+    ### Test 3: Delete each microservice manager pod
+
+    ### Test 4: Delete the whole microservice manager deployment
