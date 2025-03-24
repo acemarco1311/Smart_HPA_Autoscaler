@@ -17,7 +17,7 @@ ResourceData = namedtuple("ResourceData", [
 
 UnderprovisionedData = namedtuple("UnderprovisionedData", [
     "microservice_name",
-    "desired_for_scale_reps"
+    "desired_for_scale_reps",
     "required_reps",  # new data
     "required_cpu",  # new data
     "cpu_request_per_rep",

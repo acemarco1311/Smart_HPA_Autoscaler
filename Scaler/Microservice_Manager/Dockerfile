@@ -33,6 +33,13 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
 RUN mv kubectl /usr/local/bin/kubectl
 RUN chmod +x /usr/local/bin/kubectl
 
+# set up for NFS shared storage
+RUN apt update
+RUN apt install nfs-common -y
+RUN mkdir -p /microservice_manager/state
+# host.docker.interal resolved to local machine ip
+# RUN mount host.docker.internal:/var/nfs/general /microservice_manager/state
+
 # run with args from K8s deployment `args`
 # for different instances of MS Manager
 ENTRYPOINT ["python3", "./src/server.py"]

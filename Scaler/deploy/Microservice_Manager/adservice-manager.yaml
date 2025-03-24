@@ -32,10 +32,23 @@ spec:
         ]
         ports:  # container port exposed
         - containerPort: 8080
+        # persistent volume nfs
+        volumeMounts: # specify mount for each volume below
+          - name: state-storage # match volume name
+            mountPath: /microservice_manager/state
+        # free resource
         resources:
           requests:
             cpu: 150m  # request cpu for manager
             memory: 100Mi
+      volumes:
+      - name: state-storage  # name of volume, free to change
+        persistentVolumeClaim:
+          claimName: nfs-claim
+      #- name: state
+      #  nfs:
+      #    server: host.docker.internal
+      #    path: /var/nfs/general
 ---
 apiVersion: v1
 kind: Service

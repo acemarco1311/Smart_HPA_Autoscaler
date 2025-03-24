@@ -92,7 +92,7 @@ def distribute_residual_cpu(underprovisioned_ms,
     # sort underprovisioned microservice based on cpu need
     # prioritize those who need most
     underprovisioned_ms = sorted(underprovisioned_ms,
-                                 key=lambda x: x.require_cpu,
+                                 key=lambda x: x.required_cpu,
                                  reverse=True)
     # distribute residual resources to underprovisioned ms
     for microservice in underprovisioned_ms:
@@ -163,7 +163,7 @@ def distribute_residual_cpu(underprovisioned_ms,
                 allowed_scaling_action,
                 feasible_reps,
                 arm_max_reps,
-                microservice.cpu_request_each_rep
+                microservice.cpu_request_per_rep
             ))
     return arm_underprovisioned_decision, total_residual_cpu
 
@@ -221,6 +221,6 @@ def back_distribute_residual_cpu(overprovisioned_ms, total_residual_cpu):
             microservice.scaling_action,  # auto accept
             microservice.desired_for_scale_reps,  # auto accept
             arm_max_reps,  # how much has been given back to this ms
-            microservice.cpu_request_each_reps
+            microservice.cpu_request_per_rep
         ))
     return arm_overprovisioned_decision
