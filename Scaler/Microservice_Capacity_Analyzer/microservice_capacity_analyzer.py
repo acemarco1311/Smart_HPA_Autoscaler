@@ -270,16 +270,6 @@ class CapacityAnalyzer:
                 failed_call.append(connection["name"])
             else:
                 resource_data.append(data)
-
-        #TODO: Use thread to callback, the healthy pod
-        # go ahead with the resource exchange round
-        # reset the connection with the service
-        # see if it switches to healthy pods
-        if len(failed_call) != 0:
-            # remove the channel from connection pool
-            for ms in failed_call:
-                self.remove_microservice_connection(ms)
-        # continue with healthy pod only
         return (resource_data, failed_call)
 
 
@@ -472,12 +462,6 @@ class CapacityAnalyzer:
                     "status": status
                 })
 
-        # TODO: callback for fault tolerance
-        # health pod continue
-        if len(failed_call) != 0:
-            # remove connection for reconnect later
-            for ms in failed_call:
-                self.remove_microservice_connection(ms)
         return (status_list, failed_call)
 
     '''
@@ -636,10 +620,12 @@ class CapacityAnalyzer:
     def inspect_microservices(self, microservices_data):
         # Resource Constraint environment
         if self._need_resource_exchange(microservices_data):
+            print("Resource constrained environment, trigger resource exchange")
             scaling_instructions = self._send_request_to_arm(microservices_data)
 
         # no scaling over limit, all free to scale (ResourceRich)
         else:
+            print("All microservice free to scale within limit.")
             scaling_instructions = self._free_to_scale(microservices_data)
         return scaling_instructions
 
@@ -663,21 +649,6 @@ class CapacityAnalyzer:
         pass
 
 
-def test_one(sleep_time, microservice_name, delete_interval):
-    time.sleep(sleep_time)
-    script = f"kubectl get pods -l app={microservice_name}"
-    pod_id_list = []
-    result = subroutine.execute_kubectl(script)
-    for line in result.splitlines()[1:]:
-        # pod id in first column
-        pod_id = line.split()[0]
-        pod_id_list.append(str(pod_id))
-    # delete replicas in the deployment
-    for pod_id in pod_id_list:
-        script = f"kubectl delete pod {pod_id}"
-        print(subroutine.execute_kubectl(script))
-        time.sleep(delete_interval)
-
 
 # entry point
 if __name__ == "__main__":
@@ -699,26 +670,9 @@ if __name__ == "__main__":
     # create capacity analyzer
     # connect to all
     client = CapacityAnalyzer(microservice_names, arm_name)
-    #while True:
-    #    resource_data = client.obtain_all_resource_data()
-    #    print("Extracted metrics from " + str(len(resource_data)) + "/11 microservices")
-
-    #    scaling_instructions = client.inspect_microservices(resource_data)
-    #    if scaling_instructions is None:
-    #        continue
-    #    else:
-    #        total_arm_resources = 0
-    #        for microservice in scaling_instructions:
-    #            total_arm_resources += (microservice.arm_max_reps *
-    #                                   microservice.cpu_request_per_rep)
-    #        print("Total Resources: ", total_arm_resources)
-    #        scaling_status = client.distribute_all_instructions(scaling_instructions)
-    #        print("Scaled " + str(len(scaling_status)) + "/11 microservices")
-    #    print("----------------------")
-    #    time.sleep(3)
 
     ### Test 1: Delete microservice pods
-    test_one_total_time = 100
+    test_one_total_time = 300
     test_one_start_time = time.time()
 
     print("TEST 1 STARTED.")
@@ -729,31 +683,75 @@ if __name__ == "__main__":
     #p1.start()
     #p2.start()
 
+    resource_exchange_index = 1
     # run Smart HPA for the test
     while (time.time() - test_one_start_time) < test_one_total_time:
         print("--------------------")
+        print("RESOURCE EXCHANGE INDEX: ", resource_exchange_index)
+        # Metric extract
+        print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
         resource_data, extract_failed_calls = client.obtain_all_resource_data()
-        print("Extracted metrics from " + str(len(resource_data)) + "/11 microservices")
+        #TODO:
+        # pod cannot be found, because Service does not 
+        # quickly change to a newly healthy pod
+        # information about failed calls
+        #extract_fail_info = []
+        #distribute_fail_info = []
+        #print("RETRIEVING INFO ABOUT EXTRACTED FAILED CALLS...")
+        #for microservice_name in extract_failed_calls:
+        #    pod_info_script = f"kubectl get pod -l app={microservice_name}"
+        #    pod_info = subroutine.execute_kubectl(pod_info_script)
+        #    resource_info_script = f"kubectl top pod -l app={microservice_name}"
+        #    resource_info = subroutine.execute_kubectl(resource_info_script)
+        #    extract_fail_info.append((pod_info, resource_info))
+        #print("COMPLETED")
+
+        print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/11 MICROSERVICES")
+
+        # Get scaling instructions
+        print("GETTING SCALING INFORMATION...")
         scaling_instructions = client.inspect_microservices(resource_data)
         if scaling_instructions is None:
             print("Couldn't get scaling instruction, skip resource exchange round")
             continue
         else:
+            print("COMPLETED")
+            # calculate the total resource being managed by Smart HPA
             total_arm_resources = 0
             for microservice in scaling_instructions:
                 total_arm_resources += (microservice.arm_max_reps *
                                         microservice.cpu_request_per_rep)
             print("Total Resources: ", total_arm_resources)
+            for ins in scaling_instructions:
+                print(ins.microservice_name + ": " + str(ins.feasible_reps)+ '/' + str(ins.arm_max_reps))
+
+            print("SENDING SCALING DECISIONS...")
             scaling_status, distribute_failed_calls = client.distribute_all_instructions(scaling_instructions)
             print("Scaled " + str(len(scaling_status)) + "/11 microservices")
-        print("Reset failed calls: ")
-        print(extract_failed_calls)
-        print(distribute_failed_calls)
-        for microservice in microservice_names:
-            if client._get_connection(microservice) is None:
-                print("Reset connection with ", microservice)
-                client._connect_to_server(microservice)
+
+            # information about failed calls
+            #TODO:
+            # pod cannot be found, because Service does not 
+            # quickly change to a newly healthy pod
+            #print("RETRIEVING INFO ABOUT DISTRIBUTED FAILED CALLS...")
+            #for microservice_name in distribute_failed_calls:
+            #    pod_info_script = f"kubectl get pod -l app={microservice_name}"
+            #    pod_info = subroutine.execute_kubectl(pod_info_script)
+            #    resource_info_script = f"kubectl top pod -l app={microservice_name}"
+            #    resource_info = subroutine.execute_kubectl(resource_info_script)
+            #    distribute_fail_info.append((pod_info, resource_info))
+            #print("COMPLETED")
+
+        # overall info about failed call this round
+        print("Failed in extract this round: ", extract_failed_calls)
+        print("Failed in distribute this round: ", distribute_failed_calls)
+        #for fail_call in extract_fail_info:
+        #    print(fail_call)
+        #for fail_call in distribute_fail_info:
+        #    print(fail_call)
         print("--------------------")
+        resource_exchange_index += 1
+    print("END TEST")
 
 
     

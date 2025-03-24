@@ -8,7 +8,7 @@ ResourceData = namedtuple("ResourceData", [
     "cpu_usage_per_rep",
     "cpu_request_per_rep",
     "cpu_utilization_per_rep",
-    "desired_for_scale_reps"  # num reps needs to be scaled
+    "desired_for_scale_reps",  # num reps needs to be scaled
     "scaling_action",  # needed scaling action
     "max_reps",
     "min_reps",

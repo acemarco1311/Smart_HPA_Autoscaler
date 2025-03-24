@@ -1,0 +1,1357 @@
+TEST 1 STARTED.
+--------------------
+RESOURCE EXCHANGE INDEX:  1
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:16:15.212096456+00:00"}"
+>
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:16:17.692204503+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+checkoutservice: 1/5
+frontend: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'cartservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  2
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:16:27.46161396+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  3
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:16:33.870832255+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  4
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:16:40.341996471+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  5
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:16:45.869994017+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  6
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:16:51.390920283+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  7
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:16:56.9650389+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  8
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:17:02.487672881+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  9
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:17:08.036442915+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  10
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:17:13.701108631+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  11
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:17:19.370707442+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  12
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:17:24.929467726+00:00"}"
+>
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:17:27.812114421+00:00"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+cartservice: 1/5
+checkoutservice: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'frontend']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  13
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:17:32.730522431+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  14
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:17:38.326483792+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  15
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:17:43.982074119+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  16
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:17:49.504429364+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  17
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:17:55.189928826+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  18
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:00.909271535+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 2/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  19
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:06.694933787+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  20
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:18:12.572097752+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:18:14.968167782+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'cartservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  21
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:18:20.315005127+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:22.682574078+00:00"}"
+>
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:18:25.295752339+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:29.279717854+00:00"}"
+>
+EXTRACTED METRICS FROM 7/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  525
+checkoutservice: 1/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 7/11 microservices
+Failed in extract this round:  ['adservice', 'cartservice', 'frontend', 'currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  22
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:32.131727534+00:00"}"
+>
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:18:34.500164705+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 1/5
+recommendationservice: 1/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'cartservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  23
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:41.220080473+00:00"}"
+>
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:43.614869151+00:00"}"
+>
+Cannot extract resource from  recommendationservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:47.022404754+00:00"}"
+>
+EXTRACTED METRICS FROM 8/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  600
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 8/11 microservices
+Failed in extract this round:  ['adservice', 'cartservice', 'recommendationservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  24
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:18:50.84995726+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:18:56.515410176+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  25
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:18:59.524888567+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:19:03.017893643+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:19:06.520192517+00:00"}"
+>
+EXTRACTED METRICS FROM 8/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  600
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 8/11 microservices
+Failed in extract this round:  ['adservice', 'productcatalogservice', 'currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  26
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:09.732709742+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  27
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:19:15.366133794+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['adservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  28
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:20.819113226+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:19:25.425267838+00:00"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  29
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:19:28.407030835+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:33.287020601+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+cartservice: 2/5
+checkoutservice: 1/5
+frontend: 3/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  30
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:36.536210734+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  recommendationservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:40.404791864+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+cartservice: 2/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'recommendationservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  31
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  recommendationservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:46.47241191+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['recommendationservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  32
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  recommendationservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:52.086416645+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:55.217773093+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+adservice: 1/5
+cartservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['recommendationservice', 'currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  33
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:19:58.490130369+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  recommendationservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:20:01.987443237+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:20:05.163820579+00:00"}"
+>
+EXTRACTED METRICS FROM 8/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  600
+adservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 8/11 microservices
+Failed in extract this round:  ['cartservice', 'recommendationservice', 'currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  34
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:20:08.517318475+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  35
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:20:14.145369315+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  36
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:20:19.68853888+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:20:24.505452484+00:00"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+adservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  37
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:20:29.92922146+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+cartservice: 2/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  38
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:20:35.850884524+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+cartservice: 2/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  39
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  recommendationservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:20:40.542342982+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+cartservice: 2/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['recommendationservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  40
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  recommendationservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:20:46.407383388+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+cartservice: 2/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['recommendationservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  41
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 11/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  825
+adservice: 1/5
+cartservice: 2/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 11/11 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  42
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:20:56.307684591+00:00"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  43
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:21:01.87390609+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  44
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:21:07.526354531+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 10/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  750
+adservice: 1/5
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 10/11 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+--------------------
+--------------------
+RESOURCE EXCHANGE INDEX:  45
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  adservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-03-23T09:21:13.15348257+00:00"}"
+>
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-03-23T09:21:15.564371196+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 9/11 MICROSERVICES
+GETTING SCALING INFORMATION...
+COMPLETED
+Total Resources:  675
+checkoutservice: 1/5
+frontend: 4/5
+paymentservice: 1/5
+productcatalogservice: 2/5
+recommendationservice: 2/5
+shippingservice: 1/5
+redis-cart: 1/5
+emailservice: 1/5
+currencyservice: 2/5
+SENDING SCALING DECISIONS...
+Scaled 9/11 microservices
+Failed in extract this round:  ['adservice', 'cartservice']
+Failed in distribute this round:  []
+--------------------
+END TEST
