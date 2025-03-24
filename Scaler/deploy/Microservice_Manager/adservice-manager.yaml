@@ -45,10 +45,6 @@ spec:
       - name: state-storage  # name of volume, free to change
         persistentVolumeClaim:
           claimName: nfs-claim
-      #- name: state
-      #  nfs:
-      #    server: host.docker.internal
-      #    path: /var/nfs/general
 ---
 apiVersion: v1
 kind: Service

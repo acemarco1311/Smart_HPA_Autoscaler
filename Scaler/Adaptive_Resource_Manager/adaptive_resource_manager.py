@@ -107,7 +107,8 @@ def distribute_residual_cpu(underprovisioned_ms,
 
             # allow this microservice to scale to its desired_for_scale_reps
             # with new max rep replaced user-defined max_reps
-            feasible_reps = arm_max_reps = microservice.desired_for_scale_reps
+            feasible_reps = microservice.desired_for_scale_reps
+            arm_max_reps = microservice.desired_for_scale_reps
 
             arm_underprovisioned_decision.append(ARMDecision(
                 microservice.microservice_name,

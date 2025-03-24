@@ -685,26 +685,14 @@ if __name__ == "__main__":
 
     resource_exchange_index = 1
     # run Smart HPA for the test
+    total_allocated_resources = 330 #TODO:
+    last_scaling = {}
     while (time.time() - test_one_start_time) < test_one_total_time:
         print("--------------------")
         print("RESOURCE EXCHANGE INDEX: ", resource_exchange_index)
         # Metric extract
         print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
         resource_data, extract_failed_calls = client.obtain_all_resource_data()
-        #TODO:
-        # pod cannot be found, because Service does not 
-        # quickly change to a newly healthy pod
-        # information about failed calls
-        #extract_fail_info = []
-        #distribute_fail_info = []
-        #print("RETRIEVING INFO ABOUT EXTRACTED FAILED CALLS...")
-        #for microservice_name in extract_failed_calls:
-        #    pod_info_script = f"kubectl get pod -l app={microservice_name}"
-        #    pod_info = subroutine.execute_kubectl(pod_info_script)
-        #    resource_info_script = f"kubectl top pod -l app={microservice_name}"
-        #    resource_info = subroutine.execute_kubectl(resource_info_script)
-        #    extract_fail_info.append((pod_info, resource_info))
-        #print("COMPLETED")
 
         print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/11 MICROSERVICES")
 
@@ -722,33 +710,41 @@ if __name__ == "__main__":
                 total_arm_resources += (microservice.arm_max_reps *
                                         microservice.cpu_request_per_rep)
             print("Total Resources: ", total_arm_resources)
+            # check correctness:
+            # current total resource still correct to user-config
+            total_missing_resources = 0
+            for call in extract_failed_calls:
+                if call in last_scaling:
+                    total_missing_resources += last_scaling[call]["max_reps"] * last_scaling[call]["cpu_request"]
+                else:
+                    total_missing_resources = -1
+
+            if total_missing_resources == -1:
+                print("Some microservice in the system has not interact with Smart HPA, skip correctness check.")
+            if total_missing_resources == (total_allocated_resources - total_arm_resources):
+                print("CORRECT!!!")
+            else:
+                print("INCORRECT!!!")
+
             for ins in scaling_instructions:
                 print(ins.microservice_name + ": " + str(ins.feasible_reps)+ '/' + str(ins.arm_max_reps))
+
+                # update last scaling
+                last_scaling.update({ins.microservice_name: {}})
+                last_scaling.update(
+                    {
+                        ins.microservice_name: {"max_reps": ins.arm_max_reps,
+                                                "cpu_request": ins.cpu_request_per_rep}
+                    }
+                )
 
             print("SENDING SCALING DECISIONS...")
             scaling_status, distribute_failed_calls = client.distribute_all_instructions(scaling_instructions)
             print("Scaled " + str(len(scaling_status)) + "/11 microservices")
 
-            # information about failed calls
-            #TODO:
-            # pod cannot be found, because Service does not 
-            # quickly change to a newly healthy pod
-            #print("RETRIEVING INFO ABOUT DISTRIBUTED FAILED CALLS...")
-            #for microservice_name in distribute_failed_calls:
-            #    pod_info_script = f"kubectl get pod -l app={microservice_name}"
-            #    pod_info = subroutine.execute_kubectl(pod_info_script)
-            #    resource_info_script = f"kubectl top pod -l app={microservice_name}"
-            #    resource_info = subroutine.execute_kubectl(resource_info_script)
-            #    distribute_fail_info.append((pod_info, resource_info))
-            #print("COMPLETED")
-
         # overall info about failed call this round
         print("Failed in extract this round: ", extract_failed_calls)
         print("Failed in distribute this round: ", distribute_failed_calls)
-        #for fail_call in extract_fail_info:
-        #    print(fail_call)
-        #for fail_call in distribute_fail_info:
-        #    print(fail_call)
         print("--------------------")
         resource_exchange_index += 1
     print("END TEST")

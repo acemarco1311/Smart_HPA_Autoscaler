@@ -41,12 +41,16 @@ class ARMImpl(adaptive_resource_manager_pb2_grpc.AdaptiveResourceManagerServicer
             )
 
         # classify microservice data
+        print("ARM classifying...")
         underprovisioned_ms, overprovisioned_ms = classify_ms(microservices_data)
         # distribute residual cpu
+        print("ARM distribute residual cpu")
         arm_underprovisioned_decision, total_residual_cpu = distribute_residual_cpu(underprovisioned_ms, overprovisioned_ms)
         # pay back final residual cpu
+        print("ARM distribute back")
         arm_overprovisioned_decision = back_distribute_residual_cpu(overprovisioned_ms, total_residual_cpu)
 
+        print("ARM sending final decisions")
         final_decision = arm_underprovisioned_decision + arm_overprovisioned_decision
 
         # build response message
