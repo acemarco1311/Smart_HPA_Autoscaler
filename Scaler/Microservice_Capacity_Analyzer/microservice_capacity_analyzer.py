@@ -720,6 +720,12 @@ def run(microservice_names, arm_name, runtime,
         resource_exchange_index += 1
     print("END TEST")
 
+def test_three():
+    start_time = time.time()
+    while time.time() - start_time < 500:
+        time.sleep(60)
+        delete_script = "kubectl delete pods -l app=frontend-manager"
+        result = subroutine.execute_kubectl(delete_script)
 
 # entry point
 if __name__ == "__main__":
@@ -740,10 +746,13 @@ if __name__ == "__main__":
     for name in microservice_names:
         microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 15}})
     arm_name = "adaptive-resource-manager"
-    runtime = 400
+    runtime = 500
     microservice_num = 11
 
+    p1 = Process(target=test_three)
+    p1.start()
     run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
+
 
     # create capacity analyzer
     # connect to all

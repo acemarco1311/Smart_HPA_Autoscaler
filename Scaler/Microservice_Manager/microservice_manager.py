@@ -1,4 +1,5 @@
 import math
+import os
 from subroutine import validate_argument
 from subroutine import get_available_reps
 from subroutine import get_cpu_usage
@@ -77,8 +78,17 @@ class MicroserviceManager:
         self.max_reps = max_reps  # user-defined
         self.target_cpu_utilization = target_cpu_utilization  # user-defined
         # ARM defined, replace user-defined max_reps
-        #TODO: state recovery
-        self._current_arm_max_reps = None
+        # state recovery
+        path = f"../state/{microservice_name}.txt"
+        # check if state storage is empty or not
+        is_non_zero_file = os.path.isfile(path) and os.path.getsize(path) > 0
+        # if state storage has content, load state
+        if is_non_zero_file:
+            with open(path, "r") as file:
+                saved_state = file.readline()
+                self._current_arm_max_reps = int(saved_state)
+        else:
+            self._current_arm_max_reps = None
 
 
     '''
@@ -262,5 +272,11 @@ class MicroserviceManager:
         # change max_R to update_max_R by ARM if success
         if scaling_result is not None:
             self._set_current_arm_max_reps(arm_decision.arm_max_reps)
+            # write to the state storage
+            path = "../state/"
+            path += self.microservice_name
+            path += ".txt"
+            with open(path, "w") as file:
+                file.write(str(arm_decision.arm_max_reps))
         return scaling_result
 

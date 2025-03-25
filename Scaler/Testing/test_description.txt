@@ -36,3 +36,14 @@ max rep = 3
 no replication in Smart HPA component
 -> Smart HPA can extract all microservices at the start
 -> Resource exchange work with microservices failures.
+
+test_three:
+capacity running time = 500s
+0s deplay between resource exchange
+Locust: 150 users, 0.7 users/second, total runtime = 500
+Microservice: 15m/120Mi -> 20m/200Mi
+Target utilization: 80% -> 0.8 * 15 = 12m cpu
+min rep = 1
+max rep = 3
+restart frontend manager every 60second as frontend usually being scaled up
+no replication in Smart HPA component
