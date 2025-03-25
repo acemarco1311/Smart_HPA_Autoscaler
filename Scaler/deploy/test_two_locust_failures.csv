@@ -1,0 +1,15 @@
+Method,Name,Error,Occurrences
+GET,/product/2ZYFJ3GM2N,HTTPConnectionClosed('connection closed.'),37
+GET,/product/0PUK6V6EV0,HTTPConnectionClosed('connection closed.'),32
+GET,/product/LS4PSXUNUM,HTTPConnectionClosed('connection closed.'),39
+GET,/product/66VCHSJNUP,HTTPConnectionClosed('connection closed.'),35
+GET,/product/6E92ZMYYFZ,HTTPConnectionClosed('connection closed.'),32
+POST,/cart/checkout,HTTPConnectionClosed('connection closed.'),20
+GET,/cart,HTTPConnectionClosed('connection closed.'),81
+GET,/product/L9ECAV7KIM,HTTPConnectionClosed('connection closed.'),28
+GET,/product/9SIQT8TOJO,HTTPConnectionClosed('connection closed.'),34
+GET,/product/1YMWWN1N4O,HTTPConnectionClosed('connection closed.'),32
+GET,/product/OLJCESPC7Z,HTTPConnectionClosed('connection closed.'),24
+GET,/,HTTPConnectionClosed('connection closed.'),77
+POST,/setCurrency,HTTPConnectionClosed('connection closed.'),34
+POST,/cart,HTTPConnectionClosed('connection closed.'),73

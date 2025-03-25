@@ -77,8 +77,8 @@ class MicroserviceManager:
         self.max_reps = max_reps  # user-defined
         self.target_cpu_utilization = target_cpu_utilization  # user-defined
         # ARM defined, replace user-defined max_reps
+        #TODO: state recovery
         self._current_arm_max_reps = None
-
 
 
     '''

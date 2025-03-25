@@ -12,7 +12,8 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: adservice-state
+  name: state  # name, free to change as
+               # PV not selected by name
 spec:
   capacity:
     storage: 10Mi

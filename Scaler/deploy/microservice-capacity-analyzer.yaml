@@ -23,8 +23,15 @@ spec:
         image: acemarco/microservice-capacity-analyzer:latest
         ports:  # container port exposed
         - containerPort: 8080
+        volumeMounts: # specify mount for each volume below
+          - name: state-storage
+            mountPath: /microservice_capacity_analyzer/state
         resources:
           requests:
             cpu: 150m
             memory: 100Mi
+      volumes:
+      - name: state-storage
+        persistentVolumeClaim:
+          claimName: nfs-claim
 

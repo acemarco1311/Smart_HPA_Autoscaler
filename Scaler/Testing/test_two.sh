@@ -27,4 +27,4 @@ kubectl logs -f "$result" >> test_two.log &
 
 # run load test
 # run locust load test, 2>&1 print error to terminal merge 2 streams into stdout
-locust -f ../Load_Script/locustfile.py --host=http://localhost --headless -u 100 -r 0.7 --run-time=300 2>&1 --csv=test_two_locust --csv-full-history
+locust -f ../Load_Script/locustfile.py --host=http://localhost --headless -u 150 -r 0.7 --run-time=400 2>&1 --csv=test_two_locust --csv-full-history

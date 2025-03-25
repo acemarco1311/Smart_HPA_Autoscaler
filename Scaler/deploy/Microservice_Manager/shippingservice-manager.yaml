@@ -27,7 +27,7 @@ spec:
           "--port=8080",  # port
           "--microservice_name=shippingservice", # microservice name
           "--min_reps=1",  # min reps
-          "--max_reps=2",  # max reps
+          "--max_reps=3",  # max reps
           "--target_cpu_utilization=80" # target cpu utilization
         ]
         ports:  # container port exposed

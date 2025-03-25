@@ -48,7 +48,7 @@ class CapacityAnalyzer:
         Connects to all other components (ms managers vs arm)
     '''
 
-    def __init__(self, microservice_names, arm_name):
+    def __init__(self, microservice_names, arm_name, microservice_num, microservice_resource_config):
         self.microservice_names = microservice_names
         # default
         self.arm_name = arm_name
@@ -56,11 +56,28 @@ class CapacityAnalyzer:
         # connect to ARM
         self._arm_connection = self._connect_to_arm()
 
-        # connect to adaptive resource manager
+        # connect to microservice managers
         self._microservice_connections = []
         for microservice in microservice_names:
             connection = self._connect_to_server(microservice)
             self.add_microservice_connection(connection)
+
+        # experimental use only
+        # calculate the total managed resources by Smart HPA
+        # str/name - ARMDecision
+        self.microservice_num = microservice_num
+        # last scaling {str:ARMDecision} store all the decision
+        # for all the microservices that is being managed by Smart HPA
+        # even if it not active in a certain round
+        self.last_scaling = {}
+        self.last_total_managed_resources = 0
+        self.last_extract_fail_calls = []
+        self.last_distribute_fail_calls = []
+        self.correctness = "NOT READY"
+        # used for calculating total resource
+        self.microservice_resource_config = microservice_resource_config
+
+        #TODO: arm decision cache, state/cache recovery
         return
 
     # microservice manager connections getter
@@ -270,6 +287,7 @@ class CapacityAnalyzer:
                 failed_call.append(connection["name"])
             else:
                 resource_data.append(data)
+        self.last_extract_fail_calls = failed_call
         return (resource_data, failed_call)
 
 
@@ -448,6 +466,7 @@ class CapacityAnalyzer:
             status_list - List<Dict>:
                 Dict contains: microservice names (str),
                 scaling status (str)
+            failed_call - List<ARMDecision>
     '''
     def distribute_all_instructions(self, arm_decisions):
         status_list = []
@@ -455,12 +474,14 @@ class CapacityAnalyzer:
         for decision in arm_decisions:
             status = self._send_scaling_instruction(decision)
             if status is None:
-                failed_call.append(decision.microservice_name)
+                # failed_call.append(decision.microservice_name)
+                failed_call.append(decision)
             else:
                 status_list.append({
                     "microservice_name": decision.microservice_name,
                     "status": status
                 })
+        self.last_distribute_fail_calls = failed_call
 
         return (status_list, failed_call)
 
@@ -627,27 +648,77 @@ class CapacityAnalyzer:
         else:
             print("All microservice free to scale within limit.")
             scaling_instructions = self._free_to_scale(microservices_data)
+
+        
+        # update last scaling
+        # {str: ARMDecision}
+        total_managed_resource = 0
+        for ins in scaling_instructions:
+            self.last_scaling.update({ins.microservice_name: ins})
+        
+        for name, decision in self.last_scaling.items():
+            total_managed_resource += (decision.arm_max_reps *
+                                       decision.cpu_request_per_rep)
+        
+        self.last_total_managed_resources = total_managed_resource
+        
+        total_allocated_resources = 0
+        for name, decision in self.last_scaling.items():
+            total_allocated_resources += (self.microservice_resource_config[name]["max_reps"] * self.microservice_resource_config[name]["cpu_request_per_rep"])
+
+        if self.last_total_managed_resources == total_allocated_resources:
+            self.correctness = "CORRECT"
+        else:
+            self.correctness = "INCORRECT"
         return scaling_instructions
 
     #TODO: update Knowledge Base
     def update_knowledge_base(self):
         pass
 
-    #TODO: close a connection
-    def close_microservice_connection(microservice_manager):
-        pass
 
-    #TODO: close arm connection
-    def close_arm_connection():
-        pass
 
-    #TODO: close all microservice manager connection
-    def close_all_microservice_connections():
-        pass
+def run(microservice_names, arm_name, runtime,
+        microservice_resource_config, microservice_num):
+    client = CapacityAnalyzer(microservice_names,
+                              arm_name,
+                              microservice_num,
+                              microservice_resource_config
+                             )
+    start_time = time.time()
+    print("TEST STARTED")
+    resource_exchange_index = 1
+    while (time.time() - start_time) < runtime:
+        print("-------------------------")
+        print("RESOURCE EXCHANGE INDEX: ", resource_exchange_index)
+        # Metric extract
+        print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
+        resource_data, extract_failed_calls = client.obtain_all_resource_data()
 
-    def total_allocated_resource():
-        pass
+        print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/11 MICROSERVICES")
 
+        # Get scaling instructions
+        print("GETTING SCALING INFORMATION...")
+        scaling_instructions = client.inspect_microservices(resource_data)
+        if scaling_instructions is None:
+            print("Couldn't get scaling instruction, skip resource exchange round")
+            continue
+
+        for name, decision in client.last_scaling.items():
+            print(name + ": " + str(decision.feasible_reps) + "/" + str(decision.arm_max_reps))
+        print("Total number of microservices managed by Smart HPA: ", len(client.last_scaling))
+        print("Total Resources managed by Smart HPA: ", client.last_total_managed_resources)
+        print(client.correctness)
+        # Send scaling instructions
+        scaling_status, distribute_failed_calls = client.distribute_all_instructions(scaling_instructions)
+        print("Scaled " + str(len(scaling_status)) + "/11 microservices")
+
+        # overall info about failed call this round
+        print("Failed in extract this round: ", client.last_extract_fail_calls)
+        print("Failed in distribute this round: ", client.last_distribute_fail_calls)
+
+        resource_exchange_index += 1
+    print("END TEST")
 
 
 # entry point
@@ -665,89 +736,96 @@ if __name__ == "__main__":
         "emailservice",
         "currencyservice",
     ]
+    microservice_resource_config = {}
+    for name in microservice_names:
+        microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 15}})
     arm_name = "adaptive-resource-manager"
+    runtime = 400
+    microservice_num = 11
+
+    run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
 
     # create capacity analyzer
     # connect to all
-    client = CapacityAnalyzer(microservice_names, arm_name)
+    #client = CapacityAnalyzer(microservice_names, arm_name)
 
-    ### Test 1: Delete microservice pods
-    test_one_total_time = 300
-    test_one_start_time = time.time()
+    #### Test 1: Delete microservice pods
+    #test_one_total_time = 300
+    #test_one_start_time = time.time()
 
-    print("TEST 1 STARTED.")
-    # delete pods in parallel with Smart HPA
-    # delete pod of adservice, checkoutservice
-    #p1 = Process(target=test_one, args=(15, "adservice", 4,))
-    #p2 = Process(target=test_one, args=(20, "checkoutservice", 4,))
-    #p1.start()
-    #p2.start()
+    #print("TEST 1 STARTED.")
+    ## delete pods in parallel with Smart HPA
+    ## delete pod of adservice, checkoutservice
+    ##p1 = Process(target=test_one, args=(15, "adservice", 4,))
+    ##p2 = Process(target=test_one, args=(20, "checkoutservice", 4,))
+    ##p1.start()
+    ##p2.start()
 
-    resource_exchange_index = 1
-    # run Smart HPA for the test
-    total_allocated_resources = 330 #TODO:
-    last_scaling = {}
-    while (time.time() - test_one_start_time) < test_one_total_time:
-        print("--------------------")
-        print("RESOURCE EXCHANGE INDEX: ", resource_exchange_index)
-        # Metric extract
-        print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
-        resource_data, extract_failed_calls = client.obtain_all_resource_data()
+    #resource_exchange_index = 1
+    ## run Smart HPA for the test
+    #total_allocated_resources = 330 #TODO:
+    #last_scaling = {}
+    #while (time.time() - test_one_start_time) < test_one_total_time:
+    #    print("--------------------")
+    #    print("RESOURCE EXCHANGE INDEX: ", resource_exchange_index)
+    #    # Metric extract
+    #    print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
+    #    resource_data, extract_failed_calls = client.obtain_all_resource_data()
 
-        print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/11 MICROSERVICES")
+    #    print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/11 MICROSERVICES")
 
-        # Get scaling instructions
-        print("GETTING SCALING INFORMATION...")
-        scaling_instructions = client.inspect_microservices(resource_data)
-        if scaling_instructions is None:
-            print("Couldn't get scaling instruction, skip resource exchange round")
-            continue
-        else:
-            print("COMPLETED")
-            # calculate the total resource being managed by Smart HPA
-            total_arm_resources = 0
-            for microservice in scaling_instructions:
-                total_arm_resources += (microservice.arm_max_reps *
-                                        microservice.cpu_request_per_rep)
-            print("Total Resources: ", total_arm_resources)
-            # check correctness:
-            # current total resource still correct to user-config
-            total_missing_resources = 0
-            for call in extract_failed_calls:
-                if call in last_scaling:
-                    total_missing_resources += last_scaling[call]["max_reps"] * last_scaling[call]["cpu_request"]
-                else:
-                    total_missing_resources = -1
+    #    # Get scaling instructions
+    #    print("GETTING SCALING INFORMATION...")
+    #    scaling_instructions = client.inspect_microservices(resource_data)
+    #    if scaling_instructions is None:
+    #        print("Couldn't get scaling instruction, skip resource exchange round")
+    #        continue
+    #    else:
+    #        print("COMPLETED")
+    #        # calculate the total resource being managed by Smart HPA
+    #        total_arm_resources = 0
+    #        for microservice in scaling_instructions:
+    #            total_arm_resources += (microservice.arm_max_reps *
+    #                                    microservice.cpu_request_per_rep)
+    #        print("Total Resources: ", total_arm_resources)
+    #        # check correctness:
+    #        # current total resource still correct to user-config
+    #        total_missing_resources = 0
+    #        for call in extract_failed_calls:
+    #            if call in last_scaling:
+    #                total_missing_resources += last_scaling[call]["max_reps"] * last_scaling[call]["cpu_request"]
+    #            else:
+    #                total_missing_resources = -1
 
-            if total_missing_resources == -1:
-                print("Some microservice in the system has not interact with Smart HPA, skip correctness check.")
-            if total_missing_resources == (total_allocated_resources - total_arm_resources):
-                print("CORRECT!!!")
-            else:
-                print("INCORRECT!!!")
+    #        if total_missing_resources == -1:
+    #            print("Some microservice in the system has not interact with Smart HPA, skip correctness check.")
+    #        if total_missing_resources == (total_allocated_resources - total_arm_resources):
+    #            print("CORRECT!!!")
+    #        else:
+    #            print("INCORRECT!!!")
 
-            for ins in scaling_instructions:
-                print(ins.microservice_name + ": " + str(ins.feasible_reps)+ '/' + str(ins.arm_max_reps))
+    #        for ins in scaling_instructions:
+    #            print(ins.microservice_name + ": " + str(ins.feasible_reps)+ '/' + str(ins.arm_max_reps))
 
-                # update last scaling
-                last_scaling.update({ins.microservice_name: {}})
-                last_scaling.update(
-                    {
-                        ins.microservice_name: {"max_reps": ins.arm_max_reps,
-                                                "cpu_request": ins.cpu_request_per_rep}
-                    }
-                )
+    #            # update last scaling
+    #            last_scaling.update({ins.microservice_name: {}})
+    #            last_scaling.update(
+    #                {
+    #                    ins.microservice_name: {"max_reps": ins.arm_max_reps,
+    #                                            "cpu_request": ins.cpu_request_per_rep}
+    #                }
+    #            )
 
-            print("SENDING SCALING DECISIONS...")
-            scaling_status, distribute_failed_calls = client.distribute_all_instructions(scaling_instructions)
-            print("Scaled " + str(len(scaling_status)) + "/11 microservices")
+    #        print("SENDING SCALING DECISIONS...")
+    #        scaling_status, distribute_failed_calls = client.distribute_all_instructions(scaling_instructions)
+    #        print("Scaled " + str(len(scaling_status)) + "/11 microservices")
 
-        # overall info about failed call this round
-        print("Failed in extract this round: ", extract_failed_calls)
-        print("Failed in distribute this round: ", distribute_failed_calls)
-        print("--------------------")
-        resource_exchange_index += 1
-    print("END TEST")
+    #    # overall info about failed call this round
+    #    print("Failed in extract this round: ", extract_failed_calls)
+    #    print("Failed in distribute this round: ", distribute_failed_calls)
+    #    print("--------------------")
+    #    resource_exchange_index += 1
+    #print("END TEST")
 
 
     

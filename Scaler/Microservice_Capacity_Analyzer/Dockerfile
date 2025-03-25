@@ -24,5 +24,10 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
 RUN mv kubectl /usr/local/bin/kubectl
 RUN chmod +x /usr/local/bin/kubectl
 
+# set up for NFS shared storage
+RUN apt update
+RUN apt install nfs-common -y
+RUN mkdir -p /microservice_capacity_analyzer/state
+
 # run directly as it's not server
 CMD ["python3", "./src/microservice_capacity_analyzer.py"]
