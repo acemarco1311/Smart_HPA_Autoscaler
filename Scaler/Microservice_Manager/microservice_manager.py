@@ -1,5 +1,7 @@
+import time
 import math
 import os
+import threading
 from subroutine import validate_argument
 from subroutine import get_available_reps
 from subroutine import get_cpu_usage
@@ -49,6 +51,7 @@ class MicroserviceManager:
         max_reps - Int
         target_cpu_utilization - Int
         current_arm_max_reps - Int/None
+        current_arm_max_reps_lock - threading.Lock
     '''
 
 
@@ -77,19 +80,49 @@ class MicroserviceManager:
         self.min_reps = min_reps  # user-defined
         self.max_reps = max_reps  # user-defined
         self.target_cpu_utilization = target_cpu_utilization  # user-defined
-        # ARM defined, replace user-defined max_reps
+        self._current_arm_max_reps_lock = threading.Lock()
+
         # state recovery
         path = f"../state/{microservice_name}.txt"
-        # check if state storage is empty or not
+        # check if state storage is empty
         is_non_zero_file = os.path.isfile(path) and os.path.getsize(path) > 0
         # if state storage has content, load state
         if is_non_zero_file:
             with open(path, "r") as file:
                 saved_state = file.readline()
-                self._current_arm_max_reps = int(saved_state)
+                self._set_current_arm_max_reps(int(saved_state))
         else:
-            self._current_arm_max_reps = None
+            self._set_current_arm_max_reps(None)
 
+        # create a new Process for state update/polling disk
+        self._state_polling_process = threading.Thread(
+                target=self._state_polling,
+                args=(2, path,)
+                )
+        self._state_polling_process.start()
+
+    '''
+        Polling check the state storage to update
+        virtual max replicas in runtime.
+        Terminate in object destructor
+
+        Input:
+            delay between checking in seconds
+    '''
+
+    def _state_polling(self, delay: int,
+                       state_storage_path: str):
+        while True:
+            time.sleep(delay)
+            # check if state storage exists and has content
+            has_content = (os.path.isfile(state_storage_path)
+                           and os.path.getsize(state_storage_path) > 0)
+            if has_content:
+                with open(state_storage_path, "r") as file:
+                    saved_state = file.readline()
+                    saved_state_int = int(saved_state)
+                    if self.get_current_arm_max_reps() != saved_state_int:
+                        self._set_current_arm_max_reps(saved_state_int)
 
     '''
         Get current arm max reps.
@@ -112,13 +145,15 @@ class MicroserviceManager:
         Output: None
     '''
     def _set_current_arm_max_reps(self, new_arm_max_reps):
-        # check input
-        try:
-            if (new_arm_max_reps >= self.min_reps):
-                self._current_arm_max_reps = new_arm_max_reps
-        except Exception as err:
-            print("Error occurred in setting arm max_reps")
-            print(err)
+        # obtain the lock to prevent race condition
+        with self._current_arm_max_reps_lock:
+            # check input
+            try:
+                if (new_arm_max_reps >= self.min_reps):
+                    self._current_arm_max_reps = new_arm_max_reps
+            except Exception as err:
+                print("Error occurred in setting arm max_reps")
+                print(err)
 
     def get_max_reps(self):
         # no resource exchange for this ms before
