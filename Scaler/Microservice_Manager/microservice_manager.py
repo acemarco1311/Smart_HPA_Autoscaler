@@ -95,11 +95,11 @@ class MicroserviceManager:
             self._set_current_arm_max_reps(None)
 
         # create a new Process for state update/polling disk
-        self._state_polling_process = threading.Thread(
-                target=self._state_polling,
-                args=(2, path,)
-                )
-        self._state_polling_process.start()
+        #self._state_polling_process = threading.Thread(
+        #        target=self._state_polling,
+        #        args=(2, path,)
+        #        )
+        #self._state_polling_process.start()
 
     '''
         Polling check the state storage to update
@@ -109,7 +109,8 @@ class MicroserviceManager:
         Input:
             delay between checking in seconds
     '''
-
+    
+    '''
     def _state_polling(self, delay: int,
                        state_storage_path: str):
         while True:
@@ -123,6 +124,7 @@ class MicroserviceManager:
                     saved_state_int = int(saved_state)
                     if self.get_current_arm_max_reps() != saved_state_int:
                         self._set_current_arm_max_reps(saved_state_int)
+    '''
 
     '''
         Get current arm max reps.
