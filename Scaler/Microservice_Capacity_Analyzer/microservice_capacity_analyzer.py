@@ -110,6 +110,9 @@ class CapacityAnalyzer:
                 # create new Thread as mailman
                 for decision in self.total_distribute_fail_calls:
                     threading.Thread(target=self._mailman, args=(decision,)).start()
+        
+        #TODO: poll checking if passive workers
+
         return
 
     # microservice manager connections getter

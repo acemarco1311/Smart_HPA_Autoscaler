@@ -94,6 +94,7 @@ class MicroserviceManager:
         else:
             self._set_current_arm_max_reps(None)
 
+        #TODO: poll check disk if passive worker
         # create a new Process for state update/polling disk
         #self._state_polling_process = threading.Thread(
         #        target=self._state_polling,
