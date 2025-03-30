@@ -82,17 +82,23 @@ class MicroserviceManager:
         self.target_cpu_utilization = target_cpu_utilization  # user-defined
         self._current_arm_max_reps_lock = threading.Lock()
 
+        self._current_arm_max_reps = None
         # state recovery
-        path = f"../state/{microservice_name}.txt"
-        # check if state storage is empty
-        is_non_zero_file = os.path.isfile(path) and os.path.getsize(path) > 0
-        # if state storage has content, load state
-        if is_non_zero_file:
-            with open(path, "r") as file:
-                saved_state = file.readline()
-                self._set_current_arm_max_reps(int(saved_state))
-        else:
-            self._set_current_arm_max_reps(None)
+        self.path = f"/microservice_manager/state/{microservice_name}.txt"
+
+        # load state if exist
+        if os.path.isfile(self.path):
+            if os.path.getsize(self.path) > 0:
+                with open(self.path, "r") as file:
+                    saved_state = file.readline()
+                    self._set_current_arm_max_reps(int(saved_state))
+        #else:
+        #    # create file if doesn't exist
+        #    with open(self.path, "w"):
+        #        pass
+
+
+
 
         #TODO: poll check disk if passive worker
         # create a new Process for state update/polling disk
@@ -309,12 +315,10 @@ class MicroserviceManager:
 
         # change max_R to update_max_R by ARM if success
         if scaling_result is not None:
+            print("Scaled to " + str(arm_decision.feasible_reps) + "/" + str(arm_decision.arm_max_reps))
             self._set_current_arm_max_reps(arm_decision.arm_max_reps)
             # write to the state storage
-            path = "../state/"
-            path += self.microservice_name
-            path += ".txt"
-            with open(path, "w") as file:
+            with open(self.path, "w") as file:
                 file.write(str(arm_decision.arm_max_reps))
         return scaling_result
 

@@ -40,10 +40,10 @@ class CapacityAnalyzer:
     arm_name  - str: Name of Service/Deployment of ARM
     arm_connection - Dict:
         containes name, channel, stub.
-    last_distribute_fail_call - List<ARMDecision>:
+    total_distribute_fail_calls - List<ARMDecision>:
         decisions that haven't applied to system
     state_lock - Lock:
-        lock of last_distribute_fail_call
+        lock of last_distribute_fail_calls
     '''
 
     '''
@@ -85,32 +85,38 @@ class CapacityAnalyzer:
         # restore state (last distribute failed calls) from disk
         self.total_distribute_fail_calls = []
         self.state_lock = threading.Lock()
-        self.path = "../state/mca_fail_calls.txt"
+        self.path = "/microservice_capacity_analyzer/state/mca_fail_calls.txt"
         # multiple mailman might try to modify the disk concurrently
         # but NFS does not support ReadWriteMany
         self.disk_lock = threading.Lock()
         # restore if has saved content
         has_content = os.path.isfile(self.path) and os.path.getsize(self.path) > 0
         # load from disk
-        if has_content:
-            with open(self.path, 'r') as file:
-                # read each line of microservice name
-                lines = file.readlines()
-                for arm_decision in lines:
-                    # parse text to create Dict<str, ARMDecision>
-                    components = arm_decision.split(',').strip()
-                    arm_obj = ARMDecision(
-                        microservice_name=components[0],
-                        allowed_scaling_action=components[1],
-                        feasible_reps=int(components[2]),
-                        arm_max_reps=int(components[3]),
-                        cpu_request_rep_rep=int(components[4])
-                    )
-                    self._add_to_state(arm_obj)
-                # create new Thread as mailman
-                for decision in self.total_distribute_fail_calls:
-                    threading.Thread(target=self._mailman, args=(decision,)).start()
-        
+        if os.path.isfile(self.path):
+            if os.path.getsize(self.path) > 0:
+                with open(self.path, 'r') as file:
+                    # read each line of microservice name
+                    lines = file.readlines()
+                    for arm_decision in lines:
+                        # parse text to create Dict<str, ARMDecision>
+                        components = arm_decision.split(',').strip()
+                        arm_obj = ARMDecision(
+                            microservice_name=components[0],
+                            allowed_scaling_action=components[1],
+                            feasible_reps=int(components[2]),
+                            arm_max_reps=int(components[3]),
+                            cpu_request_rep_rep=int(components[4])
+                        )
+                        self._add_to_state(arm_obj)
+                    # create new Thread as mailman
+                    for decision in self.total_distribute_fail_calls:
+                        threading.Thread(target=self._mailman, args=(decision,)).start()
+        # create file if doesn't exist
+        else:
+            with open(self.path, 'w') as file:
+                pass
+
+
         #TODO: poll checking if passive workers
 
         return
@@ -128,7 +134,7 @@ class CapacityAnalyzer:
     def _add_to_state(self, new_decision):
         # request critical section
         with self.state_lock:
-            for decision in self.last_distribution_fail_calls:
+            for decision in self.total_distribute_fail_calls:
                 # there should be no update to existing element
                 # because the microservice will be ignored
                 if decision.microservice_name == new_decision.microservice_name:
@@ -524,10 +530,14 @@ class CapacityAnalyzer:
                     raise e
                 # re-raise error for retry
                 else:
+                    print("Unexpected RPC error occurred.")
                     print("Cannot send scaling instruction to ", connection["name"])
+                    print(e)
                     return None
             else:
+                print("Non-RPC error occurred.")
                 print("Cannot send scaling instruction to ", connection["name"])
+                print(e)
                 return None
 
     def _send_scaling_instruction_once(self, arm_decision):
@@ -549,18 +559,14 @@ class CapacityAnalyzer:
             return response.status
         except Exception as e:
             if isinstance(e, grpc.RpcError):
-                unavailable = (e.code() == grpc.StatusCode.UNAVAILABLE)
-                deadline_exceeded = (e.code() == grpc.StatusCode.DEADLINE_EXCEEDED)
-                do_retry = unavailable or deadline_exceeded
-                # re-raise for retry
-                if do_retry:
-                    raise e
-                # re-raise error for retry
-                else:
-                    print("Cannot send scaling instruction to ", connection["name"])
-                    return None
-            else:
+                print("RPC error occurred.")
                 print("Cannot send scaling instruction to ", connection["name"])
+                print(e)
+                return None
+            else:
+                print("Non-RPC error occurred.")
+                print("Cannot send scaling instruction to ", connection["name"])
+                print(e)
                 return None
 
     '''
@@ -858,9 +864,9 @@ def run(microservice_names, arm_name, runtime,
         print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
         resource_data, extract_failed_calls, ignore_calls = client.obtain_all_resource_data()
 
-        print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/11 MICROSERVICES")
-        print("FAILED TO EXTRACT " + str(len(extract_failed_calls)) + "/11 MICROSERVICES")
-        print("IGNORE " + str(len(ignore_calls)) + "/11 MICROSERVICES")
+        print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/8 MICROSERVICES")
+        print("FAILED TO EXTRACT " + str(len(extract_failed_calls)) + "/8 MICROSERVICES")
+        print("IGNORE " + str(len(ignore_calls)) + "/8 MICROSERVICES")
 
         # Get scaling instructions
         print("GETTING SCALING INFORMATION...")
@@ -876,7 +882,7 @@ def run(microservice_names, arm_name, runtime,
         print(client.correctness)
         # Send scaling instructions
         scaling_status, distribute_failed_calls = client.distribute_all_instructions(scaling_instructions)
-        print("Scaled " + str(len(scaling_status)) + "/11 microservices")
+        print("Scaled " + str(len(scaling_status)) + "/8 microservices")
 
         # overall info about failed call this round
         print("Failed in extract this round: ", client.last_extract_fail_calls)
@@ -896,16 +902,13 @@ def test_three():
 # entry point
 if __name__ == "__main__":
     microservice_names = [
-        "adservice",
         "cartservice",
         "checkoutservice",
         "frontend",
         "paymentservice",
         "productcatalogservice",
-        "recommendationservice",
         "shippingservice",
         "redis-cart",
-        "emailservice",
         "currencyservice",
     ]
     microservice_resource_config = {}
@@ -913,10 +916,7 @@ if __name__ == "__main__":
         microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 15}})
     arm_name = "adaptive-resource-manager"
     runtime = 500
-    microservice_num = 11
+    microservice_num = 8
 
-    p1 = Process(target=test_three)
-    p1.start()
     run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
-    p1.join()
 
