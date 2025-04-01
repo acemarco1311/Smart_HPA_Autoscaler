@@ -1,5 +1,6 @@
 Run load test with Smart HPA on cluster.
 Delete all pods of frontend-manager every 30 seconds.
+Microservice Managers restore their state during init.
 
 Prerequisite:
 - Run reduced benchmark application: 8.
@@ -29,11 +30,10 @@ Locust config:
 - total_runtime = 500
 - max_user = 150
 - spawn_rate = 0.7
+-> No incorrect
 
--> deleting frontend-manager by a new thread has no effect?
 
-
-two experiments:  
+two, three experiments:  
 Total runtime: 600s
 
 Microservice resource allocate:
@@ -51,18 +51,11 @@ Each MM, MCA has: 150m, 100Mi
 
 
 Locust config:
-- total_runtime = 500
-- max_user = 150
+- total_runtime = 600
+- max_user = 200
 - spawn_rate = 0.7
 
--> deleting frontend-manager by a new thread has no effect?
+-> Incorrect, maybe the manager dies after update running state and before update disk state.
 
-=> deleting frontend-manager by a new thread DOES HAS EFFECT.
-=> just because the I/O and/or the delay in executing delete.
-=> that why not show "Delete" in the first incorrect but
-=> in fact, it recovered and then respond with user-defined
-=> but not marked as failed.
-=> check one.log 1352 and two.log 1803
 
-=> other pod dies (not setup) -> increase readiness/liveness probe
-                              -> increase resource limit avoid restarting during runtime
+=> Other pods dies unexpectedly: increase liveness/readiness deadline, increase resource limit to avoid restarting during runtime because of high work load.

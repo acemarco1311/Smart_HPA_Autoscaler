@@ -1,0 +1,2700 @@
+TEST STARTED
+-------------------------
+RESOURCE EXCHANGE INDEX:  1
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  2
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  3
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  4
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  5
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  6
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  7
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  8
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  9
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Delete frontend manager.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  10
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  11
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  12
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  13
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  14
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  15
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:48:02.886047995+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  16
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:48:06.650352393+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Exceed timeout
+Retrying...
+All retries failed
+None
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:48:10.440309547+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['frontend', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  17
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:48:15.903366737+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  18
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:48:21.203229946+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  19
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:48:28.065133596+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  20
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:48:33.025974446+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  21
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Delete frontend manager.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:48:39.991137533+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  22
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:48:47.06431129+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  23
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:48:54.336232162+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  24
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:49:00.188753224+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  25
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Exceed timeout
+Retrying...
+All retries failed
+None
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:49:07.212643193+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  26
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:49:14.062426275+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  27
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:49:21.292095998+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  28
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:49:26.758564009+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  29
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Delete frontend manager.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:49:34.260947548+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  30
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:49:41.718028216+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  31
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:49:48.57189478+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  32
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:49:53.64634655+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  33
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:50:00.733162418+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  34
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Exceed timeout
+Retrying...
+All retries failed
+None
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:50:02.084815478+00:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:50:09.709345282+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  35
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:50:12.6399926+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:50:18.495441458+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 5/5
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  36
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:50:21.51877122+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:50:25.603230765+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 4/5
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  37
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:50:28.780908515+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Delete frontend manager.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:50:34.742336972+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 4/5
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  38
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:50:41.483293694+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 5/5
+paymentservice: 1/3
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  39
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:50:48.993908352+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 5/5
+paymentservice: 1/3
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  40
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:50:51.323164508+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:50:54.608750217+00:00"}"
+>
+Exceed timeout
+Retrying...
+All retries failed
+None
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:50:59.377535313+00:00"}"
+>
+EXTRACTED METRICS FROM 5/8 MICROSERVICES
+FAILED TO EXTRACT 3/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 5/5
+paymentservice: 1/3
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 5/8 microservices
+Failed in extract this round:  ['cartservice', 'productcatalogservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  41
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:51:02.457770212+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:51:07.52352132+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 5/5
+paymentservice: 1/3
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  42
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:51:10.431756776+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:51:16.39491134+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 5/5
+paymentservice: 1/3
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  43
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:51:18.606865114+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:51:25.244202768+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 6/6
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  44
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Delete frontend manager.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:51:28.59093051+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:51:35.246570671+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 6/6
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  45
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:51:38.155110749+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:51:44.086238122+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 6/6
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  46
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:51:45.134810852+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:51:51.140056695+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 6/6
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  47
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:51:54.034680359+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Exceed timeout
+Retrying...
+All retries failed
+None
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Socket closed", grpc_status:14, created_time:"2025-04-01T12:51:54.437026031+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:52:02.086455306+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 6/6
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  48
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:52:04.979079125+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:52:11.216797538+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+cartservice: 1/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  49
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:52:12.210642858+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:52:18.21211291+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 1/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  50
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Delete frontend manager.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:52:25.357166563+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  51
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:52:32.720831572+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  52
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:52:35.95772365+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:52:40.344962821+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  53
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:52:43.254838002+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:52:49.356977007+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  54
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Exceed timeout
+Retrying...
+All retries failed
+None
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:52:52.534092162+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:52:58.629950345+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  55
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:53:01.527144889+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:53:07.396725313+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  56
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:53:08.433921136+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:53:14.450339555+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  57
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:53:17.543904149+00:00"}"
+>
+Delete frontend manager.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:53:23.841899632+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  58
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:53:26.749945468+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:53:32.58661291+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  59
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:53:35.570867827+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:53:39.648495106+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  60
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:53:42.842091953+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Exceed timeout
+Retrying...
+All retries failed
+None
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:53:48.764087271+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  61
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:53:51.835882199+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:53:57.776493703+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  62
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:00.725107011+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:04.74748591+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  63
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:07.875353061+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:54:13.937836628+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  64
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Delete frontend manager.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:17.113039641+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:23.367703081+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  65
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:54:26.258574478+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:32.398437929+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  66
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:33.49671809+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:39.531233177+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  67
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:54:42.508772008+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Exceed timeout
+Retrying...
+All retries failed
+None
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "Socket closed"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:54:42.908168843+00:00", grpc_status:14, grpc_message:"Socket closed"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:50.643174023+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  68
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:54:53.561245807+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:54:59.639004237+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  69
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:00.680951026+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:06.821346304+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  70
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:09.844750272+00:00"}"
+>
+Delete frontend manager.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:55:15.973471272+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  71
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:18.879673808+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:24.806523908+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  72
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:27.867985082+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:32.162902873+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  73
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:35.14050025+00:00"}"
+>
+Exceed timeout
+Retrying...
+All retries failed
+None
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:41.130436736+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 2/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  74
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:55:50.440494779+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  75
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:55:58.032077136+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  76
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:55:59.111374302+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:05.01860218+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  77
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Delete frontend manager.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:08.152098015+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:14.336149002+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  78
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:17.278562017+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:23.24599972+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  79
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:56:25.626660397+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:56:30.835605662+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  80
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:56:33.891526705+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Exceed timeout
+Retrying...
+All retries failed
+None
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-04-01T12:56:40.083455847+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 6/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  81
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:43.334338682+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:49.43364007+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  82
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:52.730221308+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:56:57.101823818+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 7/7
+paymentservice: 1/2
+productcatalogservice: 2/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  83
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:57:00.112954852+00:00"}"
+>
+Delete frontend manager.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:57:06.139812907+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 2/7
+paymentservice: 1/2
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  84
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:57:09.917125966+00:00"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-04-01T12:57:15.844793067+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+IGNORE 0/8 MICROSERVICES
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+cartservice: 3/3
+checkoutservice: 1/2
+frontend: 1/7
+paymentservice: 1/2
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  360
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+Total microservices needs update:  []
+END TEST
+Exceed timeout
+Retrying...
+All retries failed
+None

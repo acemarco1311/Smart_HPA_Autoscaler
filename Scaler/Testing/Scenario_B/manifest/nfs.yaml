@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nfs-claim
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: state  # name, free to change as
+               # PV not selected by name
+spec:
+  capacity:
+    storage: 10Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    server: host.docker.internal
+    path: /var/nfs/general # exported dir from server
