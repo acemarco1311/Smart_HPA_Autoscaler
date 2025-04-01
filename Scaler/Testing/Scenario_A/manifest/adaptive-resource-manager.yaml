@@ -1,0 +1,48 @@
+# microservice managers
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adaptive-resource-manager  # deployment name
+  labels:
+    app: smart-hpa  # get all deployments of smart-hpa.
+                    # by kubectl get deployments -l app=smart-hpa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adaptive-resource-manager  #TODO
+  template:
+    metadata:
+      labels:
+        app: adaptive-resource-manager  #TODO
+    spec:
+      serviceAccount: god  # run kubectl command
+      serviceAccountName: god  
+      containers:
+      - name: adaptive-resource-manager-container #TODO
+        image: acemarco/adaptive-resource-manager:latest
+        # Docker image ENTRYPOINT command use these args
+        args: [
+          "--hostname=localhost",  # hostname
+          "--port=8080",  # port
+        ]
+        ports:  # container port exposed
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 150m
+            memory: 100Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: adaptive-resource-manager
+spec:
+  type: ClusterIP  # internal communication only
+  selector:
+    app: adaptive-resource-manager  #TODO
+  ports:
+  - name: traffic  # type of connection
+    port: 5000  # service's port
+    targetPort: 8080  # container's port to forward traffic to
+                      # must match container's exposed port

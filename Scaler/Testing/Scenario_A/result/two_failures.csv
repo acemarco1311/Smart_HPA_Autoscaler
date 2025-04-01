@@ -1,0 +1,15 @@
+Method,Name,Error,Occurrences
+GET,/product/1YMWWN1N4O,LocustBadStatusCode(code=500),888
+POST,/setCurrency,LocustBadStatusCode(code=500),1194
+GET,/product/0PUK6V6EV0,LocustBadStatusCode(code=500),865
+POST,/cart,LocustBadStatusCode(code=500),1786
+GET,/cart,LocustBadStatusCode(code=500),1862
+GET,/product/L9ECAV7KIM,LocustBadStatusCode(code=500),841
+GET,/,LocustBadStatusCode(code=500),733
+GET,/product/66VCHSJNUP,LocustBadStatusCode(code=500),875
+GET,/product/2ZYFJ3GM2N,LocustBadStatusCode(code=500),870
+GET,/product/OLJCESPC7Z,LocustBadStatusCode(code=500),842
+GET,/product/6E92ZMYYFZ,LocustBadStatusCode(code=500),896
+POST,/cart/checkout,LocustBadStatusCode(code=500),603
+GET,/product/LS4PSXUNUM,LocustBadStatusCode(code=500),833
+GET,/product/9SIQT8TOJO,LocustBadStatusCode(code=500),897

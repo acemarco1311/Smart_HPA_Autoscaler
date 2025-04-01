@@ -15,7 +15,7 @@ kubectl delete service redis-cart-manager
 kubectl delete deployment shippingservice-manager
 kubectl delete service shippingservice-manager
 
-kubectl delete deployment adaptive-resource-manager
-kubectl delete service adaptive-resource-manager
+#kubectl delete deployment adaptive-resource-manager
+#kubectl delete service adaptive-resource-manager
 
 kubectl delete deployment microservice-capacity-analyzer
