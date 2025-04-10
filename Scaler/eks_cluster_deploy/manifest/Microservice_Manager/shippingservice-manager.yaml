@@ -1,0 +1,64 @@
+# microservice managers
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shippingservice-manager  # deployment name
+  labels:
+    app: smart-hpa  # get all deployments of smart-hpa.
+                    # by kubectl get deployments -l app=smart-hpa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shippingservice-manager  #TODO
+  template:
+    metadata:
+      labels:
+        app: shippingservice-manager  #TODO
+    spec:
+      serviceAccount: god
+      serviceAccountName: god
+      containers:
+      - name: shippingservice-manager-container #TODO
+        image: 843300524918.dkr.ecr.ap-southeast-2.amazonaws.com/smart-hpa/microservice-manager-base
+        # Docker image ENTRYPOINT command use these args
+        args: [
+          "--hostname=localhost",  # hostname
+          "--port=8080",  # port
+          "--microservice_name=shippingservice", # microservice name
+          "--min_reps=1",  # min reps
+          "--max_reps=3",  # max reps
+          "--target_cpu_utilization=80" # target cpu utilization
+        ]
+        ports:  # container port exposed
+        - containerPort: 8080
+        # persistent volume nfs
+        volumeMounts: # specify mount for each volume below
+          - name: state-storage # match volume name
+            mountPath: /microservice_manager/state
+        # free resource
+        resources:
+          requests:
+            cpu: 150m  # request cpu for manager
+            memory: 100Mi
+      volumes:
+      - name: state-storage  # name of volume, free to change
+        persistentVolumeClaim:
+          claimName: efs-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shippingservice-manager
+spec:
+  type: ClusterIP  # internal communication only
+  selector:
+    app: shippingservice-manager  #TODO
+  ports:
+  - name: traffic  # type of connection
+    port: 5000  # service's port
+    targetPort: 8080  # container's port to forward traffic to
+                      # must match container's exposed port
+  - name: health
+    port: 5005
+    targetPort: 8008

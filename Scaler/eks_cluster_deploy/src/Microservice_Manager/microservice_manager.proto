@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package microservice_manager;
+
+service MicroserviceManager {
+  // call to get resource data
+  rpc ExtractResourceData(ResourceDataRequest) returns (ResourceData) {}
+
+  
+  // execute scaling instruction
+  rpc ExecuteScaling(ARMDecision) returns (ScalingStatus) {}
+  
+  // get the current updated max reps
+  rpc GetMaxReps(MaxRepRequest) returns (MaxRepResponse) {}
+}
+
+message MaxRepRequest {}
+
+message MaxRepResponse {
+  int32 max_reps = 1;
+}
+
+message ARMDecision {
+  string microservice_name = 1;
+  string allowed_scaling_action = 2;
+  int32 feasible_reps = 3;
+  int32 arm_max_reps = 4;
+  int32 cpu_request_per_rep = 5;
+}
+
+message ScalingStatus {
+  string status = 1;
+}
+
+message ResourceDataRequest {}
+
+// data from Microservice Manager to Microservice Capacity Manager
+message  ResourceData {
+  string microservice_name = 1;
+  int32 current_reps = 2;
+  int32 desired_reps = 3;
+  int32 cpu_usage_per_rep = 4;
+  int32 cpu_request_per_rep = 5;
+  int32 cpu_utilization_per_rep = 6;
+  int32 desired_for_scale_reps = 7;
+  string scaling_action = 8;
+  int32 max_reps = 9;
+  int32 min_reps = 10; 
+  int32 target_cpu_utilization = 11;
+}
