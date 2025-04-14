@@ -148,13 +148,19 @@ def distribute_residual_cpu(underprovisioned_ms,
         else:
             # although there is no cpu residual to scale over
             # current max_reps, but can scale = max_reps
-            if microservice.current_rep < microservice.max_reps:
+            if microservice.current_reps < microservice.max_reps:
                 allowed_scaling_action = "scale up"
                 possible_reps = microservice.max_reps
                 feasible_reps = arm_max_reps = possible_reps
 
             # using full allocated resource, need to scale more
             # but no residual cpu left
+
+            #TODO: 
+            # MM dies, current rep > max rep
+            # current rep, max rep kept
+            # trigger resource exchange every round
+            # leak any residual resource
             else:
                 allowed_scaling_action = "no scale"
                 possible_reps = microservice.current_reps
@@ -171,8 +177,6 @@ def distribute_residual_cpu(underprovisioned_ms,
 
 def back_distribute_residual_cpu(overprovisioned_ms, total_residual_cpu):
     arm_overprovisioned_decision = []
-    if total_residual_cpu <= 0:
-        return
 
     # distribute cpu resource back based on residual cpu
     # prioritize less residual cpu
