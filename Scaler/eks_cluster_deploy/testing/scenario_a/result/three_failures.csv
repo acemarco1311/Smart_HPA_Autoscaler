@@ -1,2 +1,0 @@
-Method,Name,Error,Occurrences
-POST,/cart/checkout,LocustBadStatusCode(code=500),2

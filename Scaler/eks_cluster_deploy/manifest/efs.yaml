@@ -25,3 +25,31 @@ spec:
   resources:
     requests:
       storage: 10Mi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kb-pv
+spec:
+  capacity:
+    storage: 100Mi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany # mounted and access by multiple Node
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: efs-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: fs-0de459b8fca5e2dba  # EFS File System ID
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kb-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: efs-sc
+  resources:
+    requests:
+      storage: 100Mi

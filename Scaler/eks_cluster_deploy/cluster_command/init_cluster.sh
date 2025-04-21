@@ -11,9 +11,10 @@ kubectl scale deployment efs-csi-controller -n kube-system --replicas=1
 
 # deploy efs
 # requirements: update manifest/efs.yaml file system id
-./deploy_efs.sh
+cd ../manifest
+kubectl apply -f efs.yaml
 
-kubectl apply -f ../manifest/god-manifests.yaml
+kubectl apply -f god-manifests.yaml
 
 # create cluster role binding for Managers
 # to run kubectl command

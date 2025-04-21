@@ -282,14 +282,14 @@ class CapacityAnalyzer:
             List<str> failed_call
     '''
 
-    def obtain_all_resource_data(self):
+    def obtain_all_resource_data(self, test_time):
         resource_data = []
         failed_call = []
         #TODO: do concurrently with threading
         for connection in self._microservice_connections:
             microservice_name = connection["name"]
             # extract metrics from the rest
-            data = self._obtain_resource_data(connection)
+            data = self._obtain_resource_data(connection, test_time)
             if data is None:
                 failed_call.append(connection["name"])
             else:
@@ -353,11 +353,11 @@ class CapacityAnalyzer:
         # return None if failed
         retry_error_callback=error_callback
     )
-    def _obtain_resource_data(self, connection):
+    def _obtain_resource_data(self, connection, test_time):
         stub = connection["stub"]
 
         # create request
-        request = microservice_manager_pb2.ResourceDataRequest()
+        request = microservice_manager_pb2.ResourceDataRequest(test_time=str(test_time))
 
         try:
             # set timeout on request
@@ -706,57 +706,30 @@ def print_resource_data(resource_data):
         data_str += "\n"
         print(data_str)
 
-def manager_failure_injection(microservice_name, delay, total_runtime, capacity):
-    start_time = time.time()
-    while time.time() - start_time < total_runtime:
-        time.sleep(delay)
-        resource_data = capacity._obtain_resource_data(capacity._get_connection(microservice_name))
-        print(f"Delete {microservice_name} manager: ")
-        log = f"Delete {microservice_name} manager: "
-        log += str(resource_data.current_reps)
-        log += "/"
-        log += str(resource_data.max_reps)
-        print(log)
-        delete_script = f"kubectl delete pods -l app={microservice_name}-manager"
-        result = subroutine.execute_kubectl(delete_script)
-        print(result)
-
 
 # run experiments
 def run(microservice_names, arm_name, runtime,
-        microservice_resource_config, microservice_num,
-        failure_names, failure_delay, failure_runtime):
+        microservice_resource_config, microservice_num):
 
     client = CapacityAnalyzer(microservice_names,
                               arm_name,
                               microservice_num,
                               microservice_resource_config
-    )
+                             )
     start_time = time.time()
-
-    # failure injection
-    failure_thread = []
-    for manager in failure_names:
-        failure_thread.append(
-                threading.Thread(target=manager_failure_injection,
-                                 args=(manager, failure_delay, failure_runtime, client))
-        )
-
-    # start failure thread
-    for thread in failure_thread:
-        thread.start()
 
     print("TEST STARTED")
     resource_exchange_index = 1
 
     # microservice manager crash injection
     while (time.time() - start_time) < runtime:
-        print("hehehaha")
+        test_time = time.time() - start_time
         print("-------------------------")
         print("RESOURCE EXCHANGE INDEX: ", resource_exchange_index)
+        print("TEST TIME: ", test_time)
         # Metric extract
         print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
-        resource_data, extract_failed_calls= client.obtain_all_resource_data()
+        resource_data, extract_failed_calls= client.obtain_all_resource_data(test_time)
 
         print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/8 MICROSERVICES")
         print("FAILED TO EXTRACT " + str(len(extract_failed_calls)) + "/8 MICROSERVICES")
@@ -785,12 +758,10 @@ def run(microservice_names, arm_name, runtime,
         print("Failed in distribute this round: ", distribute_failed_calls)
 
         resource_exchange_index += 1
-        time.sleep(3)
+        
+        # add some delay
+        time.sleep(2)
     print("END TEST")
-
-    # wait for thread to complete
-    for thread in failure_thread:
-        thread.join()
 
 
 
@@ -814,8 +785,5 @@ if __name__ == "__main__":
     arm_name = "adaptive-resource-manager"
     runtime = 600
     microservice_num = 8
-    failure_names = ["frontend", "currencyservice", "cartservice"]
-    failure_delay = 30
-    failure_runtime = 600
-    run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num, failure_names, failure_delay, failure_runtime)
+    run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
 
