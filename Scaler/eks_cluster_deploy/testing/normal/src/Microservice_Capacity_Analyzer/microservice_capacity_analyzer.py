@@ -783,7 +783,7 @@ if __name__ == "__main__":
     for name in microservice_names:
         microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 50}})
     arm_name = "adaptive-resource-manager"
-    runtime = 600
+    runtime = 630
     microservice_num = 8
     run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
 
