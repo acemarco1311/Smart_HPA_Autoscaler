@@ -1,6 +1,7 @@
 # base image
 FROM python:3.12.2
 
+ENV PYTHONUNBUFFERED=1
 # organize container's directories
 WORKDIR /microservice_manager
 
@@ -13,6 +14,8 @@ RUN pip install --no-cache-dir grpcio
 RUN pip install --no-cache-dir grpcio-tools
 RUN pip install --no-cache-dir grpcio-health-checking
 RUN pip install --no-cache-dir tenacity
+RUN pip install --no-cache-dir kubernetes
+RUN pip install --no-cache-dir pyyaml
 
 
 # copy source code to microservice_manager/src

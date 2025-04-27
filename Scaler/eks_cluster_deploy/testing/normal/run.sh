@@ -27,7 +27,7 @@ kubectl logs -f "$result" >> "$path" &
 # run load test
 locust_path="result/$1/$1"
 target_ip=$2
-locust -f locustfile.py --host=http://"$target_ip" --headless -u 250 -r 1 --run-time=630 2>&1 --csv="$locust_path" --csv-full-history
+locust -f locustfile.py --host=http://"$target_ip" --headless -u 300 -r 1 --run-time=930 2>&1 --csv="$locust_path" --csv-full-history
 
 sleep 10
 kubectl delete deployment microservice-capacity-analyzer

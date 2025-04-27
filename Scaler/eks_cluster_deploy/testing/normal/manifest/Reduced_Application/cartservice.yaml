@@ -38,10 +38,10 @@ spec:
           value: "redis-cart:6379"
         resources:
           requests:
-            cpu: 50m
+            cpu: 100m
             memory: 150Mi
           limits:
-            cpu: 70m
+            cpu: 150m
             memory: 200Mi
         readinessProbe:
           # fix deployment problem

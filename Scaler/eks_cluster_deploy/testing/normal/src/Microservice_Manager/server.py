@@ -4,6 +4,7 @@ from data_format import ResourceData
 from data_format import ARMDecision
 import argparse
 from microservice_manager import MicroserviceManager
+import time
 
 # for grpc health check
 # generated from a provided health check .proto
@@ -11,6 +12,13 @@ from grpc_health.v1 import health
 from grpc_health.v1 import health_pb2
 from grpc_health.v1 import health_pb2_grpc
 
+# for leader election - passive replication
+import threading
+import uuid
+from kubernetes import client, config
+from kubernetes.leaderelection import leaderelection
+from kubernetes.leaderelection.resourcelock.configmaplock import ConfigMapLock
+from kubernetes.leaderelection import electionconfig
 
 import microservice_manager_pb2  # for message definitions
 # for stub (client) or implementation class (server)
@@ -25,11 +33,14 @@ class MicroserviceManagerImpl(
     def __init__(self, microservice_manager):
         # Microservice Manager object to execute tasks
         self._microservice_manager = microservice_manager
+    
+    def get_microservice_manager(self):
+        return self._microservice_manager
 
     # implementation
     def ExtractResourceData(self, request, context):
         # data can be None if error when calling kube-api-server
-        data = self._microservice_manager.Extract(request.test_time)
+        data = self._microservice_manager.Extract()
 
         # if receive a None in extracting metrics
         # send error
@@ -116,20 +127,48 @@ if __name__ == "__main__":
                              args.max_reps,
                              args.target_cpu_utilization)
 
-    # configure server
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-
     implementation = MicroserviceManagerImpl(ms)
-    # register implementation class to server
-    microservice_manager_pb2_grpc.add_MicroserviceManagerServicer_to_server(
-            implementation,
-            server
-    )
-    # configure server
-    server.add_insecure_port("[::]:" + args.port)
-    _configure_health_server(server)
-    server.start()
-    print("Microservice Manager for " + args.microservice_name + " started on port " + args.port)
-    server.wait_for_termination()
+
+    def start_server():
+        print("I'm the leader, starting server...")
+        # register implementation class to server
+        microservice_manager_pb2_grpc.add_MicroserviceManagerServicer_to_server(
+                implementation,
+                server
+        )
+        # configure server
+        server.add_insecure_port("[::]:" + args.port)
+        _configure_health_server(server)
+        server.start()
+        print("Microservice Manager for " + args.microservice_name + " started on port " + args.port)
+        server.wait_for_termination()
+    
+    def sync_state():
+        while True:
+            implementation.get_microservice_manager().sync_max_reps()
+
+
+    # load this pod config
+    config.load_incluster_config()
+    candidate_id = uuid.uuid4()
+    print(candidate_id)
+    lock_name = "manager-leader-lock"
+    lock_namespace = "default"
+    config = electionconfig.Config(
+                ConfigMapLock(lock_name, lock_namespace, candidate_id),
+                lease_duration=17,
+                renew_deadline=15,
+                retry_period=5,
+                #onstarted_leading=start_server(server, implementation, ms), # leader behavior
+                onstarted_leading=start_server,
+                # onstopped_leading=stop_server(ms), # standby behavior
+                onstopped_leading=sync_state
+            )
+    leaderelection.LeaderElection(config).run()
+
+
+
+
 
 

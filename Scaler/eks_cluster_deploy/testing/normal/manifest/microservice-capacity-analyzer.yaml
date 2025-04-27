@@ -27,6 +27,8 @@ spec:
         volumeMounts: # specify mount for each volume below
           - name: state-storage
             mountPath: /microservice_capacity_analyzer/state
+          - name: knowledge-base
+            mountPath: /microservice_capacity_analyzer/knowledge_base
         resources:
           requests:
             cpu: 200m
@@ -35,4 +37,7 @@ spec:
       - name: state-storage
         persistentVolumeClaim:
           claimName: efs-pvc
+      - name: knowledge-base
+        persistentVolumeClaim:
+          claimName: kb-pvc
 

@@ -1,2 +1,2 @@
 Method,Name,Error,Occurrences
-POST,/cart/checkout,LocustBadStatusCode(code=500),4
+POST,/cart/checkout,LocustBadStatusCode(code=500),5

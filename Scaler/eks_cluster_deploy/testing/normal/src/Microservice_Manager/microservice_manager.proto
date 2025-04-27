@@ -32,9 +32,7 @@ message ScalingStatus {
   string status = 1;
 }
 
-message ResourceDataRequest {
-  string test_time = 1;
-}
+message ResourceDataRequest {}
 
 // data from Microservice Manager to Microservice Capacity Manager
 message  ResourceData {

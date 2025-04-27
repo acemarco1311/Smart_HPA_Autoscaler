@@ -29,7 +29,7 @@ spec:
           "--microservice_name=productcatalogservice", # microservice name
           "--min_reps=1",  # min reps
           "--max_reps=3",  # max reps
-          "--target_cpu_utilization=90" # target cpu utilization
+          "--target_cpu_utilization=30" # target cpu utilization
         ]
         ports:  # container port exposed
         - containerPort: 8080

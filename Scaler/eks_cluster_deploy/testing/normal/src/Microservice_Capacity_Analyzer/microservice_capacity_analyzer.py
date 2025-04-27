@@ -1,3 +1,4 @@
+import json
 from concurrent import futures
 from multiprocessing import Process, Lock
 import time
@@ -695,8 +696,36 @@ class CapacityAnalyzer:
         return scaling_instructions
 
     #TODO: update Knowledge Base
-    def update_knowledge_base(self):
-        pass
+    def update_knowledge_base(self, resource_data, extract_failed_calls, test_time):
+        # update each successful Extract() call
+        for data in resource_data:
+            stored_object = {
+                "microservice_name": data.microservice_name,
+                "current_reps": data.current_reps,
+                "desired_reps": data.desired_reps,
+                "cpu_usage_per_rep": data.cpu_usage_per_rep,
+                "cpu_request_per_rep": data.cpu_request_per_rep,
+                "cpu_utilization_per_rep": data.cpu_utilization_per_rep,
+                "desired_for_scale_reps": data.desired_for_scale_reps,
+                "scaling_action": data.scaling_action,
+                "max_reps": data.max_reps,
+                "min_reps": data.min_reps,
+                "target_cpu_utilization": data.target_cpu_utilization,
+                "test_time": test_time
+            }
+            ms_name = data.microservice_name
+            with open(f"/microservice_capacity_analyzer/knowledge_base/{ms_name}.txt", "a") as file:
+                json.dump(stored_object, file)
+                file.write("\n")
+
+        # update log for each failed call
+        for ms in extract_failed_calls:
+            with open(f"/microservice_capacity_analyzer/knowledge_base/{ms}.txt", "a") as file:
+                prev_max_reps = self.last_scaling.ms.arm_max_reps
+                json.dump({"max_reps": prev_max_reps,
+                           "test_time": test_time},
+                          file)
+                file.write("\n")
 
 
 def print_resource_data(resource_data):
@@ -705,6 +734,7 @@ def print_resource_data(resource_data):
         data_str += str(data.current_reps) + '/' + str(data.max_reps)
         data_str += "\n"
         print(data_str)
+
 
 
 # run experiments
@@ -730,6 +760,8 @@ def run(microservice_names, arm_name, runtime,
         # Metric extract
         print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
         resource_data, extract_failed_calls= client.obtain_all_resource_data(test_time)
+        # update KB for result
+        client.update_knowledge_base(resource_data, extract_failed_calls, test_time)
 
         print("EXTRACTED METRICS FROM " + str(len(resource_data)) + "/8 MICROSERVICES")
         print("FAILED TO EXTRACT " + str(len(extract_failed_calls)) + "/8 MICROSERVICES")
@@ -781,9 +813,14 @@ if __name__ == "__main__":
     ]
     microservice_resource_config = {}
     for name in microservice_names:
-        microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 50}})
+        if name == "cartservice":
+            microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 100}})
+        elif name == "redis-cart":
+            microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_rep_rep": 50}})
+        else:
+            microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 70}})
     arm_name = "adaptive-resource-manager"
-    runtime = 630
+    runtime = 930
     microservice_num = 8
     run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
 

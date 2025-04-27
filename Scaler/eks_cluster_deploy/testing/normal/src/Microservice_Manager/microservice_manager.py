@@ -83,7 +83,6 @@ class MicroserviceManager:
         self.target_cpu_utilization = target_cpu_utilization  # user-defined
         self._current_arm_max_reps = None
         self.path = f"/microservice_manager/state/{microservice_name}.txt"
-        self.knowledge_base_path = f"/microservice_manager/knowledge_base/{microservice_name}.txt"
 
     '''
         Get current arm max reps.
@@ -148,14 +147,20 @@ class MicroserviceManager:
     def _Monitor(self):
         print("Start collecting metrics")
         current_reps = get_available_reps(self.microservice_name)
+        desired_reps = get_desired_reps(self.microservice_name)
         if current_reps is None:
             return None
 
+        # microservice being scaled
+        if current_reps < desired_reps:
+            # use desired reps stored by ms deployment
+            # to eliminate K8s scaling delay
+            current_reps = desired_reps
+
         cpu_usage_per_rep = get_cpu_usage(self.microservice_name, current_reps)
-        desired_reps = get_desired_reps(self.microservice_name)
         cpu_request_per_rep = get_cpu_request(self.microservice_name)
         print("Complete collecting metrics")
-        
+
         result = (current_reps,
                   desired_reps,
                   cpu_usage_per_rep,
@@ -231,15 +236,10 @@ class MicroserviceManager:
             None if there is any error
     '''
 
-    def Extract(self, test_time):
+    def Extract(self):
         monitor_data = self._Monitor()
+        # some pod are not available yet
         if monitor_data is None:
-            # Append an empty line into Knowledge Base
-            # to assure each resource exchange round
-            # stay in the same line
-            with open(self.knowledge_base_path, "a") as file:
-                json.dump({}, file)
-                file.write("\n")
             return None
 
         analyze_data = self._Analyze(monitor_data[0],
@@ -259,14 +259,6 @@ class MicroserviceManager:
                 min_reps=self.min_reps,
                 target_cpu_utilization=self.target_cpu_utilization
         )
-        # write to knowledge base
-        with open(self.knowledge_base_path, "a") as file:
-            # append json object
-            info = resource_data._asdict()
-            # add test time
-            info["test_time"] = test_time
-            json.dump(info, file)
-            file.write("\n")
         return resource_data
 
     def Execute(self, arm_decision):
@@ -283,4 +275,7 @@ class MicroserviceManager:
             print("Scaled to " + str(arm_decision.feasible_reps) + "/" + str(arm_decision.arm_max_reps))
             self._set_current_arm_max_reps(arm_decision.arm_max_reps)
         return scaling_result
+
+    def sync_max_reps(self):
+        return
 
