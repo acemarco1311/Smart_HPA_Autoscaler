@@ -1,0 +1,82 @@
+# microservice managers
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paymentservice-manager  # deployment name
+  labels:
+    app: smart-hpa  # get all deployments of smart-hpa.
+                    # by kubectl get deployments -l app=smart-hpa
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: paymentservice-manager  #TODO
+  template:
+    metadata:
+      labels:
+        app: paymentservice-manager  #TODO
+        role: standby
+    spec:
+      serviceAccount: god
+      serviceAccountName: god
+      containers:
+      - name: paymentservice-manager-container #TODO
+        image: 843300524918.dkr.ecr.ap-southeast-2.amazonaws.com/smart-hpa/microservice-manager-base:normal
+        imagePullPolicy: Always
+        # Docker image ENTRYPOINT command use these args
+        args: [
+          "--hostname=localhost",  # hostname
+          "--port=8080",  # port
+          "--microservice_name=paymentservice", # microservice name
+          "--min_reps=1",  # min reps
+          "--max_reps=3",  # max reps
+          "--target_cpu_utilization=60" # target cpu utilization
+        ]
+        ports:  # container port exposed
+        - containerPort: 8080
+        # for passive replication
+        env:
+        - name: POD
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        # persistent volume nfs
+        volumeMounts: # specify mount for each volume below
+          - name: state-storage # match volume name
+            mountPath: /microservice_manager/state
+          - name: knowledge-base
+            mountPath: /microservice_manager/knowledge_base
+        # free resource
+        resources:
+          requests:
+            cpu: 200m  # request cpu for manager
+            memory: 200Mi
+      volumes:
+      - name: state-storage  # name of volume, free to change
+        persistentVolumeClaim:
+          claimName: efs-pvc
+      - name: knowledge-base
+        persistentVolumeClaim:
+          claimName: kb-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: paymentservice-manager
+spec:
+  type: ClusterIP  # internal communication only
+  selector:
+    app: paymentservice-manager  #TODO
+    role: leader
+  ports:
+  - name: traffic  # type of connection
+    port: 5000  # service's port
+    targetPort: 8080  # container's port to forward traffic to
+                      # must match container's exposed port
+  - name: health
+    port: 5005
+    targetPort: 8008

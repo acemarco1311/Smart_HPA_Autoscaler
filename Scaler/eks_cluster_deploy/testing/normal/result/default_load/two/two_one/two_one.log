@@ -1,0 +1,6286 @@
+{'cartservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'checkoutservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'frontend': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'paymentservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'productcatalogservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'shippingservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'redis-cart': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'currencyservice': {'max_reps': 3, 'cpu_request_per_rep': 70}}
+INFO:root:a2e0a01a-bdd0-4720-bde6-569e079274ce is a follower
+INFO:root:yet to finish lease_duration, lease held by 6f76c93b-d447-4936-9a93-d111688df106 and has not expired
+INFO:root:yet to finish lease_duration, lease held by 6f76c93b-d447-4936-9a93-d111688df106 and has not expired
+INFO:root:yet to finish lease_duration, lease held by 6f76c93b-d447-4936-9a93-d111688df106 and has not expired
+INFO:root:yet to finish lease_duration, lease held by 6f76c93b-d447-4936-9a93-d111688df106 and has not expired
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+INFO:root:a2e0a01a-bdd0-4720-bde6-569e079274ce successfully acquired lease
+INFO:root:Leader has entered renew loop and will try to update lease continuously
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+TEST STARTED
+-------------------------
+RESOURCE EXCHANGE INDEX:  1
+TEST TIME:  2.6702880859375e-05
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  2
+TEST TIME:  4.419372320175171
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  3
+TEST TIME:  8.545679092407227
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  4
+TEST TIME:  12.66251254081726
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  5
+TEST TIME:  17.41317343711853
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  6
+TEST TIME:  21.51293683052063
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  7
+TEST TIME:  25.80169105529785
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  8
+TEST TIME:  30.075066804885864
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  9
+TEST TIME:  34.254929065704346
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  10
+TEST TIME:  38.386595487594604
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  11
+TEST TIME:  42.656688928604126
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  12
+TEST TIME:  47.51676630973816
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  13
+TEST TIME:  51.66654396057129
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  14
+TEST TIME:  55.96628475189209
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  15
+TEST TIME:  60.084712266922
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  16
+TEST TIME:  64.3124189376831
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  17
+TEST TIME:  68.48931932449341
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  18
+TEST TIME:  72.6689510345459
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  19
+TEST TIME:  77.37719392776489
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  20
+TEST TIME:  81.72580003738403
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  21
+TEST TIME:  85.98416709899902
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  22
+TEST TIME:  90.07736825942993
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  23
+TEST TIME:  94.25587344169617
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  24
+TEST TIME:  98.5161612033844
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  25
+TEST TIME:  103.05886316299438
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  26
+TEST TIME:  108.02357268333435
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  27
+TEST TIME:  112.22871279716492
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  28
+TEST TIME:  116.48463177680969
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  29
+TEST TIME:  120.79685521125793
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:47:22.715007705+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  30
+TEST TIME:  127.08959603309631
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:47:29.010400693+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  31
+TEST TIME:  133.51956605911255
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:47:35.891306465+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:47:40.184662709+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  32
+TEST TIME:  142.3228738307953
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:47:47.481303777+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  33
+TEST TIME:  149.79245328903198
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:47:52.252812511+00:00"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:47:55.911465687+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['frontend', 'currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  34
+TEST TIME:  158.09927535057068
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:48:00.581560585+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 3/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['frontend']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  35
+TEST TIME:  166.75761365890503
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:48:09.365557713+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:48:13.095878989+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 3/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['frontend', 'currencyservice']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  36
+TEST TIME:  175.2215301990509
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:48:19.412410319+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 2/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 3/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  37
+TEST TIME:  181.6952245235443
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:48:25.785398784+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 2/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 3/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  38
+TEST TIME:  188.04833269119263
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 2/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 3/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  39
+TEST TIME:  192.32299828529358
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 2/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  40
+TEST TIME:  199.33896493911743
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 2/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 2/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  41
+TEST TIME:  203.72915601730347
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 2/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  42
+TEST TIME:  207.98058342933655
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:48:50.463888656+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['frontend']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  43
+TEST TIME:  214.18684697151184
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:48:56.834713066+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 7/8 microservices
+Failed in extract this round:  ['frontend']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  44
+TEST TIME:  220.6526072025299
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  45
+TEST TIME:  226.46804475784302
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:49:08.39331273+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  46
+TEST TIME:  232.8901491165161
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:49:14.803408055+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  47
+TEST TIME:  239.28666830062866
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:49:21.181212892+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 2/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  48
+TEST TIME:  245.49849033355713
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 2/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 3/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  49
+TEST TIME:  251.85457015037537
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:49:36.198288896+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 3/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  50
+TEST TIME:  258.44107699394226
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 3/3
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  51
+TEST TIME:  264.7916166782379
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:49:49.141944375+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  52
+TEST TIME:  271.39746952056885
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:49:55.437224681+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 3/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  53
+TEST TIME:  277.6632525920868
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 3/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/2
+
+currencyservice: 4/4
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  54
+TEST TIME:  282.1663889884949
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:50:06.285613595+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['frontend']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  55
+TEST TIME:  290.34784626960754
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  56
+TEST TIME:  296.8073751926422
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  57
+TEST TIME:  301.20718336105347
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:50:23.091800926+00:00"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  58
+TEST TIME:  307.67306685447693
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:50:29.605147545+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  59
+TEST TIME:  314.3203148841858
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:50:36.228338705+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/3
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  60
+TEST TIME:  320.75040650367737
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 3/3
+
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/4
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 5/5
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  61
+TEST TIME:  327.2934195995331
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:50:49.206644116+00:00"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 5/5
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  62
+TEST TIME:  333.7551326751709
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:50:55.741007188+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 5/5
+checkoutservice: 1/3
+frontend: 4/4
+paymentservice: 1/3
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  63
+TEST TIME:  340.24521112442017
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 5/5
+
+checkoutservice: 1/3
+
+frontend: 4/4
+
+paymentservice: 1/3
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/4
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 7/7
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  64
+TEST TIME:  346.41866278648376
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:51:08.361157825+00:00"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:51:11.185290587+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 7/7
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'frontend']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  65
+TEST TIME:  354.89770698547363
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:51:16.820081088+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:51:19.625754661+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 7/7
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 6/8 microservices
+Failed in extract this round:  ['cartservice', 'frontend']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  66
+TEST TIME:  363.3451008796692
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:51:25.216562921+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/4
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 7/7
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  67
+TEST TIME:  371.8740620613098
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:51:36.741718967+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 7/7
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 4/7
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/4
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  68
+TEST TIME:  379.0742118358612
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 4/7
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/4
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  69
+TEST TIME:  384.5405089855194
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:51:48.835378518+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  70
+TEST TIME:  391.1932544708252
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:51:55.397677103+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  71
+TEST TIME:  397.704350233078
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 5/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  72
+TEST TIME:  402.47695994377136
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 5/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  73
+TEST TIME:  408.5091667175293
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 5/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  74
+TEST TIME:  412.9630591869354
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 5/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  75
+TEST TIME:  417.51029086112976
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 5/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  76
+TEST TIME:  421.88720297813416
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 5/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 5/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  77
+TEST TIME:  426.28141045570374
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 5/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  78
+TEST TIME:  430.7835144996643
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  79
+TEST TIME:  437.9648959636688
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  80
+TEST TIME:  442.3798460960388
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  81
+TEST TIME:  446.6980764865875
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  82
+TEST TIME:  450.979145526886
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 4/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  83
+TEST TIME:  455.2328951358795
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 4/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  84
+TEST TIME:  459.5717740058899
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  85
+TEST TIME:  466.30553674697876
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  86
+TEST TIME:  470.88008546829224
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  87
+TEST TIME:  475.24507188796997
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  88
+TEST TIME:  479.56846833229065
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  89
+TEST TIME:  484.10011076927185
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  90
+TEST TIME:  488.4185254573822
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  91
+TEST TIME:  493.09845876693726
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  92
+TEST TIME:  497.9429943561554
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  93
+TEST TIME:  502.24850368499756
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  94
+TEST TIME:  506.671434879303
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  95
+TEST TIME:  511.01020646095276
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  96
+TEST TIME:  515.3531913757324
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  97
+TEST TIME:  519.8448417186737
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  98
+TEST TIME:  525.6061720848083
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:54:07.600502417+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  99
+TEST TIME:  532.2026937007904
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:54:14.137443493+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  100
+TEST TIME:  538.6064779758453
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:54:20.533823129+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  101
+TEST TIME:  544.972113609314
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:54:26.887597726+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  102
+TEST TIME:  551.3854625225067
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 3/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 4/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  103
+TEST TIME:  556.207288980484
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:54:38.135654049+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 4/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  104
+TEST TIME:  562.5428249835968
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:54:44.446504009+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 4/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  105
+TEST TIME:  569.0695886611938
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:54:50.977908343+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 4/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  106
+TEST TIME:  575.4492676258087
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 4/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 3/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  107
+TEST TIME:  582.1629667282104
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 3/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  108
+TEST TIME:  587.7452080249786
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  109
+TEST TIME:  592.0203037261963
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  110
+TEST TIME:  596.4597659111023
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  111
+TEST TIME:  600.8714871406555
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  112
+TEST TIME:  605.1930632591248
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  113
+TEST TIME:  609.4489228725433
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  114
+TEST TIME:  613.8868708610535
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:55:35.847680455+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  115
+TEST TIME:  620.2782926559448
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:55:42.176815701+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  116
+TEST TIME:  626.6690037250519
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:55:48.598444192+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  117
+TEST TIME:  633.0527634620667
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:55:54.980924527+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['cartservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  118
+TEST TIME:  639.474867105484
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  119
+TEST TIME:  645.4909512996674
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  120
+TEST TIME:  650.0078856945038
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  121
+TEST TIME:  654.2448921203613
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  122
+TEST TIME:  658.4795262813568
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  123
+TEST TIME:  662.8424346446991
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 5/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  124
+TEST TIME:  667.0323860645294
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 5/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 3/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  125
+TEST TIME:  671.4187986850739
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 3/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 2/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  126
+TEST TIME:  676.4627687931061
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 2/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 2/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 3/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  127
+TEST TIME:  680.7599394321442
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 2/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 3/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/6
+checkoutservice: 1/2
+frontend: 2/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  128
+TEST TIME:  684.9795987606049
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/6
+
+checkoutservice: 1/2
+
+frontend: 2/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  129
+TEST TIME:  691.3545820713043
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  130
+TEST TIME:  695.4320092201233
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  131
+TEST TIME:  699.6259636878967
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  132
+TEST TIME:  705.7431571483612
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  133
+TEST TIME:  710.0871090888977
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  134
+TEST TIME:  714.2447822093964
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  135
+TEST TIME:  718.493145942688
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  136
+TEST TIME:  722.7873096466064
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  137
+TEST TIME:  726.8395195007324
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  138
+TEST TIME:  731.0587096214294
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  139
+TEST TIME:  736.4749448299408
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 1/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  140
+TEST TIME:  740.5949444770813
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+currencyservice: 1/5
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 0/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  141
+TEST TIME:  744.7657151222229
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:57:50.61191085+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 0/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  142
+TEST TIME:  752.8074517250061
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:57:58.685241739+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 0/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  143
+TEST TIME:  760.9439628124237
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:58:07.72950171+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 0/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  144
+TEST TIME:  769.9874165058136
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:58:15.849702635+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/6
+
+checkoutservice: 1/2
+
+frontend: 1/5
+
+paymentservice: 1/1
+
+productcatalogservice: 1/1
+
+shippingservice: 1/2
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/6
+checkoutservice: 1/2
+frontend: 1/5
+paymentservice: 1/1
+productcatalogservice: 1/1
+shippingservice: 1/2
+redis-cart: 1/2
+currencyservice: 0/5
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Scaled 7/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  []
+-------------------------
+RESOURCE EXCHANGE INDEX:  145
+TEST TIME:  778.091459274292
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-09T05:58:26.021625094+00:00"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease
+Cannot extract resource from  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-09T05:58:34.454462371+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader a2e0a01a-bdd0-4720-bde6-569e079274ce has successfully acquired lease

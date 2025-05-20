@@ -108,6 +108,7 @@ def _configure_health_server(server: grpc.Server):
     health_pb2_grpc.add_HealthServicer_to_server(health_servicer, server)
 
 
+
 # entry point
 if __name__ == "__main__":
 
@@ -131,7 +132,11 @@ if __name__ == "__main__":
     implementation = MicroserviceManagerImpl(ms)
 
     def start_server():
-        print("I'm the leader, starting server...")
+        print("I'm the leader.")
+        print("Updating label to receive traffic...")
+        while ms.promote_to_leader() is None:
+             print("Failed to update label, retrying...")
+        print("Updated pod label, starting server...")
         # register implementation class to server
         microservice_manager_pb2_grpc.add_MicroserviceManagerServicer_to_server(
                 implementation,
@@ -143,27 +148,21 @@ if __name__ == "__main__":
         server.start()
         print("Microservice Manager for " + args.microservice_name + " started on port " + args.port)
         server.wait_for_termination()
-    
-    def sync_state():
-        while True:
-            implementation.get_microservice_manager().sync_max_reps()
 
 
     # load this pod config
     config.load_incluster_config()
     candidate_id = uuid.uuid4()
-    print(candidate_id)
-    lock_name = "manager-leader-lock"
+    # use each configmaplock for each microservice manager
+    lock_name = f"{args.microservice_name}-leader-lock"
     lock_namespace = "default"
     config = electionconfig.Config(
                 ConfigMapLock(lock_name, lock_namespace, candidate_id),
                 lease_duration=17,
                 renew_deadline=15,
                 retry_period=5,
-                #onstarted_leading=start_server(server, implementation, ms), # leader behavior
                 onstarted_leading=start_server,
-                # onstopped_leading=stop_server(ms), # standby behavior
-                onstopped_leading=sync_state
+                onstopped_leading=None
             )
     leaderelection.LeaderElection(config).run()
 

@@ -1,0 +1,3 @@
+Method,Name,Error,Occurrences
+GET,/cart,LocustBadStatusCode(code=500),1
+GET,/,LocustBadStatusCode(code=500),1

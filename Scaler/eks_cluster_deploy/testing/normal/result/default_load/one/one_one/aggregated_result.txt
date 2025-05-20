@@ -1,0 +1,1 @@
+{"supply_cpu": 1316, "capacity_cpu": 1680, "residual_cpu": 364, "needed_cpu": 288.6896551724138, "overutilization_cpu": 62.82137931034483, "overutilization_percent": 4.341003309534044, "overutilization_time": 629.4786469936371, "overprovision_time": 350.834370136261, "underprovision_time": 629.4786469936371}

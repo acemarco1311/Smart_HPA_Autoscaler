@@ -1,0 +1,2215 @@
+{'cartservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'checkoutservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'frontend': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'paymentservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'productcatalogservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'shippingservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'redis-cart': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'currencyservice': {'max_reps': 3, 'cpu_request_per_rep': 70}}
+INFO:root:1bc83cee-e598-499f-b5b4-dd909199332b is a follower
+INFO:root:yet to finish lease_duration, lease held by 6e6b70a6-84fc-43e4-9d0f-cd473d4a8a0a and has not expired
+INFO:root:yet to finish lease_duration, lease held by 6e6b70a6-84fc-43e4-9d0f-cd473d4a8a0a and has not expired
+INFO:root:yet to finish lease_duration, lease held by 6e6b70a6-84fc-43e4-9d0f-cd473d4a8a0a and has not expired
+INFO:root:yet to finish lease_duration, lease held by 6e6b70a6-84fc-43e4-9d0f-cd473d4a8a0a and has not expired
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:1bc83cee-e598-499f-b5b4-dd909199332b successfully acquired lease
+INFO:root:Leader has entered renew loop and will try to update lease continuously
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+TEST STARTED
+-------------------------
+RESOURCE EXCHANGE INDEX:  1
+TEST TIME:  2.47955322265625e-05
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Scaled 8/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  []
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  2
+TEST TIME:  4.270634174346924
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:12:59.592994736+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:12:59.595138185+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:12:59.691522695+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:12:59.796298813+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:12:59.798146821+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 3/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  3
+TEST TIME:  7.9812586307525635
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:06.195698805+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:06.417896871+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  4
+TEST TIME:  14.69019079208374
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:10.727746843+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:10.978621884+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  5
+TEST TIME:  19.2524197101593
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:15.119797174+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 7/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  6
+TEST TIME:  23.302040815353394
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:18.614850573+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:18.924489096+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  7
+TEST TIME:  27.280644178390503
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:22.606612153+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:23.003979998+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  8
+TEST TIME:  31.274378776550293
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:27.179291353+00:00"}"
+>
+Scaled 7/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  9
+TEST TIME:  35.34474468231201
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:30.571776678+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:30.663443724+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:30.869826197+00:00"}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  10
+TEST TIME:  39.14659905433655
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:34.433870844+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:34.535168605+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:34.537392423+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:34.53949324+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:34.54135592+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:34.542973255+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:34.544870848+00:00"}"
+>
+Scaled 1/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='currencyservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  11
+TEST TIME:  42.61720037460327
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:38.371406628+00:00"}"
+>
+Scaled 7/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  12
+TEST TIME:  46.760900020599365
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:42.563035078+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:42.749642128+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:42.751777306+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:42.845247516+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 4/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='currencyservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  13
+TEST TIME:  50.917840003967285
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:46.319207249+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:46.515983304+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:46.615198214+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  14
+TEST TIME:  54.78794884681702
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:50.212536782+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:50.317601243+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  15
+TEST TIME:  58.67189693450928
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:53.904174524+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:13:54.017465671+00:00"}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  16
+TEST TIME:  62.606475830078125
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:57.905234373+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:58.286672753+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:13:58.288538158+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  17
+TEST TIME:  66.45971584320068
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:02.998382426+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 7/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  18
+TEST TIME:  71.82847595214844
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 1/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:14:07.335203135+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:14:07.439656167+00:00"}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  19
+TEST TIME:  75.8010823726654
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:11.828533815+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:11.83090266+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:12.056338017+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:12.058439189+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:12.060471795+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:12.062657134+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 2/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='currencyservice', allowed_scaling_action='scale down', feasible_reps=0, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  20
+TEST TIME:  80.1352596282959
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+EXTRACTED METRICS FROM 8/8 MICROSERVICES
+FAILED TO EXTRACT 0/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+currencyservice: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:15.468259786+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:15.470632835+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:15.569027216+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  []
+Failed in distribute this round:  [ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  21
+TEST TIME:  83.94387769699097
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-19T04:14:23.305509722+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:23.574681448+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:14:23.68046649+00:00"}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  22
+TEST TIME:  91.9387469291687
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:31.260716887+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:31.611354996+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:31.613540526+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  23
+TEST TIME:  99.87498450279236
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-19T04:14:39.066059092+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 1/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:14:39.128762719+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:14:39.130973032+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:14:39.133098519+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:39.483845434+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 3/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='cartservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  24
+TEST TIME:  107.82869696617126
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:47.178222046+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 1/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:14:47.341595271+00:00"}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  25
+TEST TIME:  115.91117525100708
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:51.269863868+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-19T04:14:57.374154659+00:00"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:14:57.618604954+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  26
+TEST TIME:  125.98242402076721
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:01.580016074+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:09.20390059+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 2/3
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/3
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:09.269628655+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:15:09.271670445+00:00"}"
+>
+Scaled 4/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  27
+TEST TIME:  137.91999530792236
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:17.327056273+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 2/3
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/3
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 4/4
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:15:17.620607869+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:17.622892125+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:15:17.625301411+00:00"}"
+>
+Scaled 4/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  28
+TEST TIME:  145.89149713516235
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:21.246088707+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:27.452704449+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 4/4
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:15:27.516505331+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:15:27.949803612+00:00"}"
+>
+Scaled 4/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=2, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  29
+TEST TIME:  156.0223331451416
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-19T04:15:31.405147298+00:00"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:37.524161534+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 4/4
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/3
+shippingservice: 1/3
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:15:37.793119556+00:00"}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  30
+TEST TIME:  166.17498230934143
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:46.599769925+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 4/4
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/3
+
+shippingservice: 1/3
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 7/7
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/2
+shippingservice: 1/1
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:15:47.079750903+00:00"}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  31
+TEST TIME:  175.43152284622192
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:50.769165913+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:56.91998541+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/2
+
+shippingservice: 1/1
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 7/7
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/2
+shippingservice: 1/1
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  productcatalogservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:15:57.286204626+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='productcatalogservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=2, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  32
+TEST TIME:  185.55913424491882
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:00.881995269+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:07.826260757+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/2
+
+shippingservice: 1/1
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 7/7
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/2
+shippingservice: 1/1
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:16:08.076951135+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:08.18213305+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:08.183963517+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 3/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=1, cpu_request_per_rep=70), ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=2, cpu_request_per_rep=70)]
+-------------------------
+RESOURCE EXCHANGE INDEX:  33
+TEST TIME:  196.25640392303467
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-19T04:16:16.288644049+00:00"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 7/7
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/2
+
+shippingservice: 1/1
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1680
+Total allocated resources of managed microservices:  1680
+cartservice: 11/11
+checkoutservice: 1/3
+frontend: 1/1
+paymentservice: 1/1
+productcatalogservice: 1/2
+shippingservice: 1/1
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1680
+CORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  redis-cart
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:16.645369957+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  frontend
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:16.765548025+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:16:16.767589337+00:00"}"
+>
+Scaled 4/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='redis-cart', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=2, cpu_request_per_rep=70), ARMDecision(microservice_name='frontend', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=1, cpu_request_per_rep=70), ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=1, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  34
+TEST TIME:  204.84002375602722
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:20.224761419+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:26.373281559+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/2
+
+shippingservice: 1/1
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1960
+Total allocated resources of managed microservices:  1680
+cartservice: 11/11
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/2
+shippingservice: 1/1
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1960
+INCORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:16:26.619797438+00:00"}"
+>
+Scaled 5/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  35
+TEST TIME:  215.00259804725647
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in extracting resource data", grpc_status:13, created_time:"2025-05-19T04:16:30.346257807+00:00"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:36.55752974+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 6/8 MICROSERVICES
+FAILED TO EXTRACT 2/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/2
+
+shippingservice: 1/1
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+All microservice free to scale within limit.
+Total managed resources by Smart HPA:  1960
+Total allocated resources of managed microservices:  1680
+cartservice: 11/11
+checkoutservice: 1/3
+frontend: 1/3
+paymentservice: 1/3
+productcatalogservice: 1/2
+shippingservice: 1/1
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1960
+INCORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  paymentservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in execute scaling for microservice.", grpc_status:13, created_time:"2025-05-19T04:16:36.799812151+00:00"}"
+>
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  shippingservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:36.900448619+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 4/8 microservices
+Failed in extract this round:  ['cartservice', 'currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='paymentservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70), ARMDecision(microservice_name='shippingservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=1, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  36
+TEST TIME:  225.06907677650452
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+Cannot extract resource from  currencyservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:46.054687206+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+EXTRACTED METRICS FROM 7/8 MICROSERVICES
+FAILED TO EXTRACT 1/8 MICROSERVICES
+Resource data before Smart HPA scaling: 
+cartservice: 11/11
+
+checkoutservice: 1/3
+
+frontend: 1/3
+
+paymentservice: 1/3
+
+productcatalogservice: 1/2
+
+shippingservice: 1/1
+
+redis-cart: 1/2
+
+GETTING SCALING INFORMATION...
+Resource constrained environment, trigger resource exchange
+Total managed resources by Smart HPA:  1960
+Total allocated resources of managed microservices:  1680
+cartservice: 15/15
+checkoutservice: 1/3
+frontend: 1/1
+paymentservice: 1/1
+productcatalogservice: 1/2
+shippingservice: 1/1
+redis-cart: 1/2
+currencyservice: 0/3
+Total number of microservices managed by Smart HPA:  8
+Total Resources managed by Smart HPA:  1960
+INCORRECT
+Unexpected RPC error occurred.
+Cannot send scaling instruction to  checkoutservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in execute scaling for microservice."
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:46.54603258+00:00", grpc_status:13, grpc_message:"Error in execute scaling for microservice."}"
+>
+Scaled 6/8 microservices
+Failed in extract this round:  ['currencyservice']
+Failed in distribute this round:  [ARMDecision(microservice_name='checkoutservice', allowed_scaling_action='no scale', feasible_reps=1, arm_max_reps=3, cpu_request_per_rep=70)]
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease
+-------------------------
+RESOURCE EXCHANGE INDEX:  37
+TEST TIME:  234.91328859329224
+GETTING RESOURCE METRICS FROM MICROSERVICES.
+Cannot extract resource from  cartservice
+<_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INTERNAL
+	details = "Error in extracting resource data"
+	debug_error_string = "UNKNOWN:Error received from peer  {created_time:"2025-05-19T04:16:50.290787856+00:00", grpc_status:13, grpc_message:"Error in extracting resource data"}"
+>
+INFO:root:leader 1bc83cee-e598-499f-b5b4-dd909199332b has successfully acquired lease

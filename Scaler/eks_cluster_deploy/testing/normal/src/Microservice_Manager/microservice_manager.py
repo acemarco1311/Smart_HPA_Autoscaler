@@ -9,6 +9,7 @@ from subroutine import get_cpu_usage
 from subroutine import get_desired_reps
 from subroutine import get_cpu_request
 from subroutine import scale
+from subroutine import update_leader_label
 from data_format import ResourceData
 from data_format import ARMDecision
 
@@ -96,6 +97,13 @@ class MicroserviceManager:
         return self._current_arm_max_reps
 
 
+    def promote_to_leader(self):
+        pod_ip = os.environ.get("POD")
+        result = update_leader_label(pod_ip)
+        return result
+
+
+
     '''
         Set current arm_max_reps
 
@@ -152,7 +160,7 @@ class MicroserviceManager:
             return None
 
         # microservice being scaled
-        if current_reps < desired_reps:
+        if current_reps != desired_reps:
             # use desired reps stored by ms deployment
             # to eliminate K8s scaling delay
             current_reps = desired_reps

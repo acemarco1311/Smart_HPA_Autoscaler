@@ -1,0 +1,9 @@
+Method,Name,Error,Occurrences
+POST,/setCurrency,LocustBadStatusCode(code=500),2
+POST,/cart,LocustBadStatusCode(code=500),1
+GET,/cart,LocustBadStatusCode(code=500),1
+GET,/product/L9ECAV7KIM,LocustBadStatusCode(code=500),1
+GET,/product/2ZYFJ3GM2N,LocustBadStatusCode(code=500),1
+GET,/product/OLJCESPC7Z,LocustBadStatusCode(code=500),2
+GET,/product/6E92ZMYYFZ,LocustBadStatusCode(code=500),1
+POST,/cart/checkout,LocustBadStatusCode(code=500),1

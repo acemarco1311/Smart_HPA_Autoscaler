@@ -1,0 +1,222 @@
+{'cartservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'checkoutservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'frontend': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'paymentservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'productcatalogservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'shippingservice': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'redis-cart': {'max_reps': 3, 'cpu_request_per_rep': 70}, 'currencyservice': {'max_reps': 3, 'cpu_request_per_rep': 70}}
+INFO:root:ca4fb736-e635-4d6f-aeba-098515e45fb2 is a follower
+INFO:root:yet to finish lease_duration, lease held by ad6533a1-3abe-492d-95eb-c97539ec4884 and has not expired
+INFO:root:yet to finish lease_duration, lease held by ad6533a1-3abe-492d-95eb-c97539ec4884 and has not expired
+INFO:root:yet to finish lease_duration, lease held by ad6533a1-3abe-492d-95eb-c97539ec4884 and has not expired
+INFO:root:yet to finish lease_duration, lease held by ad6533a1-3abe-492d-95eb-c97539ec4884 and has not expired
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:ca4fb736-e635-4d6f-aeba-098515e45fb2 successfully acquired lease
+INFO:root:Leader has entered renew loop and will try to update lease continuously
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+Received error from kube-api-server
+Error from server (NotFound): services "cartservice-manager" not found
+
+Retrying...
+Received error from kube-api-server
+Error from server (NotFound): services "cartservice-manager" not found
+
+Retrying...
+Received error from kube-api-server
+Error from server (NotFound): services "cartservice-manager" not found
+
+Retrying...
+All retries failed
+Received error from kube-api-server
+Error from server (NotFound): services "cartservice-manager" not found
+
+Retrying...
+Received error from kube-api-server
+Error from server (NotFound): services "cartservice-manager" not found
+
+Retrying...
+Received error from kube-api-server
+Error from server (NotFound): services "cartservice-manager" not found
+
+Retrying...
+All retries failed
+Cannot resolve endpoint to connect to Service to  cartservice
+Exception in thread Thread-1 (start_client):
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/microservice_capacity_analyzer/./src/microservice_capacity_analyzer.py", line 856, in start_client
+    run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
+  File "/microservice_capacity_analyzer/./src/microservice_capacity_analyzer.py", line 750, in run
+    client = CapacityAnalyzer(microservice_names,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/microservice_capacity_analyzer/./src/microservice_capacity_analyzer.py", line 78, in __init__
+    connection = self._connect_to_server(microservice)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/microservice_capacity_analyzer/./src/microservice_capacity_analyzer.py", line 181, in _connect_to_server
+    raise ValueError("Incorrect microservice name.")
+ValueError: Incorrect microservice name.
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease
+INFO:root:leader ca4fb736-e635-4d6f-aeba-098515e45fb2 has successfully acquired lease

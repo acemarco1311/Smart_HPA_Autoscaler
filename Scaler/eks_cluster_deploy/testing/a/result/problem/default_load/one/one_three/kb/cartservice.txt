@@ -1,0 +1,24 @@
+{"microservice_name": "cartservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 2, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 2, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 51.3734974861145}
+{"microservice_name": "cartservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 2, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 2, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 59.19616365432739}
+{"max_reps": 3, "test_time": 75.61741662025452}
+{"max_reps": 3, "test_time": 167.35421299934387}
+{"max_reps": 3, "test_time": 298.42457032203674}
+{"max_reps": 3, "test_time": 331.5037055015564}
+{"max_reps": 3, "test_time": 364.58093333244324}
+{"max_reps": 3, "test_time": 397.6559166908264}
+{"max_reps": 3, "test_time": 430.7328886985779}
+{"max_reps": 3, "test_time": 463.81180691719055}
+{"max_reps": 3, "test_time": 496.8892731666565}
+{"max_reps": 3, "test_time": 529.9651098251343}
+{"max_reps": 3, "test_time": 563.0588624477386}
+{"max_reps": 3, "test_time": 596.1407284736633}
+{"max_reps": 3, "test_time": 629.2208800315857}
+{"max_reps": 3, "test_time": 662.2985043525696}
+{"max_reps": 3, "test_time": 695.3761413097382}
+{"max_reps": 3, "test_time": 728.4529323577881}
+{"max_reps": 3, "test_time": 761.5257079601288}
+{"max_reps": 3, "test_time": 794.6070282459259}
+{"max_reps": 3, "test_time": 827.6884372234344}
+{"max_reps": 3, "test_time": 860.7644717693329}
+{"max_reps": 3, "test_time": 893.8451437950134}
+{"max_reps": 3, "test_time": 926.9238693714142}

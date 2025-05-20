@@ -1,0 +1,34 @@
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 1, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 1, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 2.3603439331054688e-05}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 1, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 1, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 4.298859119415283}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 1, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 1, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 8.19781494140625}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 1, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 1, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 12.060075521469116}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 1, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 1, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 15.992120027542114}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 1, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 1, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 21.422513723373413}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 1, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 1, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 25.211867094039917}
+{"max_reps": 3, "test_time": 29.81497359275818}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 3, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 4, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 33.52777600288391}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 3, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 4, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 37.526766300201416}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 3, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 4, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 41.37896752357483}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 3, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 4, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 45.317862033843994}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 3, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 4, "desired_for_scale_reps": 1, "scaling_action": "no scale", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 49.15229034423828}
+{"microservice_name": "currencyservice", "current_reps": 1, "desired_reps": 1, "cpu_usage_per_rep": 0, "cpu_request_per_rep": 70, "cpu_utilization_per_rep": 0, "desired_for_scale_reps": 0, "scaling_action": "scale down", "max_reps": 3, "min_reps": 1, "target_cpu_utilization": 30, "test_time": 55.247493267059326}
+{"max_reps": 3, "test_time": 61.301106691360474}
+{"max_reps": 3, "test_time": 71.22367000579834}
+{"max_reps": 3, "test_time": 79.46052312850952}
+{"max_reps": 3, "test_time": 88.07855248451233}
+{"max_reps": 3, "test_time": 97.99134516716003}
+{"max_reps": 3, "test_time": 106.71476197242737}
+{"max_reps": 3, "test_time": 114.9865734577179}
+{"max_reps": 3, "test_time": 125.22503852844238}
+{"max_reps": 3, "test_time": 135.11038756370544}
+{"max_reps": 3, "test_time": 143.0081479549408}
+{"max_reps": 3, "test_time": 150.88390469551086}
+{"max_reps": 3, "test_time": 159.05366921424866}
+{"max_reps": 3, "test_time": 166.78004813194275}
+{"max_reps": 3, "test_time": 174.58833718299866}
+{"max_reps": 3, "test_time": 183.0263442993164}
+{"max_reps": 3, "test_time": 190.6748766899109}
+{"max_reps": 3, "test_time": 198.92560863494873}
+{"max_reps": 3, "test_time": 207.73286247253418}
+{"max_reps": 3, "test_time": 215.55303621292114}
+{"max_reps": 3, "test_time": 223.56867575645447}

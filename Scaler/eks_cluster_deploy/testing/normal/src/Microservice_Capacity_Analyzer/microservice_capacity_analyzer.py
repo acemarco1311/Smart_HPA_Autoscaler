@@ -30,6 +30,13 @@ import adaptive_resource_manager_pb2_grpc
 import microservice_manager_pb2
 import microservice_manager_pb2_grpc
 
+# for passive replication - leader election between pods
+import threading
+import uuid
+from kubernetes import client, config
+from kubernetes.leaderelection import leaderelection
+from kubernetes.leaderelection.resourcelock.configmaplock import ConfigMapLock
+from kubernetes.leaderelection import electionconfig
 
 class CapacityAnalyzer:
 
@@ -283,14 +290,14 @@ class CapacityAnalyzer:
             List<str> failed_call
     '''
 
-    def obtain_all_resource_data(self, test_time):
+    def obtain_all_resource_data(self):
         resource_data = []
         failed_call = []
         #TODO: do concurrently with threading
         for connection in self._microservice_connections:
             microservice_name = connection["name"]
             # extract metrics from the rest
-            data = self._obtain_resource_data(connection, test_time)
+            data = self._obtain_resource_data(connection)
             if data is None:
                 failed_call.append(connection["name"])
             else:
@@ -354,11 +361,11 @@ class CapacityAnalyzer:
         # return None if failed
         retry_error_callback=error_callback
     )
-    def _obtain_resource_data(self, connection, test_time):
+    def _obtain_resource_data(self, connection):
         stub = connection["stub"]
 
         # create request
-        request = microservice_manager_pb2.ResourceDataRequest(test_time=str(test_time))
+        request = microservice_manager_pb2.ResourceDataRequest()
 
         try:
             # set timeout on request
@@ -684,9 +691,8 @@ class CapacityAnalyzer:
         # check total allocated resources of all managed ms
         total_allocated_resources = 0
         for name, decision in self.last_scaling.items():
-            total_allocated_resources += (self.microservice_resource_config[name]["max_reps"] * 
+            total_allocated_resources += (self.microservice_resource_config[name]["max_reps"] *
                                           self.microservice_resource_config[name]["cpu_request_per_rep"])
-
         print("Total managed resources by Smart HPA: ", self.last_total_managed_resources)
         print("Total allocated resources of managed microservices: ", total_allocated_resources)
         if self.last_total_managed_resources == total_allocated_resources:
@@ -721,7 +727,7 @@ class CapacityAnalyzer:
         # update log for each failed call
         for ms in extract_failed_calls:
             with open(f"/microservice_capacity_analyzer/knowledge_base/{ms}.txt", "a") as file:
-                prev_max_reps = self.last_scaling.ms.arm_max_reps
+                prev_max_reps = self.last_scaling[ms].arm_max_reps
                 json.dump({"max_reps": prev_max_reps,
                            "test_time": test_time},
                           file)
@@ -734,8 +740,6 @@ def print_resource_data(resource_data):
         data_str += str(data.current_reps) + '/' + str(data.max_reps)
         data_str += "\n"
         print(data_str)
-
-
 
 # run experiments
 def run(microservice_names, arm_name, runtime,
@@ -759,7 +763,8 @@ def run(microservice_names, arm_name, runtime,
         print("TEST TIME: ", test_time)
         # Metric extract
         print("GETTING RESOURCE METRICS FROM MICROSERVICES.")
-        resource_data, extract_failed_calls= client.obtain_all_resource_data(test_time)
+
+        resource_data, extract_failed_calls= client.obtain_all_resource_data()
         # update KB for result
         client.update_knowledge_base(resource_data, extract_failed_calls, test_time)
 
@@ -790,9 +795,9 @@ def run(microservice_names, arm_name, runtime,
         print("Failed in distribute this round: ", distribute_failed_calls)
 
         resource_exchange_index += 1
-        
+
         # add some delay
-        time.sleep(2)
+        time.sleep(1)
     print("END TEST")
 
 
@@ -811,16 +816,41 @@ if __name__ == "__main__":
         "redis-cart",
         "currencyservice",
     ]
+    microservice_cpu_request = [
+        100, 70, 85, 90, 45, 65, 55, 50
+    ]
     microservice_resource_config = {}
+    # use even cpu request
     for name in microservice_names:
-        if name == "cartservice":
-            microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 100}})
-        elif name == "redis-cart":
-            microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_rep_rep": 50}})
-        else:
-            microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 70}})
+        microservice_resource_config.update({name: {"max_reps": 3, "cpu_request_per_rep": 70}})
+    #for i in range(len(microservice_names)):
+    #    microservice_resource_config.update({microservice_names[i]: {"max_reps": 3, "cpu_request_per_rep": microservice_cpu_request[i]}})
+    print(microservice_resource_config)
     arm_name = "adaptive-resource-manager"
-    runtime = 930
+    runtime = 2000
     microservice_num = 8
-    run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
+
+    def start_client():
+        # update pod label for leader
+        pod_ip = os.environ.get("POD")
+        script = f"kubectl label pod {pod_ip} role=leader --overwrite"
+        subroutine.execute_kubectl(script)
+        # start smart HPA
+        run(microservice_names, arm_name, runtime, microservice_resource_config, microservice_num)
+
+    # leader election
+    config.load_incluster_config()
+    candidate_id = uuid.uuid4()
+    lock_name = "mca-leader-lock"
+    lock_namespace = "default"
+    config = electionconfig.Config(
+            ConfigMapLock(lock_name, lock_namespace, candidate_id),
+            lease_duration=17,
+            renew_deadline=15,
+            retry_period=5,
+            onstarted_leading=start_client,
+            onstopped_leading=None
+    )
+    leaderelection.LeaderElection(config).run()
+
 

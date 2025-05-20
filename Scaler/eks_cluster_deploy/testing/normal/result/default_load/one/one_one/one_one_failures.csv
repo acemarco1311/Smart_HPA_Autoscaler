@@ -1,0 +1,3 @@
+Method,Name,Error,Occurrences
+POST,/cart/checkout,LocustBadStatusCode(code=500),4
+GET,/product/9SIQT8TOJO,LocustBadStatusCode(code=500),1

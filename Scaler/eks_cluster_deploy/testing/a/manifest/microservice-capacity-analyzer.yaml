@@ -1,0 +1,54 @@
+# microservice managers
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-capacity-analyzer  # deployment name
+  labels:
+    app: smart-hpa  # get all deployments of smart-hpa.
+                    # by kubectl get deployments -l app=smart-hpa
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: microservice-capacity-analyzer  #TODO
+  template:
+    metadata:
+      labels:
+        app: microservice-capacity-analyzer  #TODO
+        role: standby
+    spec:
+      serviceAccount: god
+      serviceAccountName: god
+      containers:
+      - name: microservice-capacity-analyzer-container #TODO
+        image: 843300524918.dkr.ecr.ap-southeast-2.amazonaws.com/smart-hpa/microservice-capacity-analyzer:A
+        imagePullPolicy: Always
+        ports:  # container port exposed
+        - containerPort: 8080
+        # for passive replication
+        env:
+        - name: POD
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        volumeMounts: # specify mount for each volume below
+          - name: state-storage
+            mountPath: /microservice_capacity_analyzer/state
+          - name: knowledge-base
+            mountPath: /microservice_capacity_analyzer/knowledge_base
+        resources:
+          requests:
+            cpu: 200m
+            memory: 300Mi
+      volumes:
+      - name: state-storage
+        persistentVolumeClaim:
+          claimName: efs-pvc
+      - name: knowledge-base
+        persistentVolumeClaim:
+          claimName: kb-pvc
+

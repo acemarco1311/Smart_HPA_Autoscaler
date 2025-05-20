@@ -44,10 +44,10 @@ spec:
           name: redis-data
         resources:
           requests:
-            cpu: 50m
+            cpu: 70m
             memory: 150Mi
           limits:
-            cpu: 70m
+            cpu: 100m
             memory: 200Mi
       volumes:
       - name: redis-data
